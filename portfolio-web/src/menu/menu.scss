@@ -6,12 +6,9 @@
   width: 70px;
   height: 100vh;
   background-color: #000;
-
-  transition: width 0.25s;
 }
 
 .menu-container.menu-open {
-  width: 80vw;
   display: block;
 }
 
@@ -28,13 +25,7 @@
     font-family: 'Helvetica', sans-serif;
     font-size: 18px;
     color: #FFF;
-
-    // transform-origin: top left;
     transform: rotate(90deg) translateX(100%);
-  }
-
-  .menu-bt {
-    // margin-bottom: 15px;
   }
 
   div[class^="menu-bt-rt-"] {

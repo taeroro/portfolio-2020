@@ -5,11 +5,9 @@
   right: 0;
   width: 70px;
   height: 100vh;
-  background-color: #000;
-  transition: width 0.25s; }
+  background-color: #000; }
 
 .menu-container.menu-open {
-  width: 80vw;
   display: block; }
 
 .menu-button-wrapper {
