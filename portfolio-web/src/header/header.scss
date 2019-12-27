@@ -1,0 +1,46 @@
+.header-container {
+  width: 100vw;
+  z-index: 5;
+}
+
+.header-desktop {
+  display: inline-block;
+  width: calc(100% - 80px);
+  height: 55px;
+  padding: 25px 40px;
+
+  .logo-wrapper {
+    position: absolute;
+    float: left;
+
+    a {
+      display: inline-block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      height: 55px;
+    }
+  }
+
+  .back-button {
+    display: inline-block;
+    opacity: 0.2;
+    transition: opacity 0.25s;
+    height: 55px;
+    line-height: 55px;
+
+    a {
+      display: inline-block;
+      color: inherit;
+      text-decoration: none;
+      font-family: 'Helvetica', sans-serif;
+      font-size: 36px;
+    }
+  }
+
+  .back-button:hover {
+    opacity: 1;
+  }
+}
