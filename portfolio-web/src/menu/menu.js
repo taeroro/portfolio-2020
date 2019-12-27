@@ -5,6 +5,7 @@ import anime from 'animejs';
 
 export default class Menu extends Component {
   menuRef = React.createRef();
+  menuOverlayRef = React.createRef();
 
   constructor(props) {
     super(props);
@@ -47,6 +48,12 @@ export default class Menu extends Component {
       easing: "easeOutCubic",
       autoplay: false
     };
+    let shadowAnimation = {
+      targets: this.menuRef.current,
+      boxShadow: '-10px 0px 20px rgba(0,0,0,0.5)',
+      duration: 500,
+      easing: "easeOutCubic",
+    };
     let menuAnimationReverse = {
       targets: this.menuRef.current,
       width: {
@@ -54,15 +61,29 @@ export default class Menu extends Component {
         duration: 500,
         easing: "easeOutCubic"
       },
+      boxShadow: '0px 0px 0px rgba(0,0,0,0)',
       easing: "easeOutCubic",
       autoplay: false
     };
+    let menuOverlayAnimation = {
+      targets: this.menuOverlayRef.current,
+      opacity: 0.7,
+      duration: 500,
+      easing: "easeOutCubic",
+    };
+    let menuOverlayAnimationReverse = {
+      targets: this.menuOverlayRef.current,
+      opacity: 0,
+      duration: 500,
+      easing: "easeOutCubic",
+    };
+
 
     if (this.state.isMenuExpanded) {
-      animeTimeline.add(menuAnimation);
+      animeTimeline.add(menuAnimation).add(shadowAnimation).add(menuOverlayAnimation, '-=500');
     }
     else {
-      animeTimeline.add(menuAnimationReverse);
+      animeTimeline.add(menuOverlayAnimationReverse).add(menuAnimationReverse, '-=500');
     }
   }
 
@@ -73,20 +94,26 @@ export default class Menu extends Component {
 
   render() {
     return (
-      <div
-        className={"menu-container"}
-        ref={this.menuRef}
-      >
-        <div className="menu-button-wrapper">
-          <div className="menu-bt" onClick={this.toggleMenu}>
-            <div className="menu-bt-rt-1"></div>
-            <div className="menu-bt-rt-2"></div>
-            <div className="menu-bt-rt-3"></div>
-          </div>
-
-          <span>MENU</span>
+      <div className="menu-overlay-container">
+        <div
+          className={this.state.isMenuExpanded ? "menu-overlay enable-event" : "menu-overlay"}
+          ref={this.menuOverlayRef}
+          onClick={this.state.isMenuExpanded ? this.toggleMenu: () => {}}>
         </div>
+        <div
+          className="menu-container"
+          ref={this.menuRef}
+        >
+          <div className="menu-button-wrapper">
+            <div className="menu-bt" onClick={this.toggleMenu}>
+              <div className="menu-bt-rt-1"></div>
+              <div className="menu-bt-rt-2"></div>
+              <div className="menu-bt-rt-3"></div>
+            </div>
 
+            <span>MENU</span>
+          </div>
+        </div>
       </div>
     );
   }

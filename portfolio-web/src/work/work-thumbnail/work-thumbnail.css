@@ -1,0 +1,14 @@
+.thumbnail-container {
+  width: 80%;
+  height: 63vh;
+  overflow: hidden;
+  margin-top: 8vh;
+  margin-bottom: 100px; }
+  .thumbnail-container img {
+    transform: translateY(-18%);
+    width: 100%;
+    object-fit: cover;
+    filter: saturate(0%);
+    opacity: 0.2; }
+
+/*# sourceMappingURL=work-thumbnail.css.map */

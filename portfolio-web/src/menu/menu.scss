@@ -1,5 +1,5 @@
 .menu-container {
-  z-index: 6;
+  z-index: 7;
   position: fixed;
   top: 0;
   right: 0;
@@ -22,7 +22,7 @@
 
   span {
     position: absolute;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 18px;
     color: #FFF;
     transform: rotate(90deg) translateX(100%);
@@ -37,4 +37,18 @@
   .menu-bt-rt-1, .menu-bt-rt-2 {
     margin-bottom: 5px;
   }
+}
+
+.menu-overlay {
+  z-index: 6;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-overlay.enable-event {
+  pointer-events: auto;
 }

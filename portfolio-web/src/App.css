@@ -1,3 +1,27 @@
-.App {
-  text-align: center;
+h1::selection {
+  background: #0000FF;
+}
+h1::-moz-selection {
+  background: #0000FF;
+}
+
+h2::selection {
+  background: #0000FF;
+}
+h2::-moz-selection {
+  background: #0000FF;
+}
+
+p::selection {
+  background: #0000FF;
+}
+p::-moz-selection {
+  background: #0000FF;
+}
+
+span::selection {
+  background: #0000FF;
+}
+span::-moz-selection {
+  background: #0000FF;
 }

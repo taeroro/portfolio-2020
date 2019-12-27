@@ -1,4 +1,5 @@
 .header-container {
+  position: fixed;
   width: 100vw;
   z-index: 5; }
 
@@ -26,7 +27,7 @@
       display: inline-block;
       color: inherit;
       text-decoration: none;
-      font-family: 'Helvetica', sans-serif;
+      font-family: 'Helvetica Neue', sans-serif;
       font-size: 36px; }
   .header-desktop .back-button:hover {
     opacity: 1; }

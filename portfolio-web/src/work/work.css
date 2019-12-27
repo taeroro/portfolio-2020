@@ -1,0 +1,33 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100vw - 70px); }
+
+.introduction-container {
+  width: 100%;
+  margin-top: 105px; }
+  .introduction-container .name {
+    font-family: 'Founders Grotesk Test' ,'Helvetica Neue', sans-serif;
+    font-size: 200px;
+    font-weight: 700;
+    color: #000;
+    margin: 15vh 40px 0; }
+  .introduction-container .skill-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 40px 0 40px; }
+    .introduction-container .skill-wrapper div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; }
+    .introduction-container .skill-wrapper h2 {
+      display: inline-block;
+      font-family: 'Founders Grotesk Test' ,'Helvetica Neue', sans-serif;
+      font-size: 42px;
+      font-weight: 400;
+      color: #000;
+      margin: 0; }
+
+/*# sourceMappingURL=work.css.map */
