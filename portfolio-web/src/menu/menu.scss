@@ -20,6 +20,10 @@
   margin-top: 40px;
   width: 70px;
 
+  .menu-bt {
+    cursor: pointer;
+  }
+
   span {
     position: absolute;
     font-family: 'Helvetica Neue', sans-serif;
@@ -47,8 +51,4 @@
   background-color: #000;
   opacity: 0;
   pointer-events: none;
-}
-
-.menu-overlay.enable-event {
-  pointer-events: auto;
 }
