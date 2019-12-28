@@ -17,6 +17,7 @@ export default class Menu extends Component {
 
     this.tl = gsap.timeline();
     gsap.registerPlugin(TextPlugin);
+    
     this.menuRef = null;
     this.menuOverlayRef = null;
     this.rt1Ref = null;
@@ -43,9 +44,6 @@ export default class Menu extends Component {
     this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
   }
 
-  componentDidUpdate() {
-  }
-
   // when user clicked the menu button
   toggleMenu() {
     if (!this.state.isMenuExpanded) {
@@ -59,7 +57,7 @@ export default class Menu extends Component {
 
       this.tl.to(this.menuLabelRef, {duration: 0.5, text: {value: "CLOSE", delimiter: " "}, ease: "none"}, "-=0.5");
 
-      this.tl.to(this.menuRef, {duration: 0.5, boxShadow: '-10px 0px 20px rgba(0,0,0,0.5)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+      this.tl.to(this.menuRef, {duration: 0.5, boxShadow: '-10px 0px 20px rgba(0,0,0,0.5)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"} , "-=0.35");
       this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0.7', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
     }
     else {

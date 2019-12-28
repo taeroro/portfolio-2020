@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,oBAAqB;EACnB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,MAAM;EAChB,UAAU,EAAE,GAAG;EACf,aAAa,EAAE,KAAK;EAEpB,wBAAI;IACF,SAAS,EAAE,gBAAgB;IAC3B,KAAK,EAAE,IAAI;IACX,UAAU,EAAE,KAAK;IACjB,MAAM,EAAE,YAAY;IACpB,OAAO,EAAE,GAAG",
-"sources": ["work-thumbnail.scss"],
-"names": [],
-"file": "work-thumbnail.css"
-}

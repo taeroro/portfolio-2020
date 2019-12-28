@@ -6,8 +6,10 @@
 }
 
 .introduction-container {
-  width: 100%;
+  z-index: 4;
+  width: calc(100vw - 70px);
   margin-top: 105px;
+  position: fixed;
   // background-color: rgba(0,0,255,0.5);
 
   .name {
@@ -38,5 +40,27 @@
       color: #000;
       margin: 0;
     }
+  }
+}
+
+.thumbnail-feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnail-container {
+  width: 80%;
+  height: 63vh;
+  overflow: hidden;
+  margin-top: 8vh;
+  margin-bottom: 100px;
+
+  img {
+    transform: translateY(-18%);
+    width: 100%;
+    object-fit: cover;
+    filter: saturate(0%);
+    opacity: 0.2;
   }
 }
