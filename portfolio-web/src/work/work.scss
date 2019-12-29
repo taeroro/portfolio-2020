@@ -12,8 +12,18 @@
   position: fixed;
   // background-color: rgba(0,0,255,0.5);
 
+  .title-description {
+    position: absolute;
+    margin: 0 0 0 40px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(0,0,0,0.2);
+    // opacity: 0.2;
+  }
+
   .name {
-    font-family: 'Founders Grotesk Test' ,'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 200px;
     font-weight: 700;
     color: #000;
@@ -34,7 +44,7 @@
 
     h2 {
       display: inline-block;
-      font-family: 'Founders Grotesk Test' ,'Helvetica Neue', sans-serif;
+      font-family: 'Helvetica Neue', sans-serif;
       font-size: 42px;
       font-weight: 400;
       color: #000;
@@ -47,20 +57,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .feed-placeholder {
+    padding-bottom: 8vh;
+    // background-color: rgba(0,0,255,0.5);
+  }
 }
 
 .thumbnail-container {
+  z-index: 0;
   width: 80%;
   height: 63vh;
   overflow: hidden;
-  margin-top: 8vh;
-  margin-bottom: 100px;
+  cursor: pointer;
+  // margin-top: 8vh;
+  // margin-bottom: 100px;
 
-  img {
+  .thumbnail-img {
     transform: translateY(-18%);
     width: 100%;
     object-fit: cover;
     filter: saturate(0%);
     opacity: 0.2;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
+
+  .thumbnail-img.mouse-over {
+    filter: saturate(100%);
+    opacity: 0.7;
+  }
+}
+
+.thumbnail-container.mouse-over {
+  z-index: 5;
 }
