@@ -5,7 +5,15 @@ import './work.css';
 import gsap from 'gsap';
 import TextPlugin from "gsap/TextPlugin";
 
-const focused_mockup_path = './work/focused/focused-mockup.jpg';
+const mockup_img_path = [
+  './work/focused/focused-mockup.jpg',
+  './work/apark/small_apark_rendered-01.jpg',
+  './work/apark/small_apark_rendered-01.jpg',
+  './work/apark/small_apark_rendered-01.jpg',
+  './work/apark/small_apark_rendered-01.jpg',
+  './work/apark/small_apark_rendered-01.jpg',
+  './work/driving/uxdesign.cc_the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a.png',
+]
 
 class Work extends Component {
   constructor(props) {
@@ -51,49 +59,49 @@ class Work extends Component {
     if (prevState.currentThumbNum !== this.state.currentThumbNum) {
       switch (this.state.currentThumbNum) {
         case -1:
-          this.tl.to(this.introNameRef, {duration: 0.5, text: "RYAN FAN"});
-          this.tl.to(this.skillRef, {duration: 0.5, opacity: '1', display: 'flex', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-          this.tl.to(this.descriptionRef, {duration: 0.5, text: ""}, "-=0.5");
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "RYAN FAN"});
+          this.tl.to(this.skillRef, {duration: 0.25, opacity: '1', display: 'flex', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: ""}, "-=0.25");
           break;
         case 0:
-          this.tl.to(this.introNameRef, {duration: 0.5, text: "FOCUSED."});
-          this.tl.to(this.skillRef, {duration: 0.5, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-          this.tl.to(this.descriptionRef, {duration: 0.5, text: "DIGITAL PRODUCT DESIGN"}, "-=0.5");
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "FOCUSED."});
+          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 1:
-          this.tl.to(this.introNameRef, {duration: 0.5, text: "αPARK"});
-          this.tl.to(this.skillRef, {duration: 0.5, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-          this.tl.to(this.descriptionRef, {duration: 0.5, text: "DIGITAL PRODUCT DESIGN"}, "-=0.5");
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "αPARK"});
+          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 2:
-          this.tl.to(this.introNameRef, {duration: 0.5, text: "JAZZIN"});
-          this.tl.to(this.skillRef, {duration: 0.5, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-          this.tl.to(this.descriptionRef, {duration: 0.5, text: "BRAND DESIGN & DIGITAL PRODUCT DESIGN"}, "-=0.5");
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "JAZZIN"});
+          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "BRAND DESIGN & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 3:
-          this.tl.to(this.introNameRef, {duration: 0.5, text: "THE ANVIL"});
-          this.tl.to(this.skillRef, {duration: 0.5, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-          this.tl.to(this.descriptionRef, {duration: 0.5, text: "DIGITAL PRODUCT DESIGN"}, "-=0.5");
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "THE ANVIL"});
+          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 4:
-          this.tl.to(this.introNameRef, {duration: 0.5, text: "YINTECH LABS"});
-          this.tl.to(this.skillRef, {duration: 0.5, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-          this.tl.to(this.descriptionRef, {duration: 0.5, text: "SOFTWARE DEVELOPMENT & DIGITAL PRODUCT DESIGN"}, "-=0.5");
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "YINTECH LABS"});
+          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "SOFTWARE DEVELOPMENT & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 5:
-          this.tl.to(this.introNameRef, {duration: 0.5, text: "FACES OF THE PORTRAITS"});
-          this.tl.to(this.skillRef, {duration: 0.5, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-          this.tl.to(this.descriptionRef, {duration: 0.5, text: "DESIGN AND TECHNOLOGY"}, "-=0.5");
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "FACES OF THE PORTRAITS"});
+          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "DESIGN AND TECHNOLOGY"}, "-=0.25");
           break;
         case 6:
-          this.tl.to(this.introNameRef, {duration: 0.5, text: "INTERACTION IN DRIVING"});
-          this.tl.to(this.skillRef, {duration: 0.5, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-          this.tl.to(this.descriptionRef, {duration: 0.5, text: "PUBLICATION"}, "-=0.5");
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "INTERACTION IN DRIVING"});
+          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "PUBLICATION"}, "-=0.25");
           break;
         default:
-          this.tl.to(this.introNameRef, {duration: 0.5, text: "RYAN FAN"});
-          this.tl.to(this.skillRef, {duration: 0.5, opacity: '1', display: 'flex', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-          this.tl.to(this.descriptionRef, {duration: 0.5, text: ""}, "-=0.5");
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "RYAN FAN"});
+          this.tl.to(this.skillRef, {duration: 0.25, opacity: '1', display: 'flex', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: ""}, "-=0.25");
       }
     }
   }
@@ -137,21 +145,11 @@ class Work extends Component {
   }
 
   imgHoverOverHandler(index) {
-    console.log("over " + index);
-
     this.setState({mouseIsOver: index});
-
-    // this.tl.set(this.imgRef[index], {filter: 'saturate(100%)', opacity: 0.8});
-    // this.tl.set(this.introRef, {zIndex: 0});
   }
 
   imgHoverLeaveHandler(index) {
-    console.log("leave " + index);
-
     this.setState({mouseIsOver: -1});
-    
-    // this.tl.set(this.imgRef[index], {filter: 'saturate(0%)', opacity: 0.2});
-    // this.tl.set(this.introRef, {zIndex: 4});
   }
 
   renderIntroduction() {
@@ -174,18 +172,21 @@ class Work extends Component {
   }
 
   renderThumbnail(index) {
+    const imgClass = "thumbnail-img-" + index + " ";
+    let bottom = ((window.innerHeight - this.state.introHeight)/2 > 100) ? (window.innerHeight - this.state.introHeight)/2 : 100;
+
     return (
       <div
-        className={this.state.currentThumbNum === index ? "thumbnail-container mouse-over" : "thumbnail-container"}
+        className={this.state.currentThumbNum === index ? "thumbnail-container page-enter" : "thumbnail-container"}
         // className="thumbnail-container"
-        style={{marginBottom: ((window.innerHeight - this.state.introHeight)/2)}}
+        style={{marginBottom: bottom}}
         ref={div => this.thumbnailRef[index] = div}
         onMouseOver={() => this.imgHoverOverHandler(index)}
         onMouseLeave={() => this.imgHoverLeaveHandler(index)}
       >
         <img
-          className={this.state.currentThumbNum === index ? "thumbnail-img mouse-over" : "thumbnail-img"}
-          src={focused_mockup_path}
+          className={this.state.mouseIsOver === index ? imgClass + "mouse-over" : imgClass}
+          src={mockup_img_path[index]}
           alt="thumbnail image"
           ref={img => this.imgRef[index] = img}
         />
