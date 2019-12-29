@@ -17,7 +17,7 @@ export default class Header extends Component {
       <nav className="header-container">
         <div className="header-desktop">
           <div className="logo-wrapper">
-            <a href="">
+            <a href="/">
               <img src={logo_path} alt="logo" />
             </a>
           </div>

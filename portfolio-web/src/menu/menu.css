@@ -39,6 +39,7 @@
   height: 100vh;
   background-color: #000;
   opacity: 0;
-  pointer-events: none; }
+  pointer-events: none;
+  top: 0; }
 
 /*# sourceMappingURL=menu.css.map */

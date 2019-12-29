@@ -23,6 +23,8 @@ class Work extends Component {
       introHeight: 0,
       currentThumbNum: -1,
       mouseIsOver: -1,
+      nameMouseIsOver: false,
+      titleDescY: 0,
     };
 
     this.tl = gsap.timeline();
@@ -47,6 +49,7 @@ class Work extends Component {
     this.setState({
       introHeight: this.introRef.clientHeight + 105,
       currentThumbNum: -1,
+      titleDescY: window.getComputedStyle(this.introNameRef).getPropertyValue('margin-top'),
     });
   }
 
@@ -64,37 +67,37 @@ class Work extends Component {
           this.tl.to(this.descriptionRef, {duration: 0.25, text: ""}, "-=0.25");
           break;
         case 0:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "FOCUSED."});
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "FOCUSED.", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 1:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "αPARK"});
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "αPARK", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 2:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "JAZZIN"});
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "JAZZIN", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "BRAND DESIGN & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 3:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "THE ANVIL"});
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "THE ANVIL", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 4:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "YINTECH LABS"});
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "YINTECH LABS", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "SOFTWARE DEVELOPMENT & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 5:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "FACES OF THE PORTRAITS"});
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "FACES OF THE PORTRAITS", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DESIGN AND TECHNOLOGY"}, "-=0.25");
           break;
         case 6:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "INTERACTION IN DRIVING"});
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "UX COLLECTIVE", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "PUBLICATION"}, "-=0.25");
           break;
@@ -123,24 +126,31 @@ class Work extends Component {
     }
     else if (window.pageYOffset >= offset1 && window.pageYOffset < this.thumbnailRef[0].offsetTop + (thumbnailHeight/2)) {
       this.setState({ currentThumbNum: 0 });
+      this.setState({nameMouseIsOver: false});
     }
     else if (window.pageYOffset >= this.thumbnailRef[0].offsetTop + (thumbnailHeight/2) && window.pageYOffset < this.thumbnailRef[1].offsetTop + (thumbnailHeight/2)) {
       this.setState({ currentThumbNum: 1 });
+      this.setState({nameMouseIsOver: false});
     }
     else if (window.pageYOffset >= this.thumbnailRef[1].offsetTop + (thumbnailHeight/2) && window.pageYOffset < this.thumbnailRef[2].offsetTop + (thumbnailHeight/2)) {
       this.setState({ currentThumbNum: 2 });
+      this.setState({nameMouseIsOver: false});
     }
     else if (window.pageYOffset >= this.thumbnailRef[2].offsetTop + (thumbnailHeight/2) && window.pageYOffset < this.thumbnailRef[3].offsetTop + (thumbnailHeight/2)) {
       this.setState({ currentThumbNum: 3 });
+      this.setState({nameMouseIsOver: false});
     }
     else if (window.pageYOffset >= this.thumbnailRef[3].offsetTop + (thumbnailHeight/2) && window.pageYOffset < this.thumbnailRef[4].offsetTop + (thumbnailHeight/2)) {
       this.setState({ currentThumbNum: 4 });
+      this.setState({nameMouseIsOver: false});
     }
     else if (window.pageYOffset >= this.thumbnailRef[4].offsetTop + (thumbnailHeight/2) && window.pageYOffset < this.thumbnailRef[5].offsetTop + (thumbnailHeight/2)) {
       this.setState({ currentThumbNum: 5 });
+      this.setState({nameMouseIsOver: false});
     }
     else if (window.pageYOffset >= this.thumbnailRef[5].offsetTop + (thumbnailHeight/2)) {
       this.setState({ currentThumbNum: 6 });
+      this.setState({nameMouseIsOver: false});
     }
   }
 
@@ -152,15 +162,69 @@ class Work extends Component {
     this.setState({mouseIsOver: -1});
   }
 
+  fromHtmlEntities(string) {
+    return (string+"").replace(/&#\d+;/gm,function(s) {
+      return String.fromCharCode(s.match(/\d+/gm)[0]);
+    })
+  };
+
+  nameHoverOverHandler() {
+    if (this.state.currentThumbNum === -1) {
+      // this.introNameRef.textContent += this.fromHtmlEntities("&#8599;");
+
+      // this.tl.to(this.introNameRef, {duration: 0.25, borderBottom: '5px solid #000', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+      this.setState({nameMouseIsOver: true});
+    }
+  }
+
+  nameHoverLeaveHandler() {
+    if (this.state.currentThumbNum === -1) {
+      // this.introNameRef.textContent = "RYAN FAN";
+
+      // this.tl.to(this.introNameRef, {duration: 0.25, borderBottom: '0px solid #000', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+
+      this.setState({nameMouseIsOver: false});
+    }
+  }
+
   renderIntroduction() {
     return (
       <div className="introduction-container" ref={div => this.introRef = div}>
         <div>
-          <span className="title-description" ref={span => this.descriptionRef = span}></span>
-          <h1 className="name" ref={h1 => this.introNameRef = h1}>RYAN FAN</h1>
+          <span
+            className="title-description"
+            style={{marginTop: this.state.titleDescY}}
+            ref={span => this.descriptionRef = span}
+          >
+          </span>
+           <Link
+             className="name-link"
+             style={this.state.currentThumbNum === -1 ? {pointerEvents: "auto"} : {pointerEvents: "none"}}
+             to={{
+               pathname: "/about",
+               state: {
+                 isFromLink: true
+               }
+             }}
+            >
+             <h1
+               // className="name"
+               className={this.state.nameMouseIsOver ? "name name-mouse-over" : "name"}
+               ref={h1 => this.introNameRef = h1}
+               onMouseOver={() => this.nameHoverOverHandler()}
+               onMouseLeave={() => this.nameHoverLeaveHandler()}
+             >
+               RYAN FAN
+             </h1>
+           </Link>
+
         </div>
 
-        <div className="skill-wrapper" ref={div => this.skillRef = div}>
+        <div
+          // className="skill-wrapper"
+          className={this.state.nameMouseIsOver ? "skill-wrapper name-mouse-over" : "skill-wrapper"}
+          ref={div => this.skillRef = div}
+        >
           <div>
             <h2>DESIGN DIGITAL PRODUCTS</h2>
             <h2>DEVELOP SOFTWARE</h2>
@@ -178,7 +242,6 @@ class Work extends Component {
     return (
       <div
         className={this.state.currentThumbNum === index ? "thumbnail-container page-enter" : "thumbnail-container"}
-        // className="thumbnail-container"
         style={{marginBottom: bottom}}
         ref={div => this.thumbnailRef[index] = div}
         onMouseOver={() => this.imgHoverOverHandler(index)}

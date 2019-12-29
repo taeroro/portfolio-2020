@@ -17,16 +17,32 @@
     font-weight: 400;
     color: rgba(0, 0, 0, 0.2); }
   .introduction-container .name {
+    display: inline-block;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 200px;
     font-weight: 700;
     color: #000;
-    margin: 15vh 40px 0; }
+    margin: 15vh 40px 0;
+    border-bottom: 0px solid #0000FF;
+    transform: translateX(0);
+    transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-property: border-bottom, transform;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none; }
+  .introduction-container .name.name-mouse-over {
+    border-bottom: 10px solid #0000FF;
+    transform: translateX(-10px);
+    cursor: pointer !important; }
   .introduction-container .skill-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: 0 40px 0 40px; }
+    margin: 0 40px 0 40px;
+    opacity: 1;
+    transition: opacity 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
     .introduction-container .skill-wrapper div {
       display: flex;
       flex-direction: column;
@@ -37,7 +53,14 @@
       font-size: 42px;
       font-weight: 400;
       color: #000;
-      margin: 0; }
+      margin: 0;
+      user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -o-user-select: none; }
+  .introduction-container .skill-wrapper.name-mouse-over {
+    opacity: 0.2 !important; }
 
 .thumbnail-feed {
   display: flex;
@@ -51,17 +74,35 @@
   width: 80%;
   height: 63vh;
   overflow: hidden;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
   .thumbnail-container img[class^="thumbnail-img-"] {
     width: 100%;
     object-fit: cover;
     filter: saturate(0%);
     opacity: 0.2;
-    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none; }
   .thumbnail-container .thumbnail-img-0 {
-    transform: translateY(-18%); }
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    transform: translateY(5vh); }
   .thumbnail-container .thumbnail-img-1 {
-    transform: translateY(-25%); }
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    transform: translateY(5vh); }
   .thumbnail-container img[class^="thumbnail-img-"].mouse-over {
     filter: saturate(100%);
     opacity: 0.7; }
