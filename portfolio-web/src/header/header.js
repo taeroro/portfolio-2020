@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './header.css';
+import { Link, withRouter } from "react-router-dom";
 
 const logo_path = './logo-new.svg';
 
@@ -8,8 +9,17 @@ export default class Header extends Component {
     super(props);
 
     this.state = {
-      path: "",
+      path: "/",
     };
+  }
+
+  componentWillMount() {
+    this.setState({ path: this.props.location.pathname });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ path: nextProps.location.pathname });
+    console.log(nextProps.location.pathname);
   }
 
   render() {
@@ -22,15 +32,15 @@ export default class Header extends Component {
             </a>
           </div>
 
-          {
-            this.state.path !== ""
-            &&
-            <div className="back-button">
-              <a href="">
-                &#8598; BACK
-              </a>
-            </div>
-          }
+          <div className={this.state.path === "/" ? "back-button hide-button" : "back-button"}>
+            <Link
+              className="back-link"
+              to={{pathname: "/"}}
+             >
+              &#8598; BACK
+            </Link>
+          </div>
+
         </div>
       </nav>
     );

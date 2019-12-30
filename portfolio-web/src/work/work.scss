@@ -15,7 +15,7 @@
   .title-description {
     position: absolute;
     margin: 0 0 0 40px;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 24px;
     font-weight: 400;
     color: rgba(0,0,0,0.2);
@@ -24,7 +24,7 @@
 
   .name {
     display: inline-block;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 200px;
     font-weight: 700;
     color: #000;
@@ -43,7 +43,7 @@
   }
 
   .name.name-mouse-over {
-    border-bottom: 10px solid #0000FF;
+    border-bottom: 15px solid #0000FF;
     transform: translateX(-10px);
     cursor: pointer !important;
   }
@@ -64,7 +64,7 @@
 
     h2 {
       display: inline-block;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Helvetica Neue', 'Arial', sans-serif;
       font-size: 42px;
       font-weight: 400;
       color: #000;

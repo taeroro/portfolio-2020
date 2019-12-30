@@ -8,31 +8,23 @@
 
 .name {
   display: inline-block;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
   font-size: 200px;
   font-weight: 700;
   color: #000;
   margin: 15vh 40px 0;
 
-  // border-bottom: 0px solid #0000FF;
   transform: translateX(0);
   transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition-property: border-bottom, transform;
-
-  user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
+  transition-property: transform;
 }
 
 .name.name-mouse-over {
-  // border-bottom: 10px solid #0000FF;
   transform: translateX(-10px);
 }
 
 .bio {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
   font-size: 24px;
   font-weight: 300;
   color: #000;

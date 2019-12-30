@@ -11,9 +11,7 @@ export default class About extends Component {
     this.state = {
       path: "",
       nameMouseIsOver: true,
-      // nameMouseIsOver: false,
     };
-    // TODO: remove top
 
     this.tl = gsap.timeline();
     gsap.registerPlugin(TextPlugin);
@@ -26,13 +24,14 @@ export default class About extends Component {
     if (this.props.location.state && this.props.location.state.isFromLink) {
       setTimeout(() => {
         this.setState({ nameMouseIsOver: false });
+        this.tl.to(this.bioRef, {duration: 0.5, opacity: 1, y: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "+=0.25");
       }, 250);
     }
     else {
       this.setState({ nameMouseIsOver: false });
     }
 
-    this.tl.to(this.bioRef, {duration: 0.5, opacity: 1, y: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+    // this.tl.to(this.bioRef, {duration: 0.5, opacity: 1, y: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
   }
 
 
@@ -51,7 +50,7 @@ export default class About extends Component {
         </div>
 
         <p className="bio" ref={p => this.bioRef = p}>
-          is a digital product designer and engineer with a concentration in the practice of user experience design. He holds a Bachelor of Science degree in Computer Science from Purdue University - 2019, and attaining a Masters of Professional Studies degree in Communication Design at Parsons School of Design - 2020.
+          is a digital product designer and engineer with a concentration in the practice of user experience design. He holds a Bachelor of Science degree in Computer Science from Purdue University(2019), and attaining a Masters of Professional Studies degree in Communication Design at Parsons School of Design(2020).
           <br /><br />
           With the rapidly growing demand in digital product design, he stands at the intersection of design and engineering, positioning himself as the liaison of cooperating these interdisciplinary fields together to facilitate and create thoughtful user experience of the digital products.
         </p>

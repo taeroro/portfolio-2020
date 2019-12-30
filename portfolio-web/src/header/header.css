@@ -8,7 +8,8 @@
   display: inline-block;
   width: calc(100% - 80px);
   height: 55px;
-  padding: 25px 40px; }
+  padding: 25px 40px;
+  text-align: center; }
   .header-desktop .logo-wrapper {
     position: absolute;
     float: left; }
@@ -21,16 +22,24 @@
   .header-desktop .back-button {
     display: inline-block;
     opacity: 0.2;
-    transition: opacity 0.25s;
+    transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
     height: 55px;
-    line-height: 55px; }
+    line-height: 55px;
+    border-bottom: 0px solid #0000FF;
+    transform: translateX(0);
+    pointer-events: auto; }
     .header-desktop .back-button a {
       display: inline-block;
       color: inherit;
       text-decoration: none;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Helvetica Neue', 'Arial', sans-serif;
       font-size: 36px; }
   .header-desktop .back-button:hover {
-    opacity: 1; }
+    opacity: 1;
+    border-bottom: 5px solid #0000FF;
+    transform: translateX(-5%); }
+  .header-desktop .back-button.hide-button {
+    opacity: 0;
+    pointer-events: none; }
 
 /*# sourceMappingURL=header.css.map */
