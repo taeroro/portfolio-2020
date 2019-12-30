@@ -162,20 +162,21 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 70px;
+  width: 60px;
   top: 0;
   right: 0;
   background-color: #000000;
   opacity: 0.8;
 
   transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transform: translateX(70px);
+  transform: translateX(60px);
 
   span {
      font-family: 'Helvetica Neue', 'Arial', sans-serif;
      font-size: 18px;
      font-weight: 400;
      color: #FFF;
+     white-space: nowrap;
 
      transform: rotate(90deg);
      transform-origin: 50% 50%;

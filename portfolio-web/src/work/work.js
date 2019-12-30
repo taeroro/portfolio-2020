@@ -112,6 +112,7 @@ class Work extends Component {
   updateWindowDimensions() {
     this.setState({
       introHeight: this.introRef.clientHeight + 105,
+      titleDescY: window.getComputedStyle(this.introNameRef).getPropertyValue('margin-top'),
     });
   }
 
