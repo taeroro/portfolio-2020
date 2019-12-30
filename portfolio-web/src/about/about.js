@@ -70,6 +70,8 @@ export default class About extends Component {
             <a href="https://github.com/taeroro" target="_blank">Github</a>
           </div>
         </div>
+
+        {/* <p className="copyright">© 2020 ZUYUAN FAN. ALL RIGHTS RESERVED.</p> */}
       </div>
     );
   }

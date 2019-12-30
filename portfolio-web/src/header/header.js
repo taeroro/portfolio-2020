@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './header.css';
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const logo_path = './logo-new.svg';
+const logo_path = '/logo-new.svg';
 
 export default class Header extends Component {
   constructor(props) {
@@ -19,7 +19,6 @@ export default class Header extends Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState({ path: nextProps.location.pathname });
-    console.log(nextProps.location.pathname);
   }
 
   render() {

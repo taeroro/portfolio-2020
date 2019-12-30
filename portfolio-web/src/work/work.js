@@ -112,13 +112,12 @@ class Work extends Component {
   updateWindowDimensions() {
     this.setState({
       introHeight: this.introRef.clientHeight + 105,
-      // thumbMarginBottom: window.getComputedStyle(this.thumbnailRef).getPropertyValue('margin-bottom')
     });
   }
 
   updateScroll() {
     let thumbnailHeight = this.thumbnailRef[0].clientHeight;
-    let thumbnailBottom = window.getComputedStyle(this.thumbnailRef[0]).getPropertyValue('margin-bottom');
+    // let thumbnailBottom = window.getComputedStyle(this.thumbnailRef[0]).getPropertyValue('margin-bottom');
     let offset1 = thumbnailHeight - (window.innerHeight - this.placeholderRef.clientHeight);
 
     if (window.pageYOffset < offset1) {
@@ -162,27 +161,23 @@ class Work extends Component {
     this.setState({mouseIsOver: -1});
   }
 
-  fromHtmlEntities(string) {
-    return (string+"").replace(/&#\d+;/gm,function(s) {
-      return String.fromCharCode(s.match(/\d+/gm)[0]);
-    })
-  };
+  imgOnClick(index) {
+    if (index !== 6) {
+      this.props.history.push('/work/' + index);
+    }
+    else {
+      window.open("https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a", '_blank');
+    }
+  }
 
   nameHoverOverHandler() {
     if (this.state.currentThumbNum === -1) {
-      // this.introNameRef.textContent += this.fromHtmlEntities("&#8599;");
-
-      // this.tl.to(this.introNameRef, {duration: 0.25, borderBottom: '5px solid #000', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
       this.setState({nameMouseIsOver: true});
     }
   }
 
   nameHoverLeaveHandler() {
     if (this.state.currentThumbNum === -1) {
-      // this.introNameRef.textContent = "RYAN FAN";
-
-      // this.tl.to(this.introNameRef, {duration: 0.25, borderBottom: '0px solid #000', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-
       this.setState({nameMouseIsOver: false});
     }
   }
@@ -241,18 +236,33 @@ class Work extends Component {
 
     return (
       <div
-        className={this.state.currentThumbNum === index ? "thumbnail-container page-enter" : "thumbnail-container"}
+        className={
+          this.state.mouseIsOver === index
+          ? "thumbnail-container mouse-over"
+          : "thumbnail-container"
+        }
         style={{marginBottom: bottom}}
         ref={div => this.thumbnailRef[index] = div}
         onMouseOver={() => this.imgHoverOverHandler(index)}
         onMouseLeave={() => this.imgHoverLeaveHandler(index)}
+        onClick={() => this.imgOnClick(index)}
       >
         <img
           className={this.state.mouseIsOver === index ? imgClass + "mouse-over" : imgClass}
           src={mockup_img_path[index]}
-          alt="thumbnail image"
+          alt="thumbnail"
           ref={img => this.imgRef[index] = img}
         />
+
+        <div
+          className={
+            this.state.mouseIsOver === index
+            ? "open-bar-container mouse-over"
+            : "open-bar-container"
+          }
+        >
+          <span>&#8593; OPEN</span>
+        </div>
       </div>
     );
   }

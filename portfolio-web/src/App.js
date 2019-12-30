@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header {...this.props} />
-        <Menu />
+        <Menu {...this.props} />
         <Routes />
       </div>
     );

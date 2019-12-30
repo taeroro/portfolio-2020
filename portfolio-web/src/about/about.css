@@ -53,4 +53,9 @@
     color: #FFF;
     background-color: blue; }
 
+.copyright {
+  margin-top: 10vh;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  opacity: 0.5; }
+
 /*# sourceMappingURL=about.css.map */

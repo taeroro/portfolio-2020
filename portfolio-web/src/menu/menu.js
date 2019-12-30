@@ -9,7 +9,7 @@ export default class Menu extends Component {
     super(props);
 
     this.state = {
-      path: "",
+      path: "/",
       isMenuExpanded: false,
       windowWidth: 0,
       windowHeight: 0,
@@ -17,7 +17,7 @@ export default class Menu extends Component {
 
     this.tl = gsap.timeline();
     gsap.registerPlugin(TextPlugin);
-    
+
     this.menuRef = null;
     this.menuOverlayRef = null;
     this.rt1Ref = null;
@@ -34,6 +34,14 @@ export default class Menu extends Component {
     window.addEventListener('resize', this.updateWindowDimensions);
 
     this.tl.set([this.rt1Ref, this.rt2Ref, this.rt3Ref], {transformOrigin: "50% 50%"});
+  }
+
+  componentWillMount() {
+    this.setState({ path: this.props.location.pathname });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ path: nextProps.location.pathname });
   }
 
   componentWillUnmount() {
@@ -61,8 +69,8 @@ export default class Menu extends Component {
       this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0.7', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
     }
     else {
-      this.tl.to(this.menuRef, {duration: 0.5, boxShadow: '-10px 0px 20px rgba(0,0,0,0.0)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-      this.tl.to(this.menuRef, {duration: 0.5, width: '70px', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      this.tl.to(this.menuRef, {duration: 0, boxShadow: '-10px 0px 20px rgba(0,0,0,0.0)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+      this.tl.to(this.menuRef, {duration: 0.5, width: '70px', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
       this.tl.set(this.menuOverlayRef, {pointerEvents: "none"});
       this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
 
@@ -88,7 +96,14 @@ export default class Menu extends Component {
           onClick={this.state.isMenuExpanded ? this.toggleMenu: () => {}}>
         </div>
         <div
-          className="menu-container"
+          // className="menu-container"
+          className={
+            this.state.path.match(/.*work.+/)
+            ?
+              !this.state.isMenuExpanded ? "menu-container menu-compact" : "menu-container menu-compact compact-expand"
+            :
+              "menu-container"
+          }
           ref={div => this.menuRef = div}
         >
           <div className="menu-button-wrapper">

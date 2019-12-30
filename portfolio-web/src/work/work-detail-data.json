@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "title": "FOCUSED.",
+    "category": "DIGITAL PRODUCT DESIGN",
+    "thumbnail_image_path": "/work/focused/focused-mockup.jpg"
+  },
+  {
+    "id": 1,
+    "title": "αPARK",
+    "category": "DIGITAL PRODUCT DESIGN",
+    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg"
+  },
+  {
+    "id": 2,
+    "title": "JAZZIN",
+    "category": "BRAND DESIGN & DIGITAL PRODUCT DESIGN",
+    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg"
+  },
+  {
+    "id": 3,
+    "title": "THE ANVIL",
+    "category": "DIGITAL PRODUCT DESIGN",
+    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg"
+  },
+  {
+    "id": 4,
+    "title": "YINTECH LABS",
+    "category": "SOFTWARE DEVELOPMENT & DIGITAL PRODUCT DESIGN",
+    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg"
+  },
+  {
+    "id": 5,
+    "title": "FACES OF THE PORTRAITS",
+    "category": "DESIGN AND TECHNOLOGY",
+    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg"
+  }
+]
