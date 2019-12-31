@@ -51,9 +51,12 @@ class Work extends Component {
       currentThumbNum: -1,
       titleDescY: window.getComputedStyle(this.introNameRef).getPropertyValue('margin-top'),
     });
+
+    console.log("hi");
   }
 
   componentWillUnmount() {
+    console.log("bye");
     window.removeEventListener('resize', this.updateWindowDimensions);
     window.removeEventListener('scroll', this.updateScroll);
   }
@@ -164,10 +167,39 @@ class Work extends Component {
 
   imgOnClick(index) {
     if (index !== 6) {
-      this.props.history.push('/work/' + index);
+      this.setState(
+        {mouseIsOver: -1},
+        () => {
+          setTimeout(() => {
+            let x = this.thumbnailRef[index].getBoundingClientRect().left;
+            let y = this.thumbnailRef[index].getBoundingClientRect().top;
+            let h = this.thumbnailRef[index].clientHeight;
+            let w = this.thumbnailRef[index].clientWidth;
+
+            console.log(x + ', ' + y + ' || ' + h + ', ' + w);
+            
+            this.props.history.push({
+              pathname: '/work/' + index,
+              state: {
+                thumbnailPosX: x,
+                thumbnailPosY: y,
+                thumbnailHeight: h,
+                thumbnailWidth: w
+              }
+            });
+          }, 500);
+        }
+      );
     }
     else {
-      window.open("https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a", '_blank');
+      this.setState(
+        {mouseIsOver: -1},
+        () => {
+          setTimeout(() => {
+            window.open("https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a", '_blank');
+          }, 500);
+        }
+      )
     }
   }
 

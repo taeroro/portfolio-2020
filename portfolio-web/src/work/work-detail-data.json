@@ -3,7 +3,39 @@
     "id": 0,
     "title": "FOCUSED.",
     "category": "DIGITAL PRODUCT DESIGN",
-    "thumbnail_image_path": "/work/focused/focused-mockup.jpg"
+    "thumbnail_image_path": "/work/focused/focused-mockup.jpg",
+    "content": [
+      {
+        "content_id": 0,
+        "content_title": "objective",
+        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+      },
+      {
+        "content_id": 1,
+        "content_title": "design process",
+        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+      },
+      {
+        "content_id": 2,
+        "content_title": "research",
+        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+      },
+      {
+        "content_id": 3,
+        "content_title": "wireframe",
+        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+      },
+      {
+        "content_id": 4,
+        "content_title": "ui kit",
+        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+      },
+      {
+        "content_id": 5,
+        "content_title": "prototype",
+        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+      }
+    ]
   },
   {
     "id": 1,

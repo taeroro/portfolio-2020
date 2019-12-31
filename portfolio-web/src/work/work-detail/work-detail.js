@@ -32,6 +32,12 @@ export default class WorkDetail extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.updateWindowDimensions);
+    window.addEventListener('scroll', this.updateScroll);
+
+    if (this.props.location.state) {
+      console.log(this.props.location.state);
+      // TODO: animation
+    }
 
     const index = this.props.match.params.id;
 
@@ -44,13 +50,12 @@ export default class WorkDetail extends Component {
       this.setState({
         titleDescHeight: this.descriptionRef.clientHeight
       })
-
-      console.log(this.descriptionRef.clientHeight);
     }, 1);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateWindowDimensions);
+    window.removeEventListener('scroll', this.updateScroll);
   }
 
   updateWindowDimensions() {
@@ -59,13 +64,15 @@ export default class WorkDetail extends Component {
     });
   }
 
+  updateScroll() {
+
+  }
 
   renderFixedContent() {
     const title = this.state.dataObj && this.state.dataObj.title;
     const category = this.state.dataObj && this.state.dataObj.category;
 
     let calcTop = parseInt(this.state.titleDescY, 10) - (this.state.titleDescHeight*0.9);
-    console.log(calcTop);
 
     return (
       <div className="introduction-container detail-page">
@@ -86,14 +93,14 @@ export default class WorkDetail extends Component {
     );
   }
 
-  renderContent0() {
+  renderThumbnail() {
     const imgPath = this.state.dataObj && this.state.dataObj.thumbnail_image_path;
 
-    if (this.state.dataObj)
-      console.log(this.state.dataObj.thumbnail_image_path);
+    // if (this.state.dataObj)
+    //   console.log(this.state.dataObj.thumbnail_image_path);
 
     return (
-      <div className="content-0">
+      <div className="thumbnail-wrapper">
         <div className="img-wrapper">
           <img
             className="thumbnail-img"
@@ -105,10 +112,11 @@ export default class WorkDetail extends Component {
     );
   }
 
-  renderContent1() {
+  renderContent(content) {
     return (
-      <div className="content-1">
-        BLAHBLAH
+      <div className={"content-" + content.content_id} key={content.content_id}>
+        <h2>{content.content_title}</h2>
+        <p>{content.content_data}</p>
       </div>
     );
   }
@@ -117,8 +125,13 @@ export default class WorkDetail extends Component {
     return (
       <div className="work-detail-container">
         {this.renderFixedContent()}
-        {this.renderContent0()}
-        {this.renderContent1()}
+        {this.renderThumbnail()}
+        {
+          this.state.dataObj && this.state.dataObj.content &&
+          this.state.dataObj.content.map((item, index) => {
+            return this.renderContent(item);
+          })
+        }
       </div>
     );
   }
