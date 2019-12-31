@@ -7,33 +7,89 @@
     "content": [
       {
         "content_id": 0,
-        "content_title": "objective",
-        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+        "content_title": "overview",
+        "content_data_type": "text-complex",
+        "content_data": {
+            "role": "Designer (Graduate Studies)",
+            "affiliation": "MPS Communication Design Program at Parsons School of Design",
+            "category": "Digital Product Design\nUX Design",
+            "collaborators": "None (Individual Project)",
+            "platform": "Mobile",
+            "deliverables": "High-fidelity prototype\nFinal presentation",
+            "timeline": "Nov 2019 - Dec 2019, 5 weeks",
+            "_details": "For this project, we were given the prompt to use the principle of human-centered design to design a digital product which attempts to reduce a user’s engagement with a specific product, service, or platform.\n\nI, as a road-trip enthusiast, am aware of the seriousness and the consequences of distracted driving (text-and-drive to be exact), decided to design a mobile-based experience/digital product to reduce the chances of driver’s getting distracted by their phones."
+        }
       },
       {
         "content_id": 1,
-        "content_title": "design process",
-        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+        "content_title": "objective",
+        "content_data_type": "text-plain",
+        "content_data": "Focused helps drivers stay focused on the road by eliminating distractions on their mobile phones."
       },
       {
         "content_id": 2,
-        "content_title": "research",
-        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+        "content_title": "design process",
+        "content_data_type": "image-single",
+        "content_data": "/work/focused/design_process.png"
       },
       {
         "content_id": 3,
-        "content_title": "wireframe",
-        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+        "content_title": "research",
+        "content_data_type": "text-complex",
+        "content_data": {
+          "_research0": "1/4 car accidents is caused by texting and driving",
+          "_research1": "Text & drive is 6x more likely to cause an accident than DUI",
+          "_research2": "94% of teen drivers acknowledge the dangers of text & drive, but 35% admitted to doing it anyway",
+          "_details": "Above is the part of the research I’ve done, looking at these numbers, I couldn’t stop thinking about what are the possible ways to keep drivers away from their phones.\n\nWith the rising of nomophobia(no-mobile-phone phobia) among population, smart phones are becoming more and more addictive, users could be checking their phone subconsciously, so I decided to use some “hard-core“ design to stop this addiction.\n\nI ran through the knowledge I have in software engineering, found a feature which can be used by developers called the single application mode, which allows the phone to lock on specific apps, the user cannot see incoming notifications or go back to the home screen and open another app.\n\nI could apply this technology into this product, so the users have less chance to get distracted by their phones."
+        }
       },
       {
         "content_id": 4,
-        "content_title": "ui kit",
-        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+        "content_title": "brainstorm",
+        "content_data_type": "image-single",
+        "content_data": ""
       },
       {
         "content_id": 5,
+        "content_title": "wireframe",
+        "content_data_type": "mixed-image",
+        "content_data": {
+          "text": "After making my thoughts clear and figuring out what the direction and the flow of this product’s experience, I came up with the wireframes.",
+          "image0": "",
+          "image1": "",
+          "image2": "",
+          "image3": "",
+          "image4": ""
+        }
+      },
+      {
+        "content_id": 6,
+        "content_title": "ui kit",
+        "content_data_type": "image-multi",
+        "content_data": {
+          "image0": "",
+          "image1": "",
+          "image2": "",
+          "image3": ""
+        }
+      },
+      {
+        "content_id": 7,
         "content_title": "prototype",
-        "content_data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros est, semper quis ante id, molestie congue lacus. In porttitor metus a bibendum tempor. Vivamus egestas dolor quis iaculis tincidunt. Phasellus mollis ut nibh vel laoreet. Quisque posuere cursus diam. In nec aliquet ante, et suscipit est. In orci ex, tincidunt vitae volutpat at, egestas sit amet nibh. Maecenas in tellus massa. Curabitur ultricies dapibus elit vel tristique."
+        "content_data_type": "video",
+        "content_data": {
+          "onboarding": "",
+          "driving": "",
+          "break": "",
+          "summary": "",
+          "activity": ""
+        }
+      },
+      {
+        "content_id": 8,
+        "content_title": "summary",
+        "content_data_type": "text-plain",
+        "content_data": "In this project, I primarily focused on the animation and finding out the visual solution to incorporate driving speed with color saturation, instead of finding out the visual style I want to achieve.\n\nIn the future, I would love to spend more time finding more visual references, creating mood-board to redesign the visual style of this digital product, will have the potential to attract more users.\n\nOverall, I really appreciate this project opportunity provided by Brendan Griffith, and the help from my talented friends."
       }
     ]
   },

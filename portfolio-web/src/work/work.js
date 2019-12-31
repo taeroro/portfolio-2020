@@ -177,7 +177,7 @@ class Work extends Component {
             let w = this.thumbnailRef[index].clientWidth;
 
             console.log(x + ', ' + y + ' || ' + h + ', ' + w);
-            
+
             this.props.history.push({
               pathname: '/work/' + index,
               state: {

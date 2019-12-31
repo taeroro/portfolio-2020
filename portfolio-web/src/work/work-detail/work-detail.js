@@ -113,11 +113,85 @@ export default class WorkDetail extends Component {
   }
 
   renderContent(content) {
+    if (content.content_id === 0) {
+      let keyArray = Object.keys(content.content_data);
+      let length = keyArray.length;
+      let data = content.content_data;
+
+      // TODO: finish this
+      console.log(keyArray[0]);
+      console.log(data[keyArray[0]]);
+    }
+
     return (
       <div className={"content-" + content.content_id} key={content.content_id}>
         <h2>{content.content_title}</h2>
-        <p>{content.content_data}</p>
+        {this.renderDetailedContent(content)}
       </div>
+    );
+  }
+
+  renderDetailedContent(content) {
+    let type = content.content_data_type;
+
+    switch (type) {
+      case "text-plain":
+        return (
+          <div className="data-wrapper">
+            <p
+              className={content.content_title === "objective" ? "text-objective" : ""}
+            >
+              {content.content_data}
+            </p>
+          </div>
+        );
+
+        case "text-complex":
+          if (content.content_title === "overview") {
+            return (
+              <div className="data-wrapper">
+                
+              </div>
+            );
+          }
+          break;
+
+        case "image-single":
+          return (
+            <div className="data-wrapper">
+
+            </div>
+          );
+
+        case "image-multi":
+          return (
+            <div className="data-wrapper">
+
+            </div>
+          );
+
+        case "mixed-image":
+          return (
+            <div className="data-wrapper">
+
+            </div>
+          );
+
+        case "video":
+          return (
+            <div className="data-wrapper">
+
+            </div>
+          );
+
+      default:
+        return (
+          <div></div>
+        );
+    }
+
+    return (
+      <div></div>
     );
   }
 
