@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import TextPlugin from "gsap/TextPlugin";
 
 const mockup_img_path = [
-  './work/focused/focused-mockup.jpg',
+  './work/focused/focused_mockup.jpg',
   './work/apark/small_apark_rendered-01.jpg',
   './work/apark/small_apark_rendered-01.jpg',
   './work/apark/small_apark_rendered-01.jpg',

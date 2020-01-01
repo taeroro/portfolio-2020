@@ -113,16 +113,6 @@ export default class WorkDetail extends Component {
   }
 
   renderContent(content) {
-    if (content.content_id === 0) {
-      let keyArray = Object.keys(content.content_data);
-      let length = keyArray.length;
-      let data = content.content_data;
-
-      // TODO: finish this
-      console.log(keyArray[0]);
-      console.log(data[keyArray[0]]);
-    }
-
     return (
       <div className={"content-" + content.content_id} key={content.content_id}>
         <h2>{content.content_title}</h2>
@@ -147,39 +137,208 @@ export default class WorkDetail extends Component {
         );
 
         case "text-complex":
+          let keyArray = Object.keys(content.content_data);
+          let data = content.content_data;
+
           if (content.content_title === "overview") {
             return (
               <div className="data-wrapper">
-                
+                {
+                  keyArray.map((item, index) => {
+                    if (keyArray[index].startsWith("_")) {
+                      return (
+                        <p key={index} className="overview-p">
+                          {data[keyArray[index]]}
+                        </p>
+                      );
+                    }
+                    else {
+                      return (
+                        <dl key={index} className="overview-dl">
+                          <dt>{keyArray[index]}</dt>
+                          <dd>{data[keyArray[index]]}</dd>
+                        </dl>
+                      );
+                    }
+                  })
+                }
               </div>
             );
           }
-          break;
+          else if (content.content_title === "research") {
+            return (
+              <div className="data-wrapper">
+                {
+                  keyArray.map((item, index) => {
+                    if (item.includes("details")) {
+                      return (
+                        <p className="research-detail" key={index}>
+                          {data[keyArray[index]]}
+                        </p>
+                      );
+                    }
+                    else {
+                      return (
+                        <p className="research-quote" key={index}>
+                          &#9657; {data[keyArray[index]]}
+                        </p>
+                      );
+                    }
+                  })
+                }
+              </div>
+            );
+          }
+
+          return (
+            <div className="data-wrapper">
+            </div>
+          );
 
         case "image-single":
           return (
             <div className="data-wrapper">
-
+              <img src={content.content_data} className="image-single" alt="image" />
             </div>
           );
 
         case "image-multi":
+          let keyArray1 = Object.keys(content.content_data);
+          let data1 = content.content_data;
           return (
             <div className="data-wrapper">
-
+              {
+                keyArray1.map((item, index) => {
+                  return (
+                    <div className="image-multi-wrapper">
+                      <img
+                        className="image-single multi"
+                        src={data1[keyArray1[index]]}
+                        alt="image"
+                        key={index}
+                      />
+                      {
+                        index !== keyArray1.length - 1 &&
+                        <div className="divider"></div>
+                      }
+                    </div>
+                  )
+                })
+              }
             </div>
           );
 
         case "mixed-image":
+          let keyArray0 = Object.keys(content.content_data);
+          let data0 = content.content_data;
+          let imageIndex = [];
+          let rowCount = 0;
+
+          for (let i = 0; i < keyArray0.length; i++) {
+            if (keyArray0[i].includes("image"))
+              imageIndex.push(i);
+          }
+          rowCount = imageIndex.length % 3;
+
+          if (content.content_title === "wireframe") {
+            return (
+              <div className="data-wrapper">
+                {
+                  keyArray0.map((item, index) => {
+                    if (item.includes("text")) {
+                      return (
+                        <p key={index}>
+                          {data0[keyArray0[index]]}
+                        </p>
+                      );
+                    }
+                  })
+                }
+                <div className="flex-wrapper dark-mode">
+                  <div className="flex-row">
+                    {
+                      imageIndex.length > 0 &&
+                      imageIndex.map((item, index) => {
+                        return (
+                          <div className="flex-column" key={index}>
+                            <img
+                              className={"wireframe-image" + item}
+                              src={data0[keyArray0[item]]}
+                              key={index}
+                            />
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
+                </div>
+              </div>
+            );
+          }
+
+          else if (content.content_title === "brainstorm") {
+            return (
+              <div className="data-wrapper">
+                {
+                  keyArray0.map((item, index) => {
+                    if (item.includes("text")) {
+                      return (
+                        <p className="brainstorm-p" key={index}>
+                          {data0[keyArray0[index]]}
+                        </p>
+                      )
+                    }
+                    else {
+                      return (
+                        <img
+                          className="image-single"
+                          src={data0[keyArray0[index]]}
+                          alt="image"
+                          key={index}
+                        />
+                      )
+                    }
+                  })
+                }
+              </div>
+            );
+          }
+
           return (
             <div className="data-wrapper">
-
             </div>
           );
 
         case "video":
+          let keyArray2 = Object.keys(content.content_data);
+          let data2 = content.content_data;
+
           return (
             <div className="data-wrapper">
+              {
+                keyArray2.map((item, index) => {
+                  if (item.includes("text")) {
+                    return (
+                      <p className="video-p">
+                        &#9657; {data2[keyArray2[index]]}
+                      </p>
+                    )
+                  }
+                  else if (item.includes("vid")) {
+                    return (
+                      <div>
+                        <div className="video-wrapper">
+                          <iframe src={data2[keyArray2[index]]} frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        </div>
+                        {
+                          index !== keyArray2.length - 1 &&
+                          <div className="divider"></div>
+                        }
+                      </div>
+                    )
+                  }
+                })
+              }
 
             </div>
           );

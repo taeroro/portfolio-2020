@@ -3,10 +3,16 @@
     "id": 0,
     "title": "FOCUSED.",
     "category": "DIGITAL PRODUCT DESIGN",
-    "thumbnail_image_path": "/work/focused/focused-mockup.jpg",
+    "thumbnail_image_path": "/work/focused/focused_mockup.jpg",
     "content": [
       {
         "content_id": 0,
+        "content_title": "objective",
+        "content_data_type": "text-plain",
+        "content_data": "Focused helps drivers stay focused on the road by eliminating distractions on their mobile phones."
+      },
+      {
+        "content_id": 1,
         "content_title": "overview",
         "content_data_type": "text-complex",
         "content_data": {
@@ -21,12 +27,6 @@
         }
       },
       {
-        "content_id": 1,
-        "content_title": "objective",
-        "content_data_type": "text-plain",
-        "content_data": "Focused helps drivers stay focused on the road by eliminating distractions on their mobile phones."
-      },
-      {
         "content_id": 2,
         "content_title": "design process",
         "content_data_type": "image-single",
@@ -37,29 +37,32 @@
         "content_title": "research",
         "content_data_type": "text-complex",
         "content_data": {
-          "_research0": "1/4 car accidents is caused by texting and driving",
-          "_research1": "Text & drive is 6x more likely to cause an accident than DUI",
-          "_research2": "94% of teen drivers acknowledge the dangers of text & drive, but 35% admitted to doing it anyway",
-          "_details": "Above is the part of the research I’ve done, looking at these numbers, I couldn’t stop thinking about what are the possible ways to keep drivers away from their phones.\n\nWith the rising of nomophobia(no-mobile-phone phobia) among population, smart phones are becoming more and more addictive, users could be checking their phone subconsciously, so I decided to use some “hard-core“ design to stop this addiction.\n\nI ran through the knowledge I have in software engineering, found a feature which can be used by developers called the single application mode, which allows the phone to lock on specific apps, the user cannot see incoming notifications or go back to the home screen and open another app.\n\nI could apply this technology into this product, so the users have less chance to get distracted by their phones."
+          "quote0": "\"1/4 car accidents is caused by texting and driving\"",
+          "quote1": "\"Text & drive is 6x more likely to cause an accident than DUI\"",
+          "quote2": "\"94% of teen drivers acknowledge the dangers of text & drive, but 35% admitted to doing it anyway\"",
+          "details": "Looking at these numbers, I couldn’t stop thinking about what are the possible ways to keep drivers away from their phones.\n\nWith the rising of nomophobia(no-mobile-phone phobia) among population, smart phones are becoming more and more addictive, users could be checking their phone subconsciously, so I decided to use some “hard-core” design to stop this addiction.\n\nI ran through the knowledge I have in software engineering, found a feature which can be used by developers called the single application mode, which allows the phone to lock on specific apps, the user cannot see incoming notifications or go back to the home screen and open another app.\n\nI could apply this technology into this product, so the users have less chance to get distracted by their phones."
         }
       },
       {
         "content_id": 4,
         "content_title": "brainstorm",
-        "content_data_type": "image-single",
-        "content_data": ""
+        "content_data_type": "mixed-image",
+        "content_data": {
+            "image0": "/work/focused/focused_brainstorm.jpg",
+            "text0": "To encourage users/drivers to use Focused, I decided to use gamification by integrating a social system, a reward system and a map diary into this product. However, due to the time limit, I could not finish designing the medals for the reward system; which the reward system eventually get dropped from the features of the app.\n\nTo further reducing user engagement while driving, I decided to incorporate color saturation with traveling speed, the screen will become less saturated with colors when the vehicle is traveling faster."
+          }
       },
       {
         "content_id": 5,
         "content_title": "wireframe",
         "content_data_type": "mixed-image",
         "content_data": {
-          "text": "After making my thoughts clear and figuring out what the direction and the flow of this product’s experience, I came up with the wireframes.",
-          "image0": "",
-          "image1": "",
-          "image2": "",
-          "image3": "",
-          "image4": ""
+          "text0": "After making my thoughts clear and figuring out what the direction and the flow of this product’s experience, I came up with the wireframes (low-fidelity prototype).",
+          "image0": "/work/focused/1_Home.png",
+          "image1": "/work/focused/2_Driving_with_Nav.png",
+          "image2": "/work/focused/3_Summary.png",
+          "image3": "/work/focused/4_Leaderboard.png",
+          "image4": "/work/focused/6_Map.png"
         }
       },
       {
@@ -67,10 +70,10 @@
         "content_title": "ui kit",
         "content_data_type": "image-multi",
         "content_data": {
-          "image0": "",
-          "image1": "",
-          "image2": "",
-          "image3": ""
+          "color": "/work/focused/uikit_0.png",
+          "type": "/work/focused/uikit_1.png",
+          "detail": "/work/focused/uikit_2.png",
+          "_detail": "/work/focused/uikit_3.png"
         }
       },
       {
@@ -78,11 +81,12 @@
         "content_title": "prototype",
         "content_data_type": "video",
         "content_data": {
-          "onboarding": "",
-          "driving": "",
-          "break": "",
-          "summary": "",
-          "activity": ""
+          "text0": "Introduction & Onboarding",
+          "vid0": "https://player.vimeo.com/video/382318276?title=0&byline=0&portrait=0",
+          "text1": "Driving",
+          "vid1": "https://player.vimeo.com/video/382318281?title=0&byline=0&portrait=0",
+          "text2": "Summary & Achievement",
+          "vid2": "https://player.vimeo.com/video/382318286?title=0&byline=0&portrait=0"
         }
       },
       {
