@@ -6,9 +6,9 @@ import gsap from 'gsap';
 import TextPlugin from "gsap/TextPlugin";
 
 const mockup_img_path = [
+  './work/apark/small_apark_rendered-01.jpg',
   './work/focused/focused_mockup.jpg',
-  './work/apark/small_apark_rendered-01.jpg',
-  './work/apark/small_apark_rendered-01.jpg',
+  './work/jazzin/jazzin.svg',
   './work/apark/small_apark_rendered-01.jpg',
   './work/apark/small_apark_rendered-01.jpg',
   './work/apark/small_apark_rendered-01.jpg',
@@ -70,12 +70,12 @@ class Work extends Component {
           this.tl.to(this.descriptionRef, {duration: 0.25, text: ""}, "-=0.25");
           break;
         case 0:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "FOCUSED.", cursor: "default"});
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "αPARK", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 1:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "αPARK", cursor: "default"});
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "FOCUSED.", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;

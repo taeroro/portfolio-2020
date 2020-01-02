@@ -1,6 +1,108 @@
 [
   {
     "id": 0,
+    "title": "αPARK",
+    "category": "DIGITAL PRODUCT DESIGN",
+    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg",
+    "content": [
+      {
+        "content_id": 0,
+        "content_title": "objective",
+        "content_data_type": "text-plain",
+        "content_data": "αPark connects drivers looking for parking with parking space owners and businesses."
+      },
+      {
+        "content_id": 1,
+        "content_title": "overview",
+        "content_data_type": "text-complex",
+        "content_data": {
+            "role": "Designer (Graduate Studies)",
+            "affiliation": "MPS Communication Design Program at Parsons School of Design",
+            "category": "Digital Product Design\nUX Design",
+            "collaborators": "None (Individual Project)",
+            "platform": "Mobile",
+            "deliverables": "High-fidelity Prototype\nFinal Presentation",
+            "timeline": "Sep 2019 - Oct 2019",
+            "_details": "Parking has always not been easy. Looking at businesses like Airbnb which connect home owners with travelers, inspired me to design a similar experience but to solve the parking problem."
+        }
+      },
+      {
+        "content_id": 2,
+        "content_title": "design process",
+        "content_data_type": "image-single",
+        "content_data": "/work/apark/design_process.png"
+      },
+      {
+        "content_id": 3,
+        "content_title": "research",
+        "content_data_type": "text-complex",
+        "content_data": {
+          "quote0": "Existing Solutions & Problems",
+          "text0": "Before diving into the actual design process, I started looking for existing apps or solutions that has similar features; Pavemint and ParqEx are the two products that match with my idea. However, these apps have more or less some problematic user experience, sometimes confuses users. That’s why I decided to research and identify what the existing problems are, then improve the user experience of my product.",
+          "image0": "/work/apark/ParqEx.jpg",
+          "desc0": "For instance, ParqEx has a really small date and time picker, comparing to the size of the screen, which could leads users to select at the wrong date or time",
+          "quote1": "User Interviews",
+          "text1_0": "After conducting interviews with potential users in person, I summarized the results into these points:",
+          "point1": "- All expressed the need for this specific product\n- The distance from the parking spot to the destination is the most important factor for users\n- Some users would pay more for a closer parking spot to their destination\n- Most of the users usually don’t look at reviews to find parking",
+          "text1_1": "These points helped me to understand what users need the most, and what features should I prioritize in my product experience."
+
+        }
+      },
+      {
+        "content_id": 4,
+        "content_title": "analyze",
+        "content_data_type": "mixed-image",
+        "content_data": {
+            "text0": "After doing the researching, I started brainstorming, then created persona to assist me understand more about what I should be designing. Also, I made user flows based on the persona I created, to have a better understanding of the structure and experience of this application.",
+            "image0": "/work/apark/Persona1.jpg",
+            "image1": "/work/apark/Persona2.jpg",
+            "image2": "/work/apark/Persona3.jpg",
+            "image3": "/work/apark/UserFlow1.jpg",
+            "image4": "/work/apark/UserFlow2.jpg"
+          }
+      },
+      {
+        "content_id": 5,
+        "content_title": "wireframe",
+        "content_data_type": "mixed-image",
+        "content_data": {
+          "text0": "Then I translated these sketches into wireframes.",
+          "image0": "/work/apark/sketches.jpg",
+          "image1": "/work/apark/Wireframe.png"
+        }
+      },
+      {
+        "content_id": 6,
+        "content_title": "ui kit",
+        "content_data_type": "image-multi",
+        "content_data": {
+          "image0": "/work/apark/logos_colors.jpg",
+          "image1": "/work/apark/typography_buttons_elements.jpg"
+        }
+      },
+      {
+        "content_id": 7,
+        "content_title": "prototype",
+        "content_data_type": "video",
+        "content_data": {
+          "text0": "Booking",
+          "vid0": "https://player.vimeo.com/video/382359011?title=0&byline=0&portrait=0",
+          "text1": "After Booking",
+          "vid1": "https://player.vimeo.com/video/382359008?title=0&byline=0&portrait=0",
+          "text2": "Menu",
+          "vid2": "https://player.vimeo.com/video/382358620?title=0&byline=0&portrait=0"
+        }
+      },
+      {
+        "content_id": 8,
+        "content_title": "summary",
+        "content_data_type": "text-plain",
+        "content_data": "I think one of the challenges of this design is the map, how should I redesign it to display more parking space but doesn’t look too chaotic? Finding more references which have visual solutions for large quantity of data should be the next step."
+      }
+    ]
+  },
+  {
+    "id": 1,
     "title": "FOCUSED.",
     "category": "DIGITAL PRODUCT DESIGN",
     "thumbnail_image_path": "/work/focused/focused_mockup.jpg",
@@ -21,8 +123,8 @@
             "category": "Digital Product Design\nUX Design",
             "collaborators": "None (Individual Project)",
             "platform": "Mobile",
-            "deliverables": "High-fidelity prototype\nFinal presentation",
-            "timeline": "Nov 2019 - Dec 2019, 5 weeks",
+            "deliverables": "High-fidelity Prototype\nFinal Presentation",
+            "timeline": "Nov 2019 - Dec 2019",
             "_details": "For this project, we were given the prompt to use the principle of human-centered design to design a digital product which attempts to reduce a user’s engagement with a specific product, service, or platform.\n\nI, as a road-trip enthusiast, am aware of the seriousness and the consequences of distracted driving (text-and-drive to be exact), decided to design a mobile-based experience/digital product to reduce the chances of driver’s getting distracted by their phones."
         }
       },
@@ -40,7 +142,7 @@
           "quote0": "\"1/4 car accidents is caused by texting and driving\"",
           "quote1": "\"Text & drive is 6x more likely to cause an accident than DUI\"",
           "quote2": "\"94% of teen drivers acknowledge the dangers of text & drive, but 35% admitted to doing it anyway\"",
-          "details": "Looking at these numbers, I couldn’t stop thinking about what are the possible ways to keep drivers away from their phones.\n\nWith the rising of nomophobia(no-mobile-phone phobia) among population, smart phones are becoming more and more addictive, users could be checking their phone subconsciously, so I decided to use some “hard-core” design to stop this addiction.\n\nI ran through the knowledge I have in software engineering, found a feature which can be used by developers called the single application mode, which allows the phone to lock on specific apps, the user cannot see incoming notifications or go back to the home screen and open another app.\n\nI could apply this technology into this product, so the users have less chance to get distracted by their phones."
+          "details": "Looking at these numbers, I couldn’t stop thinking about what are the possible ways to keep drivers away from their phones.\n\nI started looking for existing apps or solutions that has similar features. Drivemode has similar concept, which they are aiming for integrating all kinds of apps, phone features into their product to facilitate the user engagement with their phone, could end up causing drivers spending more time engaging with their phones, which is the opposite of what I want to achieve.\n\nWith the rising phenomena of nomophobia(no-mobile-phone phobia) among population, smart phones are becoming more and more addictive, users could be checking their phone subconsciously, so I decided to use some “hard-core“ design to stop this addiction.\n\nI ran through the knowledge I have in software engineering, found a feature which can be used by developers called the single application mode, which allows the phone to lock on specific apps, the user cannot see incoming notifications or go back to the home screen and open another app.\n\nI could apply this technology into this product, so the users have less chance to get distracted by their phones."
         }
       },
       {
@@ -93,21 +195,49 @@
         "content_id": 8,
         "content_title": "summary",
         "content_data_type": "text-plain",
-        "content_data": "In this project, I primarily focused on the animation and finding out the visual solution to incorporate driving speed with color saturation, instead of finding out the visual style I want to achieve.\n\nIn the future, I would love to spend more time finding more visual references, creating mood-board to redesign the visual style of this digital product, will have the potential to attract more users.\n\nOverall, I really appreciate this project opportunity provided by Brendan Griffith, and the help from my talented friends."
+        "content_data": "For this project, I primarily focused on the animation and finding out the visual solution to incorporate driving speed with color saturation, instead of finding out the visual style I want to achieve.\n\nFor next step, I would spend more time finding more visual references, creating mood-board to redesign the visual style of this digital product, will have the potential to attract more users.\n\nOverall, I really appreciate this project opportunity provided by Brendan Griffiths, and the help from my talented friends."
       }
     ]
-  },
-  {
-    "id": 1,
-    "title": "αPARK",
-    "category": "DIGITAL PRODUCT DESIGN",
-    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg"
   },
   {
     "id": 2,
     "title": "JAZZIN",
     "category": "BRAND DESIGN & DIGITAL PRODUCT DESIGN",
-    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg"
+    "thumbnail_image_path": "/work/jazzin/jazzin.svg",
+    "content": [
+      {
+        "content_id": 0,
+        "content_title": "objective",
+        "content_data_type": "text-plain",
+        "content_data": "Jazzin is a jazz festival supporting local jazz bars and artists to raise awareness of their groups to the public."
+      },
+      {
+        "content_id": 1,
+        "content_title": "overview",
+        "content_data_type": "text-complex",
+        "content_data": {
+            "role": "Designer, Strategist (Graduate Studies)",
+            "affiliation": "MPS Communication Design Program at Parsons School of Design",
+            "category": "Brand Design\nSocial Media Strategy\nDigital Product Design",
+            "collaborators": "Yuri Ha\nYifu Zhang",
+            "medium": "Print\nSocial Media\nWebsite\nMobile App",
+            "deliverables": "Poster\nSocial Media Campaign\nTicketing Website\nHigh-fidelity Prototype\nFinal presentation",
+            "timeline": "Sep 2019 - Dec 2019",
+            "_details": "For this project, we were given the prompt to plan and design a music festival, strictly using typographic forms with minimum amount of photography or illustration for the graphic elements in the design system.\n\nThis is my first time doing brand design, working with two experienced designers helped me understanding more about the process and philosophy of graphic design."
+        }
+      },
+      {
+        "content_id": 2,
+        "content_title": "design system",
+        "content_data_type": "mixed-image",
+        "content_data": {
+            "image0": "/work/jazzin/Direction-02.png",
+            "image1": "/work/jazzin/Direction-04.png",
+            "image2": "/work/jazzin/Direction-05.png",
+            "image3": "/work/jazzin/Direction-07.png"
+          }
+      }
+    ]
   },
   {
     "id": 3,

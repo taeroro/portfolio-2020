@@ -12,6 +12,7 @@ export default class WorkDetail extends Component {
 
     this.state = {
       path: "",
+      projectId: -1,
       dataObj: null,
       titleDescY: 0,
       titleDescHeight: 0,
@@ -42,6 +43,7 @@ export default class WorkDetail extends Component {
     const index = this.props.match.params.id;
 
     this.setState({
+      projectId: index,
       dataObj: workData[index],
       titleDescY: window.getComputedStyle(this.introNameRef).getPropertyValue('margin-top'),
     });
@@ -177,10 +179,49 @@ export default class WorkDetail extends Component {
                         </p>
                       );
                     }
-                    else {
+                    else if (item.includes("quote")) {
+                      if (this.state.projectId === "0") {
+                        return (
+                          <p className="research-quote research-p-section" key={index}>
+                            &#9657; {data[keyArray[index]]}
+                          </p>
+                        );
+                      }
+                      else if (this.state.projectId === "1") {
+                        return (
+                          <p className="research-quote" key={index}>
+                            &#9657; {data[keyArray[index]]}
+                          </p>
+                        );
+                      }
+                    }
+                    else if (item.includes("image")) {
                       return (
-                        <p className="research-quote" key={index}>
-                          &#9657; {data[keyArray[index]]}
+                        <img
+                          src={data[keyArray[index]]}
+                          className="image-single research"
+                          key={index}
+                        />
+                      );
+                    }
+                    else if (item.includes("desc")) {
+                      return (
+                        <p className="img-desc"  key={index}>
+                          {data[keyArray[index]]}
+                        </p>
+                      );
+                    }
+                    else if (item.includes("text")) {
+                      return (
+                        <p key={index}>
+                          {data[keyArray[index]]}
+                        </p>
+                      );
+                    }
+                    else if (item.includes("point")) {
+                      return (
+                        <p className="research-point" key={index}>
+                          {data[keyArray[index]]}
                         </p>
                       );
                     }
@@ -210,12 +251,11 @@ export default class WorkDetail extends Component {
               {
                 keyArray1.map((item, index) => {
                   return (
-                    <div className="image-multi-wrapper">
+                    <div className="image-multi-wrapper" key={index}>
                       <img
                         className="image-single multi"
                         src={data1[keyArray1[index]]}
                         alt="image"
-                        key={index}
                       />
                       {
                         index !== keyArray1.length - 1 &&
@@ -241,39 +281,72 @@ export default class WorkDetail extends Component {
           rowCount = imageIndex.length % 3;
 
           if (content.content_title === "wireframe") {
-            return (
-              <div className="data-wrapper">
-                {
-                  keyArray0.map((item, index) => {
-                    if (item.includes("text")) {
-                      return (
-                        <p key={index}>
-                          {data0[keyArray0[index]]}
-                        </p>
-                      );
-                    }
-                  })
-                }
-                <div className="flex-wrapper dark-mode">
-                  <div className="flex-row">
-                    {
-                      imageIndex.length > 0 &&
-                      imageIndex.map((item, index) => {
+            if (this.state.projectId === "0") {
+              return (
+                <div className="data-wrapper">
+                  {
+                    keyArray0.map((item, index) => {
+                      if (item.includes("text")) {
                         return (
-                          <div className="flex-column" key={index}>
+                          <p key={index}>
+                            {data0[keyArray0[index]]}
+                          </p>
+                        );
+                      }
+                      else {
+                        return (
+                          <div className="wireframe-single-wrapper" key={index}>
                             <img
-                              className={"wireframe-image" + item}
-                              src={data0[keyArray0[item]]}
-                              key={index}
+                              className="image-single less-height"
+                              src={data0[keyArray0[index]]}
                             />
+                            {
+                              index !== keyArray0.length - 1 &&
+                              <p className="image-arrow">&#8659;</p>
+                            }
                           </div>
                         )
-                      })
-                    }
+                      }
+                    })
+                  }
+                </div>
+              );
+            }
+            else if (this.state.projectId === "1") {
+              return (
+                <div className="data-wrapper">
+                  {
+                    keyArray0.map((item, index) => {
+                      if (item.includes("text")) {
+                        return (
+                          <p key={index}>
+                            {data0[keyArray0[index]]}
+                          </p>
+                        );
+                      }
+                    })
+                  }
+                  <div className="flex-wrapper dark-mode">
+                    <div className="flex-row">
+                      {
+                        imageIndex.length > 0 &&
+                        imageIndex.map((item, index) => {
+                          return (
+                            <div className="flex-column" key={index}>
+                              <img
+                                className={"wireframe-image" + item}
+                                src={data0[keyArray0[item]]}
+                                key={index}
+                              />
+                            </div>
+                          )
+                        })
+                      }
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
+              );
+            }
           }
 
           else if (content.content_title === "brainstorm") {
@@ -304,6 +377,51 @@ export default class WorkDetail extends Component {
             );
           }
 
+          else if (content.content_title === "analyze") {
+            if (imageIndex.length > 0) {
+              imageIndex.splice(2, 0, -1);
+            }
+            return (
+              <div className="data-wrapper">
+                {
+                  keyArray0.map((item, index) => {
+                    if (item.includes("text")) {
+                      return (
+                        <p key={index}>
+                          {data0[keyArray0[index]]}
+                        </p>
+                      );
+                    }
+                  })
+                }
+                <div className="analyze-wrapper">
+                  {
+                    imageIndex.length > 0 &&
+                    imageIndex.map((item, index) => {
+                      if (item === -1) {
+                        return (
+                          <div className="analyze-container placeholder" key={index}></div>
+                        )
+                      }
+                      else {
+                        return (
+                          <div className="analyze-container" key={index}>
+                            <img
+                              className={"image-analyze"}
+                              src={data0[keyArray0[item]]}
+                              key={index}
+                            />
+                          </div>
+                        )
+                      }
+                    })
+                  }
+                </div>
+
+              </div>
+            );
+          }
+
           return (
             <div className="data-wrapper">
             </div>
@@ -319,16 +437,16 @@ export default class WorkDetail extends Component {
                 keyArray2.map((item, index) => {
                   if (item.includes("text")) {
                     return (
-                      <p className="video-p">
+                      <p className="video-p" key={index}>
                         &#9657; {data2[keyArray2[index]]}
                       </p>
                     )
                   }
                   else if (item.includes("vid")) {
                     return (
-                      <div>
+                      <div key={index}>
                         <div className="video-wrapper">
-                          <iframe src={data2[keyArray2[index]]} frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                          <iframe src={data2[keyArray2[index]]} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
                         </div>
                         {
                           index !== keyArray2.length - 1 &&
