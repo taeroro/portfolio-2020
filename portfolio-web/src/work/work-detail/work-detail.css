@@ -114,7 +114,7 @@ div[class^="content-"] {
     object-fit: cover; }
   div[class^="content-"] .brainstorm-p {
     margin-top: 10vh; }
-  div[class^="content-"] .analyze-wrapper {
+  div[class^="content-"] .analyze-wrapper, div[class^="content-"] .jazzin-poster-wrapper {
     display: flex;
     display: -ms-flexbox;
     flex-flow: row wrap;
@@ -173,7 +173,7 @@ div[class^="content-"] {
     height: 1px;
     background-color: rgba(0, 0, 0, 0.5);
     margin: 5vh auto; }
-  div[class^="content-"] .video-p {
+  div[class^="content-"] .video-p, div[class^="content-"] .jazzin-p {
     font-size: var(--pObjSize);
     line-height: calc(var(--pObjSize) * 1.6);
     font-weight: 500; }
@@ -187,5 +187,43 @@ div[class^="content-"] {
       left: 0;
       width: 100%;
       height: 100%; }
+  div[class^="content-"] .jazzin-image-wrapper {
+    background-color: #FFF;
+    width: 70%;
+    margin: 2.5vh 0; }
+  div[class^="content-"] .jazzin-image-wrapper:nth-of-type(2n) {
+    margin-left: auto;
+    margin-right: 0; }
+  div[class^="content-"] .jazzin-image-wrapper:first-of-type {
+    margin-top: 0; }
+  div[class^="content-"] .jazzin-image-wrapper:last-of-type {
+    margin-bottom: 0; }
+  div[class^="content-"] .jazzin-poster-wrapper {
+    margin-top: 2vh;
+    margin-bottom: 10vh; }
+  div[class^="content-"] .jazzin-poster {
+    margin: 0px 15px; }
+  div[class^="content-"] .image-single.poster {
+    height: 80vh;
+    width: auto; }
+  div[class^="content-"] .social-9-wrapper {
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 2vh; }
+    div[class^="content-"] .social-9-wrapper img[class^="jazzin-social"] {
+      width: 100%;
+      height: auto;
+      object-fit: cover; }
+  div[class^="content-"] .social-9-overview-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    div[class^="content-"] .social-9-overview-wrapper img[class^="jazzin-social"] {
+      align-self: flex-end;
+      height: 80vh;
+      width: auto;
+      object-fit: cover; }
 
 /*# sourceMappingURL=work-detail.css.map */

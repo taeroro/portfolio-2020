@@ -220,8 +220,8 @@
             "affiliation": "MPS Communication Design Program at Parsons School of Design",
             "category": "Brand Design\nSocial Media Strategy\nDigital Product Design",
             "collaborators": "Yuri Ha\nYifu Zhang",
-            "medium": "Print\nSocial Media\nWebsite\nMobile App",
-            "deliverables": "Poster\nSocial Media Campaign\nTicketing Website\nHigh-fidelity Prototype\nFinal presentation",
+            "medium": "Print\nSocial Media\nWebsite\nMobile",
+            "deliverables": "Poster\nSocial Media Campaign\nTicketing Website\nMobile App",
             "timeline": "Sep 2019 - Dec 2019",
             "_details": "For this project, we were given the prompt to plan and design a music festival, strictly using typographic forms with minimum amount of photography or illustration for the graphic elements in the design system.\n\nThis is my first time doing brand design, working with two experienced designers helped me understanding more about the process and philosophy of graphic design."
         }
@@ -229,13 +229,48 @@
       {
         "content_id": 2,
         "content_title": "design system",
-        "content_data_type": "mixed-image",
+        "content_data_type": "image-multi",
         "content_data": {
             "image0": "/work/jazzin/Direction-02.png",
             "image1": "/work/jazzin/Direction-04.png",
             "image2": "/work/jazzin/Direction-05.png",
             "image3": "/work/jazzin/Direction-07.png"
-          }
+        }
+      },
+      {
+        "content_id": 3,
+        "content_title": "deliverables",
+        "content_data_type": "jazzin-deliverables",
+        "content_data": {
+            "text0": "Poster",
+            "poster0": "/work/jazzin/Poster.png",
+            "poster1": "/work/jazzin/Poster_Schedule.png",
+            "text1": "Social Media Campaign",
+            "social0": "/work/jazzin/social_media-01.png",
+            "social1": "/work/jazzin/social_media-02.png",
+            "social2": "/work/jazzin/social_media-03.png",
+            "social3": "/work/jazzin/social_media-04.png",
+            "social4": "/work/jazzin/social_media-05.png",
+            "social5": "/work/jazzin/social_media-06.png",
+            "social6": "/work/jazzin/social_media-07.png",
+            "social7": "/work/jazzin/social_media-08.png",
+            "social8": "/work/jazzin/social_media-09.png",
+            "social9": "/work/jazzin/9_overview.png",
+            "social10": "",
+            "social11": "",
+            "social12": "",
+            "social13": "",
+            "social14": "",
+            "social15": "",
+            "social16": "",
+            "social17": "",
+            "social18": "",
+            "social19": "",
+            "text2": "Ticketing Website",
+            "web0": "",
+            "text3": "Mobile App",
+            "app0": ""
+        }
       }
     ]
   },

@@ -246,27 +246,50 @@ export default class WorkDetail extends Component {
         case "image-multi":
           let keyArray1 = Object.keys(content.content_data);
           let data1 = content.content_data;
-          return (
-            <div className="data-wrapper">
-              {
-                keyArray1.map((item, index) => {
-                  return (
-                    <div className="image-multi-wrapper" key={index}>
-                      <img
-                        className="image-single multi"
-                        src={data1[keyArray1[index]]}
-                        alt="image"
-                      />
-                      {
-                        index !== keyArray1.length - 1 &&
-                        <div className="divider"></div>
-                      }
-                    </div>
-                  )
-                })
-              }
-            </div>
-          );
+
+          if (this.state.projectId === "2") {
+            return (
+              <div className="data-wrapper jazzin">
+                {
+                  keyArray1.map((item, index) => {
+                    return (
+                      <div className="jazzin-image-wrapper" key={index}>
+                        <img
+                          className={"image-single multi"}
+                          src={data1[keyArray1[index]]}
+                          alt="image"
+                        />
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            );
+          }
+          else {
+            return (
+              <div className="data-wrapper">
+                {
+                  keyArray1.map((item, index) => {
+                    return (
+                      <div className="image-multi-wrapper" key={index}>
+                        <img
+                          className="image-single multi"
+                          src={data1[keyArray1[index]]}
+                          alt="image"
+                        />
+                        {
+                          index !== keyArray1.length - 1 &&
+                          <div className="divider"></div>
+                        }
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            );
+          }
+          break;
 
         case "mixed-image":
           let keyArray0 = Object.keys(content.content_data);
@@ -460,6 +483,132 @@ export default class WorkDetail extends Component {
 
             </div>
           );
+
+      case "jazzin-deliverables":
+        let keyArrayj = Object.keys(content.content_data);
+        let dataj = content.content_data;
+
+        let elements = keyArrayj || [];
+        let components = elements.map(
+            (item) => {
+              if (item.includes("text")) {
+                return (
+                  <p className="jazzin-p">&#9657; {dataj[item]}</p>
+                );
+              }
+              else if (item.includes("poster")) {
+                return (
+                  <div className="jazzin-poster">
+                    <img className="image-single poster" src={dataj[item]} alt="poster" />
+                  </div>
+                );
+              }
+              else if (item.includes("social")) {
+                return (
+                  <img className={"jazzin-" + item} src={dataj[item]} alt="social" />
+                );
+              }
+              else if (item.includes("web")) {
+                return (
+                  <div></div>
+                );
+              }
+              else if (item.includes("app")) {
+                return (
+                  <div></div>
+                );
+              }
+            }
+        );
+
+        let toDisplay = [];
+        let text = [];
+        let poster = [];
+        let social = [];
+        let web = [];
+        let app = [];
+
+        for (let i = 0; i < components.length; i++) {
+          let name = keyArrayj[i];
+
+          if (name.includes("text")) {
+            text.push(components[i]);
+          }
+          else if (name.includes("poster")) {
+            poster.push(components[i]);
+          }
+          else if (name.includes("social")) {
+            social.push(components[i]);
+          }
+          else if (name.includes("web")) {
+            web.push(components[i]);
+          }
+          else if (name.includes("app")) {
+            app.push(components[i]);
+          }
+        }
+
+        let textIndex = 0;
+        for (let j = 0; j < text.length; j++) {
+          toDisplay.push(text[j]);
+          if (j === 0) {
+            toDisplay.push(
+              <div className="jazzin-poster-wrapper">
+                {poster}
+              </div>
+            );
+          }
+          else if (j === 1) {
+            toDisplay.push(
+              <div className="social-9-wrapper">
+                {social.slice(0, 9)}
+              </div>
+            );
+            toDisplay.push(
+              <div className="social-9-overview-wrapper">
+                {social.slice(9, 10)}
+              </div>
+            );
+            toDisplay.push(
+              <div className="social-sticker-wrapper">
+                {social.slice(10, 14)}
+              </div>
+            );
+            toDisplay.push(
+              <div className="social-discount-wrapper">
+                {social.slice(14, 16)}
+              </div>
+            );
+            toDisplay.push(
+              <div className="social-schedule-wrapper">
+                {social.slice(16)}
+              </div>
+            );
+          }
+          else if (j === 2) {
+            toDisplay.push(web);
+          }
+          else if (j === 3) {
+            toDisplay.push(app);
+          }
+        }
+
+        return (
+          <div className='app-wrapper'>
+            {toDisplay}
+          </div>
+        );
+
+
+        // while(components.length > 0) {
+        //   children.push(components.shift());
+        //
+        //   if (children.length === 5) {
+        //       groups.push(<div className="grid grid-pad">{children}</div>);
+        //       children = [];
+        //   }
+        // }
+
 
       default:
         return (
