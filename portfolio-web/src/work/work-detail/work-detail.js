@@ -98,8 +98,23 @@ export default class WorkDetail extends Component {
   renderThumbnail() {
     const imgPath = this.state.dataObj && this.state.dataObj.thumbnail_image_path;
 
-    // if (this.state.dataObj)
-    //   console.log(this.state.dataObj.thumbnail_image_path);
+    if (this.state.dataObj && this.state.dataObj.thumbnail_image_path.includes("webm")) {
+      return (
+        <div className="thumbnail-wrapper">
+          <div className="img-wrapper">
+            <video
+              playsInline loop muted autoPlay
+              preload="none"
+              className="thumbnail-vid"
+            >
+              <source src={imgPath} type="video/webm" />
+              <source src={imgPath.replace("webm", "mp4")} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      )
+    }
+
 
     return (
       <div className="thumbnail-wrapper">

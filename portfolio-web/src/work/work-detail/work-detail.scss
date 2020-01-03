@@ -9,7 +9,8 @@
 
 .introduction-container.detail-page {
   // TODO: remove it, debug only
-  display: none;
+  // display: none;
+  position: absolute !important;
 
   .title-description {
     font-size: 48px;
@@ -34,6 +35,15 @@
   }
 
   .thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    margin: auto;
+  }
+
+  .thumbnail-vid {
     width: 100%;
     height: 100%;
     object-fit: cover;

@@ -11,7 +11,7 @@ const mockup_img_path = [
   './work/jazzin/jazzin.png',
   './work/driving/uxdesign.cc_the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a.png',
   './work/yintech/Yintechlabs-01.jpg',
-  './work/apark/small_apark_rendered-01.jpg',
+  './work/faces/faces.webm',
 ]
 
 class Work extends Component {
@@ -272,12 +272,28 @@ class Work extends Component {
         onMouseLeave={() => this.imgHoverLeaveHandler(index)}
         onClick={() => this.imgOnClick(index)}
       >
-        <img
-          className={this.state.mouseIsOver === index ? imgClass + "mouse-over" : imgClass}
-          src={mockup_img_path[index]}
-          alt="thumbnail"
-          ref={img => this.imgRef[index] = img}
-        />
+        {
+          mockup_img_path[index].includes("webm")
+          ? (
+            <video
+              playsInline loop muted autoPlay
+              preload="none"
+              className={this.state.mouseIsOver === index ? "thumbnail-vid mouse-over" : "thumbnail-vid"}
+              ref={video => this.imgRef[index] = video}
+            >
+              <source src={mockup_img_path[index]} type="video/webm" />
+              <source src={mockup_img_path[index].replace("webm", "mp4")} type="video/mp4" />
+            </video>
+          )
+          : (
+            <img
+              className={this.state.mouseIsOver === index ? imgClass + "mouse-over" : imgClass}
+              src={mockup_img_path[index]}
+              alt="thumbnail"
+              ref={img => this.imgRef[index] = img}
+            />
+          )
+        }
 
         <div
           className={
