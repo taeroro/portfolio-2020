@@ -411,24 +411,30 @@ div[class^="content-"] {
       object-fit: cover;
       margin-bottom: 2vh;
     }
+  }
 
-    a {
-      font-family: 'Helvetica Neue', 'Arial', sans-serif;
-      font-size: var(--pSize);
-      line-height: calc(var(--pSize) * 1.6);
-      font-weight: 400;
-      color: #000;
-      text-decoration: none;
+  .a-link {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: var(--pSize);
+    line-height: calc(var(--pSize) * 1.6);
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
 
-      border-bottom: 2px solid #0000FF;
-      background-color: rgba(0, 0, 255, 0);
-      transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
+    border-bottom: 3px solid #0000FF;
+    background-color: rgba(0, 0, 255, 0);
+    transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
 
-    a:hover {
-      color: #FFF;
-      background-color: rgba(0, 0, 255, 1);
-      // border-bottom: 5px solid #0000FF;
-    }
+  .a-link:hover {
+    color: #FFF;
+    background-color: rgba(0, 0, 255, 1);
+    // border-bottom: 5px solid #0000FF;
+  }
+
+  .a-link-wrapper {
+    margin-top: 2vh;
+    text-align: center;
   }
 }

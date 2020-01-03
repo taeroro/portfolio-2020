@@ -594,6 +594,11 @@ export default class WorkDetail extends Component {
             toDisplay.push(
               <div className="social-schedule-wrapper">
                 {social.slice(14)}
+                <div className="a-link-wrapper">
+                  <a className="a-link" href="https://www.instagram.com/jazzin_2019/" target="_blank">
+                    Click here to open jazzin's Instagram
+                  </a>
+                </div>
               </div>
             );
           }
@@ -601,7 +606,7 @@ export default class WorkDetail extends Component {
             toDisplay.push(
               <div className="jazzin-web-wrapper">
                 {web}
-                <a href="https://promotion-website.blueman3963.now.sh/" target="_blank">
+                <a className="a-link" href="https://promotion-website.blueman3963.now.sh/" target="_blank">
                   Click here to open the website
                 </a>
               </div>

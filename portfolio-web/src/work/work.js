@@ -9,10 +9,10 @@ const mockup_img_path = [
   './work/apark/small_apark_rendered-01.jpg',
   './work/focused/focused_mockup.jpg',
   './work/jazzin/jazzin.png',
-  './work/apark/small_apark_rendered-01.jpg',
-  './work/apark/small_apark_rendered-01.jpg',
-  './work/apark/small_apark_rendered-01.jpg',
   './work/driving/uxdesign.cc_the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a.png',
+  './work/apark/small_apark_rendered-01.jpg',
+  './work/apark/small_apark_rendered-01.jpg',
+  './work/apark/small_apark_rendered-01.jpg',
 ]
 
 class Work extends Component {
@@ -85,24 +85,24 @@ class Work extends Component {
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "BRAND DESIGN & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 3:
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "UX COLLECTIVE", cursor: "default"});
+          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "PUBLICATION"}, "-=0.25");
+          break;
+        case 4:
           this.tl.to(this.introNameRef, {duration: 0.25, text: "THE ANVIL", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
-        case 4:
+        case 5:
           this.tl.to(this.introNameRef, {duration: 0.25, text: "YINTECH LABS", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "SOFTWARE DEVELOPMENT & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
-        case 5:
+        case 6:
           this.tl.to(this.introNameRef, {duration: 0.25, text: "FACES OF THE PORTRAITS", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DESIGN AND TECHNOLOGY"}, "-=0.25");
-          break;
-        case 6:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "UX COLLECTIVE", cursor: "default"});
-          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-          this.tl.to(this.descriptionRef, {duration: 0.25, text: "PUBLICATION"}, "-=0.25");
           break;
         default:
           this.tl.to(this.introNameRef, {duration: 0.25, text: "RYAN FAN"});
