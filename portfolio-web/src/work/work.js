@@ -8,7 +8,7 @@ import TextPlugin from "gsap/TextPlugin";
 const mockup_img_path = [
   './work/apark/small_apark_rendered-01.jpg',
   './work/focused/focused_mockup.jpg',
-  './work/jazzin/jazzin.svg',
+  './work/jazzin/jazzin.png',
   './work/apark/small_apark_rendered-01.jpg',
   './work/apark/small_apark_rendered-01.jpg',
   './work/apark/small_apark_rendered-01.jpg',

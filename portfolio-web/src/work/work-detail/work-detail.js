@@ -50,7 +50,7 @@ export default class WorkDetail extends Component {
 
     setTimeout(() => {
       this.setState({
-        titleDescHeight: this.descriptionRef.clientHeight
+        titleDescHeight: this.descriptionRef.clientHeight,
       })
     }, 1);
   }
@@ -403,6 +403,10 @@ export default class WorkDetail extends Component {
           else if (content.content_title === "analyze") {
             if (imageIndex.length > 0) {
               imageIndex.splice(2, 0, -1);
+              imageIndex.splice(5, 0, -1);
+              imageIndex.splice(6, 0, -1);
+              // imageIndex.splice(1, 0, -1);
+              // imageIndex.splice(2, 0, -1);
             }
             return (
               <div className="data-wrapper">
@@ -504,18 +508,25 @@ export default class WorkDetail extends Component {
                 );
               }
               else if (item.includes("social")) {
+                if (item === "social9") {
+                  return (
+                    <img className={"jazzin-" + item} src={dataj[item]} alt="social" />
+                  );
+                }
                 return (
                   <img className={"jazzin-" + item} src={dataj[item]} alt="social" />
                 );
               }
               else if (item.includes("web")) {
                 return (
-                  <div></div>
+                  <img className={"jazzin-" + item} src={dataj[item]} alt="web" />
                 );
               }
               else if (item.includes("app")) {
                 return (
-                  <div></div>
+                  <div className="video-wrapper">
+                    <iframe src={dataj[item]} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+                  </div>
                 );
               }
             }
@@ -559,14 +570,20 @@ export default class WorkDetail extends Component {
             );
           }
           else if (j === 1) {
+
+            console.log(this.state.overviewImgWidth);
+
             toDisplay.push(
               <div className="social-9-wrapper">
                 {social.slice(0, 9)}
               </div>
             );
             toDisplay.push(
-              <div className="social-9-overview-wrapper">
-                {social.slice(9, 10)}
+              <div className="social-9-d-wrapper">
+                <div className="d-post-wrapper">
+                  {/* <div className="line-vertical"></div> */}
+                  {social.slice(9, 10)}
+                </div>
               </div>
             );
             toDisplay.push(
@@ -575,18 +592,20 @@ export default class WorkDetail extends Component {
               </div>
             );
             toDisplay.push(
-              <div className="social-discount-wrapper">
-                {social.slice(14, 16)}
-              </div>
-            );
-            toDisplay.push(
               <div className="social-schedule-wrapper">
-                {social.slice(16)}
+                {social.slice(14)}
               </div>
             );
           }
           else if (j === 2) {
-            toDisplay.push(web);
+            toDisplay.push(
+              <div className="jazzin-web-wrapper">
+                {web}
+                <a href="https://promotion-website.blueman3963.now.sh/" target="_blank">
+                  Click here to open the website
+                </a>
+              </div>
+            );
           }
           else if (j === 3) {
             toDisplay.push(app);
@@ -594,7 +613,7 @@ export default class WorkDetail extends Component {
         }
 
         return (
-          <div className='app-wrapper'>
+          <div className='data-wrapper jazzin'>
             {toDisplay}
           </div>
         );

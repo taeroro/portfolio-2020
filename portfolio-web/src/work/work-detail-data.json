@@ -203,7 +203,7 @@
     "id": 2,
     "title": "JAZZIN",
     "category": "BRAND DESIGN & DIGITAL PRODUCT DESIGN",
-    "thumbnail_image_path": "/work/jazzin/jazzin.svg",
+    "thumbnail_image_path": "/work/jazzin/jazzin.png",
     "content": [
       {
         "content_id": 0,
@@ -221,7 +221,7 @@
             "category": "Brand Design\nSocial Media Strategy\nDigital Product Design",
             "collaborators": "Yuri Ha\nYifu Zhang",
             "medium": "Print\nSocial Media\nWebsite\nMobile",
-            "deliverables": "Poster\nSocial Media Campaign\nTicketing Website\nMobile App",
+            "deliverables": "Poster\nSocial Media Campaign\nWebsite\nMobile App",
             "timeline": "Sep 2019 - Dec 2019",
             "_details": "For this project, we were given the prompt to plan and design a music festival, strictly using typographic forms with minimum amount of photography or illustration for the graphic elements in the design system.\n\nThis is my first time doing brand design, working with two experienced designers helped me understanding more about the process and philosophy of graphic design."
         }
@@ -239,6 +239,12 @@
       },
       {
         "content_id": 3,
+        "content_title": "what did i do?",
+        "content_data_type": "text-plain",
+        "content_data": "I was in charge of coming up with design and strategy for the social media campaign, the artist and the schedule interfaces for mobile application as well as working closely with the team, exchanging ideas and suggestions with my teammates."
+      },
+      {
+        "content_id": 4,
         "content_title": "deliverables",
         "content_data_type": "jazzin-deliverables",
         "content_data": {
@@ -255,22 +261,24 @@
             "social6": "/work/jazzin/social_media-07.png",
             "social7": "/work/jazzin/social_media-08.png",
             "social8": "/work/jazzin/social_media-09.png",
-            "social9": "/work/jazzin/9_overview.png",
-            "social10": "",
-            "social11": "",
-            "social12": "",
-            "social13": "",
-            "social14": "",
-            "social15": "",
-            "social16": "",
-            "social17": "",
-            "social18": "",
-            "social19": "",
-            "text2": "Ticketing Website",
-            "web0": "",
+            "social9": "/work/jazzin/social-d.jpg",
+            "social10": "/work/jazzin/Jazz_sitcker_1-04.png",
+            "social11": "/work/jazzin/Jazz_sitcker_1-05.png",
+            "social12": "/work/jazzin/Jazz_sitcker_1-06.png",
+            "social13": "/work/jazzin/Jazz_sitcker_1-07.png",
+            "social14": "/work/jazzin/social-s.jpg",
+            "text2": "Website",
+            "web0": "/work/jazzin/web1.png",
+            "web1": "/work/jazzin/web2.png",
             "text3": "Mobile App",
-            "app0": ""
+            "app0": "https://player.vimeo.com/video/382519544?title=0&byline=0&portrait=0"
         }
+      },
+      {
+        "content_id": 5,
+        "content_title": "summary",
+        "content_data_type": "text-plain",
+        "content_data": "I’m thankful that our instructor Jacob Heftmann invited many talented and experienced designers to critique and giving feedback on our work at different check point, which really helped us moving forward to the end.\n\nOverall this was a great opportunity for us to practice design in different medium, to collaborate and work as a team, and to overcome challenges."
       }
     ]
   },
