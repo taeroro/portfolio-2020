@@ -209,7 +209,7 @@
         "content_id": 0,
         "content_title": "objective",
         "content_data_type": "text-plain",
-        "content_data": "Jazzin is a jazz festival supporting local jazz bars and artists to raise awareness of their groups to the public."
+        "content_data": "Jazzin is a 3-day jazz festival supporting local jazz bars and artists to raise awareness of their groups to the public."
       },
       {
         "content_id": 1,
@@ -284,15 +284,46 @@
   },
   {
     "id": 3,
-    "title": "THE ANVIL",
-    "category": "DIGITAL PRODUCT DESIGN",
-    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg"
+    "title": "UX COLLECTIVE",
+    "category": "PUBLICATION",
+    "thumbnail_image_path": "/work/driving/uxdesign.cc_the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a.png"
   },
   {
     "id": 4,
     "title": "YINTECH LABS",
     "category": "SOFTWARE DEVELOPMENT & DIGITAL PRODUCT DESIGN",
-    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg"
+    "thumbnail_image_path": "/work/yintech/Yintechlabs-01.jpg",
+    "content": [
+      {
+        "content_id": 0,
+        "content_title": "overview",
+        "content_data_type": "text-complex",
+        "content_data": {
+            "role": "Software Engineer, Designer (Internship)",
+            "affiliation": "Yintech Investment Holdings - Innovation Labs (Boston)",
+            "category": "Full Stack Development\niOS Development\nDigital Product Design",
+            "collaborators": " Data Scientists, Machine Learning Engineers, Back-end Developers",
+            "platform": "Web\nMobile",
+            "tools and frameworks": "React\nExpress.js\nAWS (EC2, S3, Route 53)",
+            "deliverables": "Landing Website\nStock Model Training Web Application\nMobile App\nPresentation",
+            "timeline": "May 2018 - Aug 2018",
+            "_details": "I was a software engineer intern at Yintech Investment Holdings - Innovation Labs in the greater Boston area in the summer of 2018. Since the size of the team in Boston is really small (under 10 employees), I had the valuable opportunity to design digital products before coding them into the real products.\n\nDue to the NDA, I am not able to share all the products and designs I worked on."
+        }
+      },
+      {
+        "content_id": 1,
+        "content_title": "landing website",
+        "content_data_type": "yintech-website",
+        "content_data": {
+            "title0": "Overview",
+            "text0": "The previous Yintech Innovation Labs website was an adequate, yet older website made by an engineer using Wix. I have been requested to update the old design to a more modern, clean, aesthetically pleasing, and responsive website.\n\nSince the theme of the website is business and finance, I picked one color as the primary color to maintain a clean and clear interface. I then resorted to the use of several images to convey the spirit of Yintech Innovation Labs. The choice of blue is because the parent company has chosen blue and orange as its primary colors. The blue color I chose is a variation of the blue color from the parent company so it represents the relationship and connections between these two companies, but also their status as distinct entities.",
+            "title1": "Key Interfaces",
+            "image0": "/work/yintech/Yintechlabs-02.jpg",
+            "title2": "Interaction Video",
+            "vid0": "https://player.vimeo.com/video/382538184?title=0&byline=0&portrait=0"
+        }
+      }
+    ]
   },
   {
     "id": 5,

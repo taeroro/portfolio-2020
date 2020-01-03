@@ -10,8 +10,7 @@ const mockup_img_path = [
   './work/focused/focused_mockup.jpg',
   './work/jazzin/jazzin.png',
   './work/driving/uxdesign.cc_the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a.png',
-  './work/apark/small_apark_rendered-01.jpg',
-  './work/apark/small_apark_rendered-01.jpg',
+  './work/yintech/Yintechlabs-01.jpg',
   './work/apark/small_apark_rendered-01.jpg',
 ]
 
@@ -90,16 +89,11 @@ class Work extends Component {
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "PUBLICATION"}, "-=0.25");
           break;
         case 4:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "THE ANVIL", cursor: "default"});
-          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-          this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
-          break;
-        case 5:
           this.tl.to(this.introNameRef, {duration: 0.25, text: "YINTECH LABS", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "SOFTWARE DEVELOPMENT & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
-        case 6:
+        case 5:
           this.tl.to(this.introNameRef, {duration: 0.25, text: "FACES OF THE PORTRAITS", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DESIGN AND TECHNOLOGY"}, "-=0.25");
@@ -151,10 +145,6 @@ class Work extends Component {
       this.setState({ currentThumbNum: 5 });
       this.setState({nameMouseIsOver: false});
     }
-    else if (window.pageYOffset >= this.thumbnailRef[5].offsetTop + (thumbnailHeight/2)) {
-      this.setState({ currentThumbNum: 6 });
-      this.setState({nameMouseIsOver: false});
-    }
   }
 
   imgHoverOverHandler(index) {
@@ -166,7 +156,7 @@ class Work extends Component {
   }
 
   imgOnClick(index) {
-    if (index !== 6) {
+    if (index !== 3) {
       this.setState(
         {mouseIsOver: -1},
         () => {
@@ -177,6 +167,8 @@ class Work extends Component {
             let w = this.thumbnailRef[index].clientWidth;
 
             console.log(x + ', ' + y + ' || ' + h + ', ' + w);
+
+            console.log(index);
 
             this.props.history.push({
               pathname: '/work/' + index,
@@ -318,7 +310,6 @@ class Work extends Component {
           {this.renderThumbnail(3)}
           {this.renderThumbnail(4)}
           {this.renderThumbnail(5)}
-          {this.renderThumbnail(6)}
         </div>
       </div>
     );

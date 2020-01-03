@@ -493,38 +493,39 @@ export default class WorkDetail extends Component {
         let dataj = content.content_data;
 
         let elements = keyArrayj || [];
+        let temp_i = 0;
         let components = elements.map(
             (item) => {
               if (item.includes("text")) {
                 return (
-                  <p className="jazzin-p">&#9657; {dataj[item]}</p>
+                  <p className="jazzin-p" key={temp_i++}>&#9657; {dataj[item]}</p>
                 );
               }
               else if (item.includes("poster")) {
                 return (
-                  <div className="jazzin-poster">
-                    <img className="image-single poster" src={dataj[item]} alt="poster" />
+                  <div className="jazzin-poster" key={temp_i++}>
+                    <img className="image-single poster" src={dataj[item]} alt="poster" key={temp_i++} />
                   </div>
                 );
               }
               else if (item.includes("social")) {
                 if (item === "social9") {
                   return (
-                    <img className={"jazzin-" + item} src={dataj[item]} alt="social" />
+                    <img className={"jazzin-" + item} src={dataj[item]} alt="social" key={temp_i++} />
                   );
                 }
                 return (
-                  <img className={"jazzin-" + item} src={dataj[item]} alt="social" />
+                  <img className={"jazzin-" + item} src={dataj[item]} alt="social" key={temp_i++} />
                 );
               }
               else if (item.includes("web")) {
                 return (
-                  <img className={"jazzin-" + item} src={dataj[item]} alt="web" />
+                  <img className={"jazzin-" + item} src={dataj[item]} alt="web" key={temp_i++} />
                 );
               }
               else if (item.includes("app")) {
                 return (
-                  <div className="video-wrapper">
+                  <div className="video-wrapper" key={temp_i++}>
                     <iframe src={dataj[item]} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
                   </div>
                 );
@@ -564,22 +565,19 @@ export default class WorkDetail extends Component {
           toDisplay.push(text[j]);
           if (j === 0) {
             toDisplay.push(
-              <div className="jazzin-poster-wrapper">
+              <div className="jazzin-poster-wrapper" key={temp_i++}>
                 {poster}
               </div>
             );
           }
           else if (j === 1) {
-
-            console.log(this.state.overviewImgWidth);
-
             toDisplay.push(
-              <div className="social-9-wrapper">
+              <div className="social-9-wrapper" key={temp_i++}>
                 {social.slice(0, 9)}
               </div>
             );
             toDisplay.push(
-              <div className="social-9-d-wrapper">
+              <div className="social-9-d-wrapper" key={temp_i++}>
                 <div className="d-post-wrapper">
                   {/* <div className="line-vertical"></div> */}
                   {social.slice(9, 10)}
@@ -587,12 +585,12 @@ export default class WorkDetail extends Component {
               </div>
             );
             toDisplay.push(
-              <div className="social-sticker-wrapper">
+              <div className="social-sticker-wrapper" key={temp_i++}>
                 {social.slice(10, 14)}
               </div>
             );
             toDisplay.push(
-              <div className="social-schedule-wrapper">
+              <div className="social-schedule-wrapper" key={temp_i++}>
                 {social.slice(14)}
                 <div className="a-link-wrapper">
                   <a className="a-link" href="https://www.instagram.com/jazzin_2019/" target="_blank">
@@ -604,7 +602,7 @@ export default class WorkDetail extends Component {
           }
           else if (j === 2) {
             toDisplay.push(
-              <div className="jazzin-web-wrapper">
+              <div className="jazzin-web-wrapper" key={temp_i++}>
                 {web}
                 <a className="a-link" href="https://promotion-website.blueman3963.now.sh/" target="_blank">
                   Click here to open the website
@@ -623,16 +621,48 @@ export default class WorkDetail extends Component {
           </div>
         );
 
+      case "yintech-website":
+        let keyArrayy = Object.keys(content.content_data);
+        let datay = content.content_data;
 
-        // while(components.length > 0) {
-        //   children.push(components.shift());
-        //
-        //   if (children.length === 5) {
-        //       groups.push(<div className="grid grid-pad">{children}</div>);
-        //       children = [];
-        //   }
-        // }
-
+        return (
+          <div className="data-wrapper">
+            {
+              keyArrayy.map((item, index) => {
+                if (item.includes("title")) {
+                  return (
+                    <p class="website-title" key={index}>
+                      &#9657; {datay[keyArrayy[index]]}
+                    </p>
+                  )
+                }
+                else if (item.includes("text")) {
+                  return (
+                    <p className="website-p" key={index}>
+                      {datay[keyArrayy[index]]}
+                    </p>
+                  )
+                }
+                else if (item.includes("image")) {
+                  return (
+                    <img
+                      src={datay[keyArrayy[index]]}
+                      className="image-single yintech"
+                      key={index}
+                    />
+                  )
+                }
+                else if (item.includes("vid")) {
+                  return (
+                    <div className="video-wrapper">
+                      <iframe src={datay[keyArrayy[index]]} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+                    </div>
+                  )
+                }
+              })
+            }
+          </div>
+        )
 
       default:
         return (

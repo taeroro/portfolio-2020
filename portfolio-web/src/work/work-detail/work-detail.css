@@ -281,5 +281,13 @@ div[class^="content-"] {
   div[class^="content-"] .a-link-wrapper {
     margin-top: 2vh;
     text-align: center; }
+  div[class^="content-"] .website-title {
+    font-size: var(--pObjSize);
+    line-height: calc(var(--pObjSize) * 1.6);
+    font-weight: 500; }
+  div[class^="content-"] .website-p {
+    margin-bottom: 10vh; }
+  div[class^="content-"] .image-single.yintech {
+    margin-bottom: 10vh; }
 
 /*# sourceMappingURL=work-detail.css.map */
