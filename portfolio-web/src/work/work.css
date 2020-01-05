@@ -104,7 +104,7 @@
     left: -9999px;
     right: -9999px;
     margin: auto;
-    transform: translateY(5vh); }
+    transform: translateY(10%); }
   .thumbnail-container img[class^="thumbnail-img-"].mouse-over {
     filter: saturate(100%);
     opacity: 0.7; }

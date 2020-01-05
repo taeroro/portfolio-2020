@@ -1,5 +1,5 @@
 .about-container {
-  width: calc(100vw - 70px - 80px);
+  width: calc(100vw - 70px);
   padding: 0 40px 5vh 40px;
 }
 
@@ -26,8 +26,8 @@
 
 .bio {
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
   color: #000;
 
   opacity: 0;
@@ -41,20 +41,21 @@
 
   .contact {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
+    margin-bottom: 1vh;
   }
 
   p {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 400;
   }
 
   a {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 400;
     margin-right: 40px;
     color: #000;
     text-decoration: none;

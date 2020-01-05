@@ -4,15 +4,10 @@
     "title": "αPARK",
     "category": "DIGITAL PRODUCT DESIGN",
     "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg",
+    "objective": "αPark connects drivers looking for parking with parking space owners and businesses.",
     "content": [
       {
         "content_id": 0,
-        "content_title": "objective",
-        "content_data_type": "text-plain",
-        "content_data": "αPark connects drivers looking for parking with parking space owners and businesses."
-      },
-      {
-        "content_id": 1,
         "content_title": "overview",
         "content_data_type": "text-complex",
         "content_data": {
@@ -27,29 +22,32 @@
         }
       },
       {
-        "content_id": 2,
+        "content_id": 1,
         "content_title": "design process",
         "content_data_type": "image-single",
-        "content_data": "/work/apark/design_process.png"
+        "content_data": {
+          "img": "/work/apark/design_process.png",
+          "size": 8
+        }
       },
       {
-        "content_id": 3,
+        "content_id": 2,
         "content_title": "research",
         "content_data_type": "text-complex",
         "content_data": {
-          "quote0": "Existing Solutions & Problems",
+          "title0": "Existing Solutions & Problems",
           "text0": "Before diving into the actual design process, I started looking for existing apps or solutions that has similar features; Pavemint and ParqEx are the two products that match with my idea. However, these apps have more or less some problematic user experience, sometimes confuses users. That’s why I decided to research and identify what the existing problems are, then improve the user experience of my product.",
           "image0": "/work/apark/ParqEx.jpg",
           "desc0": "For instance, ParqEx has a really small date and time picker, comparing to the size of the screen, which could leads users to select at the wrong date or time",
-          "quote1": "User Interviews",
+          "title1": "User Interviews",
           "text1_0": "After conducting interviews with potential users in person, I summarized the results into these points:",
-          "point1": "- All expressed the need for this specific product\n- The distance from the parking spot to the destination is the most important factor for users\n- Some users would pay more for a closer parking spot to their destination\n- Most of the users usually don’t look at reviews to find parking",
+          "points1": "- All expressed the need for this specific product\n- The distance from the parking spot to the destination is the most important factor for users\n- Some users would pay more for a closer parking spot to their destination\n- Most of the users usually don’t look at reviews to find parking",
           "text1_1": "These points helped me to understand what users need the most, and what features should I prioritize in my product experience."
 
         }
       },
       {
-        "content_id": 4,
+        "content_id": 3,
         "content_title": "analyze",
         "content_data_type": "mixed-image",
         "content_data": {
@@ -62,7 +60,7 @@
           }
       },
       {
-        "content_id": 5,
+        "content_id": 4,
         "content_title": "wireframe",
         "content_data_type": "mixed-image",
         "content_data": {
@@ -72,7 +70,7 @@
         }
       },
       {
-        "content_id": 6,
+        "content_id": 5,
         "content_title": "ui kit",
         "content_data_type": "image-multi",
         "content_data": {
@@ -81,7 +79,7 @@
         }
       },
       {
-        "content_id": 7,
+        "content_id": 6,
         "content_title": "prototype",
         "content_data_type": "video",
         "content_data": {
@@ -94,7 +92,7 @@
         }
       },
       {
-        "content_id": 8,
+        "content_id": 7,
         "content_title": "summary",
         "content_data_type": "text-plain",
         "content_data": "I think one of the challenges of this design is the map, how should I redesign it to display more parking space but doesn’t look too chaotic? Finding more references which have visual solutions for large quantity of data should be the next step."
@@ -106,15 +104,10 @@
     "title": "FOCUSED.",
     "category": "DIGITAL PRODUCT DESIGN",
     "thumbnail_image_path": "/work/focused/focused_mockup.jpg",
+    "objective": "Focused helps drivers stay focused on the road by eliminating distractions on their mobile phones.",
     "content": [
       {
         "content_id": 0,
-        "content_title": "objective",
-        "content_data_type": "text-plain",
-        "content_data": "Focused helps drivers stay focused on the road by eliminating distractions on their mobile phones."
-      },
-      {
-        "content_id": 1,
         "content_title": "overview",
         "content_data_type": "text-complex",
         "content_data": {
@@ -129,24 +122,27 @@
         }
       },
       {
-        "content_id": 2,
+        "content_id": 1,
         "content_title": "design process",
         "content_data_type": "image-single",
-        "content_data": "/work/focused/design_process.png"
+        "content_data": {
+          "img": "/work/focused/design_process.png",
+          "size": 8
+        }
       },
       {
-        "content_id": 3,
+        "content_id": 2,
         "content_title": "research",
         "content_data_type": "text-complex",
         "content_data": {
           "quote0": "\"1/4 car accidents is caused by texting and driving\"",
           "quote1": "\"Text & drive is 6x more likely to cause an accident than DUI\"",
           "quote2": "\"94% of teen drivers acknowledge the dangers of text & drive, but 35% admitted to doing it anyway\"",
-          "details": "Looking at these numbers, I couldn’t stop thinking about what are the possible ways to keep drivers away from their phones.\n\nI started looking for existing apps or solutions that has similar features. Drivemode has similar concept, which they are aiming for integrating all kinds of apps, phone features into their product to facilitate the user engagement with their phone, could end up causing drivers spending more time engaging with their phones, which is the opposite of what I want to achieve.\n\nWith the rising phenomena of nomophobia(no-mobile-phone phobia) among population, smart phones are becoming more and more addictive, users could be checking their phone subconsciously, so I decided to use some “hard-core“ design to stop this addiction.\n\nI ran through the knowledge I have in software engineering, found a feature which can be used by developers called the single application mode, which allows the phone to lock on specific apps, the user cannot see incoming notifications or go back to the home screen and open another app.\n\nI could apply this technology into this product, so the users have less chance to get distracted by their phones."
+          "text": "Looking at these numbers, I couldn’t stop thinking about what are the possible ways to keep drivers away from their phones.\n\nI started looking for existing apps or solutions that has similar features. Drivemode has similar concept, which they are aiming for integrating all kinds of apps, phone features into their product to facilitate the user engagement with their phone, could end up causing drivers spending more time engaging with their phones, which is the opposite of what I want to achieve.\n\nWith the rising phenomena of nomophobia(no-mobile-phone phobia) among population, smart phones are becoming more and more addictive, users could be checking their phone subconsciously, so I decided to use some “hard-core“ design to stop this addiction.\n\nI ran through the knowledge I have in software engineering, found a feature which can be used by developers called the single application mode, which allows the phone to lock on specific apps, the user cannot see incoming notifications or go back to the home screen and open another app.\n\nI could apply this technology into this product, so the users have less chance to get distracted by their phones."
         }
       },
       {
-        "content_id": 4,
+        "content_id": 3,
         "content_title": "brainstorm",
         "content_data_type": "mixed-image",
         "content_data": {
@@ -155,7 +151,7 @@
           }
       },
       {
-        "content_id": 5,
+        "content_id": 4,
         "content_title": "wireframe",
         "content_data_type": "mixed-image",
         "content_data": {
@@ -168,7 +164,7 @@
         }
       },
       {
-        "content_id": 6,
+        "content_id": 5,
         "content_title": "ui kit",
         "content_data_type": "image-multi",
         "content_data": {
@@ -179,7 +175,7 @@
         }
       },
       {
-        "content_id": 7,
+        "content_id": 6,
         "content_title": "prototype",
         "content_data_type": "video",
         "content_data": {
@@ -192,7 +188,7 @@
         }
       },
       {
-        "content_id": 8,
+        "content_id": 7,
         "content_title": "summary",
         "content_data_type": "text-plain",
         "content_data": "For this project, I primarily focused on the animation and finding out the visual solution to incorporate driving speed with color saturation, instead of finding out the visual style I want to achieve.\n\nFor next step, I would spend more time finding more visual references, creating mood-board to redesign the visual style of this digital product, will have the potential to attract more users.\n\nOverall, I really appreciate this project opportunity provided by Brendan Griffiths, and the help from my talented friends."
@@ -204,15 +200,10 @@
     "title": "JAZZIN",
     "category": "BRAND DESIGN & DIGITAL PRODUCT DESIGN",
     "thumbnail_image_path": "/work/jazzin/jazzin.png",
+    "objective": "Jazzin is a 3-day jazz festival supporting local jazz bars and artists to raise awareness of their groups to the public.",
     "content": [
       {
         "content_id": 0,
-        "content_title": "objective",
-        "content_data_type": "text-plain",
-        "content_data": "Jazzin is a 3-day jazz festival supporting local jazz bars and artists to raise awareness of their groups to the public."
-      },
-      {
-        "content_id": 1,
         "content_title": "overview",
         "content_data_type": "text-complex",
         "content_data": {
@@ -227,7 +218,7 @@
         }
       },
       {
-        "content_id": 2,
+        "content_id": 1,
         "content_title": "design system",
         "content_data_type": "image-multi",
         "content_data": {
@@ -238,13 +229,13 @@
         }
       },
       {
-        "content_id": 3,
+        "content_id": 2,
         "content_title": "what did i do?",
         "content_data_type": "text-plain",
         "content_data": "I was in charge of coming up with design and strategy for the social media campaign, the artist and the schedule interfaces for mobile application as well as working closely with the team, exchanging ideas and suggestions with my teammates."
       },
       {
-        "content_id": 4,
+        "content_id": 3,
         "content_title": "deliverables",
         "content_data_type": "jazzin-deliverables",
         "content_data": {
@@ -275,7 +266,7 @@
         }
       },
       {
-        "content_id": 5,
+        "content_id": 4,
         "content_title": "summary",
         "content_data_type": "text-plain",
         "content_data": "I’m thankful that our instructor Jacob Heftmann invited many talented and experienced designers to critique and giving feedback on our work at different check point, which really helped us moving forward to the end.\n\nOverall this was a great opportunity for us to practice design in different medium, to collaborate and work as a team, and to overcome challenges."

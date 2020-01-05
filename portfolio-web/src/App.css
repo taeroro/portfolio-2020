@@ -10,3 +10,7 @@
   background: #0000FF;
   color: #FFF;
 }
+
+p {
+  margin: 0;
+}

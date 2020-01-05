@@ -28,7 +28,7 @@ export default class WorkDetail extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }
 
   componentDidMount() {
@@ -97,6 +97,7 @@ export default class WorkDetail extends Component {
 
   renderThumbnail() {
     const imgPath = this.state.dataObj && this.state.dataObj.thumbnail_image_path;
+    const objText = this.state.dataObj && this.state.dataObj.objective;
 
     if (this.state.dataObj && this.state.dataObj.thumbnail_image_path.includes("webm")) {
       return (
@@ -118,6 +119,10 @@ export default class WorkDetail extends Component {
 
     return (
       <div className="thumbnail-wrapper">
+        <div className="objective-wrapper">
+          <p>{objText}</p>
+        </div>
+
         <div className="img-wrapper">
           <img
             className="thumbnail-img"
@@ -145,11 +150,13 @@ export default class WorkDetail extends Component {
       case "text-plain":
         return (
           <div className="data-wrapper">
-            <p
-              className={content.content_title === "objective" ? "text-objective" : ""}
-            >
-              {content.content_data}
-            </p>
+            <div className="row row-customize">
+              <div className="col-md-4 col-customize"></div>
+              <div className="col-md-4 col-customize">
+                <p>{content.content_data}</p>
+              </div>
+              <div className="col-md-4 col-customize"></div>
+            </div>
           </div>
         );
 
@@ -158,103 +165,190 @@ export default class WorkDetail extends Component {
           let data = content.content_data;
 
           if (content.content_title === "overview") {
-            return (
-              <div className="data-wrapper">
-                {
-                  keyArray.map((item, index) => {
-                    if (keyArray[index].startsWith("_")) {
-                      return (
-                        <p key={index} className="overview-p">
-                          {data[keyArray[index]]}
-                        </p>
-                      );
-                    }
-                    else {
-                      return (
-                        <dl key={index} className="overview-dl">
-                          <dt>{keyArray[index]}</dt>
-                          <dd>{data[keyArray[index]]}</dd>
-                        </dl>
-                      );
-                    }
-                  })
+            let temp_i = 0;
+            let elements = keyArray || [];
+            let components = elements.map(
+              (item) => {
+                if (item.startsWith("_")) {
+                  return (
+                    <p className="overview-p" key={temp_i++}>{data[item]}</p>
+                  );
                 }
+                else {
+                  return (
+                    <dl key={temp_i++} className="overview-dl">
+                      <dt>{item}</dt>
+                      <dd>{data[item]}</dd>
+                    </dl>
+                  );
+                }
+              }
+            );
+
+            let toDisplay = [];
+            let arr0 = components.slice(0,4);
+            let arr1 = components.slice(4, components.length-1);
+            let arr2 = components.slice(components.length-1);
+
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-2 col-customize"></div>
+                <div className="col-md-4 col-customize">{arr0}</div>
+                <div className="col-md-4 col-customize">{arr1}</div>
+                <div className="col-md-2 col-customize"></div>
               </div>
             );
-          }
-          else if (content.content_title === "research") {
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-2 col-customize"></div>
+                <div className="col-md-8 col-customize">
+                  {arr2}
+                </div>
+                <div className="col-md-2 col-customize"></div>
+              </div>
+            );
+
             return (
               <div className="data-wrapper">
-                {
-                  keyArray.map((item, index) => {
-                    if (item.includes("details")) {
-                      return (
-                        <p className="research-detail" key={index}>
-                          {data[keyArray[index]]}
-                        </p>
-                      );
-                    }
-                    else if (item.includes("quote")) {
-                      if (this.state.projectId === "0") {
-                        return (
-                          <p className="research-quote research-p-section" key={index}>
-                            &#9657; {data[keyArray[index]]}
-                          </p>
-                        );
-                      }
-                      else if (this.state.projectId === "1") {
-                        return (
-                          <p className="research-quote" key={index}>
-                            &#9657; {data[keyArray[index]]}
-                          </p>
-                        );
-                      }
-                    }
-                    else if (item.includes("image")) {
-                      return (
-                        <img
-                          src={data[keyArray[index]]}
-                          className="image-single research"
-                          key={index}
-                        />
-                      );
-                    }
-                    else if (item.includes("desc")) {
-                      return (
-                        <p className="img-desc"  key={index}>
-                          {data[keyArray[index]]}
-                        </p>
-                      );
-                    }
-                    else if (item.includes("text")) {
-                      return (
-                        <p key={index}>
-                          {data[keyArray[index]]}
-                        </p>
-                      );
-                    }
-                    else if (item.includes("point")) {
-                      return (
-                        <p className="research-point" key={index}>
-                          {data[keyArray[index]]}
-                        </p>
-                      );
-                    }
-                  })
-                }
+                {toDisplay}
               </div>
             );
           }
 
+          else if (content.content_title === "research") {
+            let temp_i = 0;
+            let elements = keyArray || [];
+            let components = elements.map(
+              (item) => {
+                if (item.includes("title")) {
+                  return (
+                    <p className="title-sm" key={temp_i++}>{data[item]}</p>
+                  );
+                }
+                else if (item.includes("text")) {
+                  return (
+                    <p key={temp_i++}>{data[item]}</p>
+                  );
+                }
+                else if (item.includes("image")) {
+                  return (
+                    <img className="image-single" src={data[item]} key={temp_i++} alt="screenshot" />
+                  );
+                }
+                else if (item.includes("desc")) {
+                  return (
+                    <p className="desc-p" key={temp_i++}>{data[item]}</p>
+                  );
+                }
+                else if (item.includes("point")) {
+                  return (
+                    <p className="point-p" key={temp_i++}>{data[item]}</p>
+                  );
+                }
+                else if (item.includes("quote")) {
+                  return (
+                    <p className="quote-p" key={temp_i++}>{data[item]}</p>
+                  );
+                }
+              }
+            );
+
+            if (this.state.projectId === "0") {
+              let toDisplay = [];
+              let arr0 = components.slice(0, 2);
+              let arr1 = components.slice(2, 3);
+              let arr2 = components.slice(3, 4);
+              let arr3 = components.slice(4, components.length);
+
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-md-4 col-customize">{arr0}</div>
+                  <div className="col-md-4 col-customize"></div>
+                </div>
+              );
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-2 col-customize"></div>
+                  <div className="col-md-2 col-customize col-apark-research col-align-bottom">{arr2}</div>
+                  <div className="col-md-4 col-customize col-apark-research">{arr1}</div>
+                  <div className="col-md-4 col-customize"></div>
+                </div>
+              );
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-md-4 col-customize">{arr3}</div>
+                  <div className="col-md-4 col-customize"></div>
+                </div>
+              );
+
+              return (
+                <div className="data-wrapper">
+                  {toDisplay}
+                </div>
+              );
+            }
+
+            else if (this.state.projectId === "1") {
+              let toDisplay = [];
+              let arr0 = components.slice(0, 1);
+              let arr1 = components.slice(1, 2);
+              let arr2 = components.slice(2, 3);
+              let arr3 = components.slice(3);
+
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-md-4 col-customize">{arr0}</div>
+                  <div className="col-md-4 col-customize"></div>
+                </div>
+              );
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-6 col-customize"></div>
+                  <div className="col-md-4 col-customize">{arr1}</div>
+                  <div className="col-md-2 col-customize"></div>
+                </div>
+              );
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-2 col-customize"></div>
+                  <div className="col-md-4 col-customize">{arr2}</div>
+                  <div className="col-md-6 col-customize"></div>
+                </div>
+              );
+              toDisplay.push(
+                <div className="row row-customize focused-research">
+                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-md-4 col-customize">{arr3}</div>
+                  <div className="col-md-4 col-customize"></div>
+                </div>
+              );
+
+              return (
+                <div className="data-wrapper">
+                  {toDisplay}
+                </div>
+              );
+            }
+          }
+
           return (
-            <div className="data-wrapper">
-            </div>
+            <div className="data-wrapper"></div>
           );
 
         case "image-single":
           return (
             <div className="data-wrapper">
-              <img src={content.content_data} className="image-single" alt="image" />
+              <div className="row row-customize">
+                <div className="col-md-2 col-customize"></div>
+                <div className={"col-md-" + content.content_data.size + " col-customize"}>
+                  <img src={content.content_data.img} className="image-single" alt="image" />
+                </div>
+                <div className="col-md-2 col-customize"></div>
+
+              </div>
             </div>
           );
 
@@ -262,7 +356,36 @@ export default class WorkDetail extends Component {
           let keyArray1 = Object.keys(content.content_data);
           let data1 = content.content_data;
 
-          if (this.state.projectId === "2") {
+          if (this.state.projectId === "0") {
+            let temp_i = 0;
+            let elements = keyArray1 || [];
+            let components = elements.map(
+              (item) => {
+                return (
+                  <img className="image-single outline full-width" src={data1[item]} alt="image" />
+                );
+              }
+            );
+
+            let toDisplay = [];
+            let arr0 = components.slice(0, 1);
+            let arr1 = components.slice(1);
+
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize">{arr0}</div>
+                <div className="col-md-6 col-customize">{arr1}</div>
+              </div>
+            );
+
+            return (
+              <div className="data-wrapper">
+                {toDisplay}
+              </div>
+            );
+          }
+
+          else if (this.state.projectId === "2") {
             return (
               <div className="data-wrapper jazzin">
                 {
@@ -320,36 +443,66 @@ export default class WorkDetail extends Component {
 
           if (content.content_title === "wireframe") {
             if (this.state.projectId === "0") {
+              let temp_i = 0;
+              let elements = keyArray0 || [];
+              let components = elements.map(
+                (item) => {
+                  if (item.includes("text")) {
+                    return (
+                      <p className="analyze" key={temp_i++}>{data0[item]}</p>
+                    );
+                  }
+                  else {
+                    return (
+                      <img className="image-single outline" src={data0[item]} alt="image" />
+                    );
+                  }
+                }
+              );
+
+              let toDisplay = [];
+              let arr0 = components.slice(0, 1);
+              let arr1 = components.slice(1, 2);
+              let arr2 = components.slice(2);
+
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-md-4 col-customize">{arr0}</div>
+                  <div className="col-md-4 col-customize"></div>
+                </div>
+              );
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-2 col-customize"></div>
+                  <div className="col-md-8 col-customize">{arr1}</div>
+                  <div className="col-md-2 col-customize"></div>
+                </div>
+              );
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-12 col-customize">
+                    <p className="down-arrow">&#8595;</p>
+                  </div>
+                </div>
+              );
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-12 col-customize">
+                    <div className="apark-wireframe">
+                      {arr2}
+                    </div>
+                  </div>
+                </div>
+              );
+
               return (
                 <div className="data-wrapper">
-                  {
-                    keyArray0.map((item, index) => {
-                      if (item.includes("text")) {
-                        return (
-                          <p key={index}>
-                            {data0[keyArray0[index]]}
-                          </p>
-                        );
-                      }
-                      else {
-                        return (
-                          <div className="wireframe-single-wrapper" key={index}>
-                            <img
-                              className="image-single less-height"
-                              src={data0[keyArray0[index]]}
-                            />
-                            {
-                              index !== keyArray0.length - 1 &&
-                              <p className="image-arrow">&#8659;</p>
-                            }
-                          </div>
-                        )
-                      }
-                    })
-                  }
+                  {toDisplay}
                 </div>
               );
             }
+
             else if (this.state.projectId === "1") {
               return (
                 <div className="data-wrapper">
@@ -416,52 +569,69 @@ export default class WorkDetail extends Component {
           }
 
           else if (content.content_title === "analyze") {
-            if (imageIndex.length > 0) {
-              imageIndex.splice(2, 0, -1);
-              imageIndex.splice(5, 0, -1);
-              imageIndex.splice(6, 0, -1);
-              // imageIndex.splice(1, 0, -1);
-              // imageIndex.splice(2, 0, -1);
-            }
-            return (
-              <div className="data-wrapper">
-                {
-                  keyArray0.map((item, index) => {
-                    if (item.includes("text")) {
-                      return (
-                        <p key={index}>
-                          {data0[keyArray0[index]]}
-                        </p>
-                      );
-                    }
-                  })
+            let temp_i = 0;
+            let elements = keyArray0 || [];
+            let components = elements.map(
+              (item) => {
+                if (item.includes("text")) {
+                  return (
+                    <p className="analyze" key={temp_i++}>{data0[item]}</p>
+                  );
                 }
-                <div className="analyze-wrapper">
-                  {
-                    imageIndex.length > 0 &&
-                    imageIndex.map((item, index) => {
-                      if (item === -1) {
-                        return (
-                          <div className="analyze-container placeholder" key={index}></div>
-                        )
-                      }
-                      else {
-                        return (
-                          <div className="analyze-container" key={index}>
-                            <img
-                              className={"image-analyze"}
-                              src={data0[keyArray0[item]]}
-                              key={index}
-                            />
-                          </div>
-                        )
-                      }
-                    })
-                  }
-                </div>
+                else {
+                  return (
+                    <img className="image-single outline" src={data0[item]} alt="image" />
+                  );
+                }
+              }
+            );
 
+            let toDisplay = [];
+            let arr0 = components.slice(0, 1);
+            let arr1 = components.slice(1, 2);
+            let arr2 = components.slice(2, 3);
+            let arr3 = components.slice(3, 4);
+            let arr4 = components.slice(4, 5);
+            let arr5 = components.slice(5);
+
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-4 col-customize"></div>
+                <div className="col-md-4 col-customize">{arr0}</div>
+                <div className="col-md-4 col-customize"></div>
               </div>
             );
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize">{arr1}</div>
+                <div className="col-md-6 col-customize"></div>
+              </div>
+            );
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize"></div>
+                <div className="col-md-6 col-customize">{arr2}</div>
+              </div>
+            );
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize">{arr3}</div>
+                <div className="col-md-6 col-customize"></div>
+              </div>
+            );
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize">{arr4}</div>
+                <div className="col-md-6 col-customize">{arr5}</div>
+              </div>
+            );
+
+            return (
+              <div className="data-wrapper">
+                {toDisplay}
+              </div>
+            );
+            // TODO
           }
 
           return (
@@ -473,33 +643,43 @@ export default class WorkDetail extends Component {
           let keyArray2 = Object.keys(content.content_data);
           let data2 = content.content_data;
 
+          let temp_i_0 = 0;
+          let elements0 = keyArray2 || [];
+          let video_count = keyArray2.length/2;
+
+          let components0 = elements0.map(
+            (item) => {
+              if (item.includes("text")) {
+                return (
+                  <p className="title-sm video" key={temp_i_0++}>
+                    {data2[item]}
+                  </p>
+                );
+              }
+              else {
+                return (
+                  <div className="video-wrapper outline" key={temp_i_0++}>
+                    <iframe src={data2[item]} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+                  </div>
+                );
+              }
+            }
+          );
+
+          let toDisplay0 = [];
+          for (let i = 0; i < video_count; i++) {
+            toDisplay0.push(
+              <div className="row row-customize video">
+                <div className="col-md-12 col-customize">
+                  {components0.slice(i*2, i*2+2)}
+                </div>
+              </div>
+            );
+          }
+
           return (
             <div className="data-wrapper">
-              {
-                keyArray2.map((item, index) => {
-                  if (item.includes("text")) {
-                    return (
-                      <p className="video-p" key={index}>
-                        &#9657; {data2[keyArray2[index]]}
-                      </p>
-                    )
-                  }
-                  else if (item.includes("vid")) {
-                    return (
-                      <div key={index}>
-                        <div className="video-wrapper">
-                          <iframe src={data2[keyArray2[index]]} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
-                        </div>
-                        {
-                          index !== keyArray2.length - 1 &&
-                          <div className="divider"></div>
-                        }
-                      </div>
-                    )
-                  }
-                })
-              }
-
+              {toDisplay0}
             </div>
           );
 
