@@ -104,14 +104,27 @@ export default class Menu extends Component {
         ref={div => this.menuContentRef = div}
       >
         <a className="title" href="/">WORK</a>
-        <a href="/work/apark" onClick={this.toggleMenu}>αPARK</a>
-        <a href="/work/focused" onClick={this.toggleMenu}>FOCUSED.</a>
-        <a href="/work/jazzin" onClick={this.toggleMenu}>JAZZIN</a>
-        <a href="https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a" target="_blank">
-          UX COLLECTIVE
-        </a>
-        <a href="/work/yintechlabs" onClick={this.toggleMenu}>YINTECH LABS</a>
-        <a href="/work/faces" onClick={this.toggleMenu}>FACES OF THE PORTRAITS</a>
+        {/* {this.state.path === "/work/"} */}
+        <div className="project-name-wrapper">
+          <a className="project-name" href="/work/apark" onClick={this.toggleMenu}>αPARK</a>
+        </div>
+        <div className="project-name-wrapper">
+          <a className="project-name" href="/work/focused" onClick={this.toggleMenu}>FOCUSED.</a>
+        </div>
+        <div className="project-name-wrapper">
+          <a className="project-name" href="/work/jazzin" onClick={this.toggleMenu}>JAZZIN</a>
+        </div>
+        <div className="project-name-wrapper">
+          <a className="project-name" href="https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a" target="_blank">
+            UX COLLECTIVE
+          </a>
+        </div>
+        <div className="project-name-wrapper">
+          <a className="project-name" href="/work/yintechlabs" onClick={this.toggleMenu}>YINTECH LABS</a>
+        </div>
+        <div className="project-name-wrapper">
+          <a className="project-name" href="/work/faces" onClick={this.toggleMenu}>FACES OF THE PORTRAITS</a>
+        </div>
 
         <a className="title" href="/about">ABOUT</a>
       </div>

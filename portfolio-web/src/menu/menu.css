@@ -93,18 +93,28 @@
     color: #FFF;
     margin: 0;
     text-transform: uppercase;
+    text-decoration: none;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px #FFF; }
   .menu-content-container .title:last-of-type {
     margin-top: 5vh; }
-  .menu-content-container a {
-    display: inline-block;
+  .menu-content-container .title:hover {
+    -webkit-text-fill-color: #0000FF;
+    color: #0000FF;
+    -webkit-text-stroke: 0; }
+  .menu-content-container .project-name-wrapper {
+    margin-bottom: 1vh; }
+  .menu-content-container .project-name {
+    display: inline;
     color: #FFF;
     text-decoration: none;
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 1vh; }
+    border-bottom: 0px solid #0000FF;
+    transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .menu-content-container .project-name:hover {
+    border-bottom: 5px solid #0000FF; }
 
 .menu-content-container.hidden {
   z-index: 0;

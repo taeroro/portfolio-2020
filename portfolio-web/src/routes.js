@@ -9,7 +9,7 @@ import About from './about/about';
 import WorkDetail from './work/work-detail/work-detail';
 
 export default () =>
-  <ScrollIntoView>
+  // <ScrollIntoView>
     <Switch>
       <AppliedRoute path="/" exact component={Work} />
       <AppliedRoute path="/about" exact component={About} />
@@ -18,4 +18,4 @@ export default () =>
       { /* Catch all unmatched routes */ }
       {/* <Route component={NotFound} /> */}
     </Switch>;
-  </ScrollIntoView>
+  {/* </ScrollIntoView> */}
