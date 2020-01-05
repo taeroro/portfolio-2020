@@ -8,9 +8,11 @@
 }
 
 .introduction-container.detail-page {
-  // TODO: remove it, debug only
-  // display: none;
-  position: absolute !important;
+  // position: fixed !important;
+
+  // position: sticky !important;
+  // position: -webkit-sticky !important;
+  // top: 0;
 
   .title-description {
     font-size: 48px;
@@ -78,6 +80,7 @@
 
 .content-0 {
   margin: 10vh 0 0 0 !important;
+  padding: 0 40px !important;
 }
 
 div[class^="content-"] {
@@ -85,8 +88,11 @@ div[class^="content-"] {
   flex-direction: column;
   // width: calc(100% - 80px);
   width: 100%;
-  padding: 0 40px;
-  margin: 20vh 0 0 0;
+  padding: 20vh 40px 0;
+  // margin: 20vh 0 0 0;
+
+  z-index: 5;
+  background-color: #FFF;
 
   h2 {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
@@ -98,6 +104,11 @@ div[class^="content-"] {
 
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px #000;
+
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 6;
   }
 
   .data-wrapper {

@@ -33,8 +33,11 @@ class WorkDetail extends Component {
 
     this.introNameRef = null;
     this.descriptionRef = null;
+    this.fixedContainerRef = null;
+    this.titleRef = [];
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.updateScroll = this.updateScroll.bind(this);
   }
 
   componentDidMount() {
@@ -46,7 +49,7 @@ class WorkDetail extends Component {
       // TODO: animation
     }
 
-    const index = indexToPath.indexOf(this.props.match.params.id);
+    const index = indexToPath.indexOf(this.props.match.params.id).toString();
 
     this.setState({
       projectId: index,
@@ -73,7 +76,9 @@ class WorkDetail extends Component {
   }
 
   updateScroll() {
-
+    if (this.titleRef.length !== 0 && window.pageYOffset >= this.titleRef[0].offsetTop - this.fixedContainerRef.clientHeight) {
+      console.log("reached");
+    }
   }
 
   renderFixedContent() {
@@ -83,7 +88,10 @@ class WorkDetail extends Component {
     let calcTop = parseInt(this.state.titleDescY, 10) - (this.state.titleDescHeight*0.9);
 
     return (
-      <div className="introduction-container detail-page">
+      <div
+        className="introduction-container detail-page"
+        ref={div => this.fixedContainerRef = div}
+      >
         <span
           className="title-description"
           style={{marginTop: calcTop}}
@@ -143,7 +151,11 @@ class WorkDetail extends Component {
   renderContent(content) {
     return (
       <div className={"content-" + content.content_id} key={content.content_id}>
-        <h2>{content.content_title}</h2>
+        <h2
+          ref={h2 => this.titleRef[parseInt(content.content_id, 10)] = h2}
+        >
+          {content.content_title}
+        </h2>
         {this.renderDetailedContent(content)}
       </div>
     );

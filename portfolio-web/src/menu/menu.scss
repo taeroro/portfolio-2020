@@ -1,5 +1,5 @@
 .menu-container {
-  z-index: 7;
+  z-index: 20;
   position: fixed;
   top: 0;
   right: 0;
@@ -95,7 +95,7 @@
 }
 
 .menu-overlay {
-  z-index: 6;
+  z-index: 19;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -106,7 +106,7 @@
 }
 
 .menu-content-container {
-  z-index: 7;
+  z-index: 20;
   position: fixed;
   right: 70px;
   top: 0;
@@ -117,6 +117,10 @@
   display: flex;
   flex-direction: column;
   opacity: 0;
+
+  .title-wrapper:last-of-type {
+    margin-top: 5vh;
+  }
 
   .title {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
@@ -129,10 +133,6 @@
 
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px #FFF;
-  }
-
-  .title:last-of-type {
-    margin-top: 5vh;
   }
 
   .title:hover {
@@ -158,6 +158,10 @@
   }
 
   .project-name:hover {
+    border-bottom: 5px solid #0000FF;
+  }
+
+  .project-name.active {
     border-bottom: 5px solid #0000FF;
   }
 }

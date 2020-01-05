@@ -59,11 +59,11 @@ class Work extends Component {
       titleDescY: window.getComputedStyle(this.introNameRef).getPropertyValue('margin-top'),
     });
 
-    console.log("hi");
+    // console.log("hi");
   }
 
   componentWillUnmount() {
-    console.log("bye");
+    // console.log("bye");
     window.removeEventListener('resize', this.updateWindowDimensions);
     window.removeEventListener('scroll', this.updateScroll);
   }
