@@ -67,7 +67,7 @@
   flex-direction: column;
   align-items: center; }
   .thumbnail-feed .feed-placeholder {
-    padding-bottom: 8vh; }
+    margin-bottom: 8vh; }
 
 .thumbnail-container {
   z-index: 5;
