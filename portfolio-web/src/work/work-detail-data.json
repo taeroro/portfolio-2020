@@ -222,10 +222,11 @@
         "content_title": "design system",
         "content_data_type": "image-multi",
         "content_data": {
-            "image0": "/work/jazzin/Direction-02.png",
-            "image1": "/work/jazzin/Direction-04.png",
-            "image2": "/work/jazzin/Direction-05.png",
-            "image3": "/work/jazzin/Direction-07.png"
+            "image0": "/work/jazzin/Direction-02.jpg",
+            "image1": "/work/jazzin/Direction-04.jpg",
+            "image2": "/work/jazzin/Direction-05.jpg",
+            "image3": "/work/jazzin/Direction-06.jpg",
+            "image4": "/work/jazzin/Direction-07.jpg"
         }
       },
       {
@@ -240,8 +241,8 @@
         "content_data_type": "jazzin-deliverables",
         "content_data": {
             "text0": "Poster",
-            "poster0": "/work/jazzin/Poster.png",
-            "poster1": "/work/jazzin/Poster_Schedule.png",
+            "poster0": "/work/jazzin/Poster.jpg",
+            "poster1": "/work/jazzin/Poster_Schedule.jpg",
             "text1": "Social Media Campaign",
             "social0": "/work/jazzin/social_media-01.jpg",
             "social1": "/work/jazzin/social_media-02.jpg",
@@ -259,8 +260,8 @@
             "social13": "/work/jazzin/Jazz_sitcker_1-07.png",
             "social14": "/work/jazzin/social-s.jpg",
             "text2": "Website",
-            "web0": "/work/jazzin/web1.png",
-            "web1": "/work/jazzin/web2.png",
+            "web0": "/work/jazzin/web1.jpg",
+            "web1": "/work/jazzin/web2.jpg",
             "text3": "Mobile App",
             "app0": "https://player.vimeo.com/video/382519544?title=0&byline=0&portrait=0"
         }
@@ -298,7 +299,7 @@
             "tools and frameworks": "React\nExpress.js\nAWS (EC2, S3, Route 53)",
             "deliverables": "Landing Website\nStock Model Training Web Application\nMobile App\nPresentation",
             "timeline": "May 2018 - Aug 2018",
-            "_details": "I was a software engineer intern at Yintech Investment Holdings - Innovation Labs in the greater Boston area in the summer of 2018. Since the size of the team in Boston is really small (under 10 employees), I had the valuable opportunity to design digital products before coding them into the real products.\n\nDue to the NDA, I am not able to share all the products and designs I worked on."
+            "_details": "I was a software engineer intern at Yintech Investment Holdings - Innovation Labs in the greater Boston area in the summer of 2018. Since the size of the team in Boston is really small (under 10 employees), I had the valuable opportunity to design digital products before coding them into the real products."
         }
       },
       {

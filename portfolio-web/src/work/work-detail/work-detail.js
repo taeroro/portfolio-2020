@@ -123,7 +123,7 @@ export default class WorkDetail extends Component {
           <p>{objText}</p>
         </div>
 
-        <div className="img-wrapper">
+        <div className="img-wrapper grey-background">
           <img
             className="thumbnail-img"
             src={imgPath}
@@ -319,7 +319,7 @@ export default class WorkDetail extends Component {
                 </div>
               );
               toDisplay.push(
-                <div className="row row-customize focused-research">
+                <div className="row row-customize focused-image-margin">
                   <div className="col-md-4 col-customize"></div>
                   <div className="col-md-4 col-customize">{arr3}</div>
                   <div className="col-md-4 col-customize"></div>
@@ -385,45 +385,82 @@ export default class WorkDetail extends Component {
             );
           }
 
-          else if (this.state.projectId === "2") {
+          else if (this.state.projectId === "1") {
+            let temp_i = 0;
+            let elements = keyArray1 || [];
+            let components = elements.map(
+              (item) => {
+                return (
+                  <img className="image-single outline full-width" src={data1[item]} alt="image" />
+                );
+              }
+            );
+
+            let toDisplay = [];
+            let arr0 = components.slice(0, 1);
+            let arr1 = components.slice(1, 2);
+            let arr2 = components.slice(2, 3);
+            let arr3 = components.slice(3);
+
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize">{arr0}</div>
+                <div className="col-md-6 col-customize">{arr1}</div>
+              </div>
+            );
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize">{arr2}</div>
+                <div className="col-md-6 col-customize">{arr3}</div>
+              </div>
+            );
+
             return (
-              <div className="data-wrapper jazzin">
-                {
-                  keyArray1.map((item, index) => {
-                    return (
-                      <div className="jazzin-image-wrapper" key={index}>
-                        <img
-                          className={"image-single multi"}
-                          src={data1[keyArray1[index]]}
-                          alt="image"
-                        />
-                      </div>
-                    )
-                  })
-                }
+              <div className="data-wrapper">
+                {toDisplay}
               </div>
             );
           }
-          else {
+
+          else if (this.state.projectId === "2") {
+            let temp_i = 0;
+            let elements = keyArray1 || [];
+            let components = elements.map(
+              (item) => {
+                return (
+                  <img className="image-single outline full-width" src={data1[item]} alt="image" />
+                );
+              }
+            );
+
+            let toDisplay = [];
+            let arr0 = components.slice(0, 1);
+            let arr1 = components.slice(1, 2);
+            let arr2 = components.slice(2, 3);
+            let arr3 = components.slice(3, 4);
+            let arr4 = components.slice(4);
+
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize">{arr0}</div>
+                <div className="col-md-6 col-customize">{arr1}</div>
+              </div>
+            );
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-12 col-customize">{arr2}</div>
+              </div>
+            );
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize">{arr3}</div>
+                <div className="col-md-6 col-customize">{arr4}</div>
+              </div>
+            );
+
             return (
               <div className="data-wrapper">
-                {
-                  keyArray1.map((item, index) => {
-                    return (
-                      <div className="image-multi-wrapper" key={index}>
-                        <img
-                          className="image-single multi"
-                          src={data1[keyArray1[index]]}
-                          alt="image"
-                        />
-                        {
-                          index !== keyArray1.length - 1 &&
-                          <div className="divider"></div>
-                        }
-                      </div>
-                    )
-                  })
-                }
+                {toDisplay}
               </div>
             );
           }
@@ -432,14 +469,6 @@ export default class WorkDetail extends Component {
         case "mixed-image":
           let keyArray0 = Object.keys(content.content_data);
           let data0 = content.content_data;
-          let imageIndex = [];
-          let rowCount = 0;
-
-          for (let i = 0; i < keyArray0.length; i++) {
-            if (keyArray0[i].includes("image"))
-              imageIndex.push(i);
-          }
-          rowCount = imageIndex.length % 3;
 
           if (content.content_title === "wireframe") {
             if (this.state.projectId === "0") {
@@ -504,66 +533,90 @@ export default class WorkDetail extends Component {
             }
 
             else if (this.state.projectId === "1") {
+              let temp_i = 0;
+              let elements = keyArray0 || [];
+              let components = elements.map(
+                (item) => {
+                  if (item.includes("text")) {
+                    return (
+                      <p className="analyze" key={temp_i++}>{data0[item]}</p>
+                    );
+                  }
+                  else {
+                    return (
+                      <img className={"image-single outline screenshot focused-" + item} src={data0[item]} alt="image" />
+                    );
+                  }
+                }
+              );
+
+              let toDisplay = [];
+              let arr0 = components.slice(0, 1);
+              let arr1 = [components.slice(1, 2), components.slice(4, 5)];
+              let arr2 = components.slice(2, 3);
+              let arr3 = [components.slice(3, 4), components.slice(5)];
+
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-md-4 col-customize">{arr0}</div>
+                  <div className="col-md-4 col-customize"></div>
+                </div>
+              );
+              toDisplay.push(
+                <div className="row row-customize">
+                  <div className="col-md-4 col-customize col-center">{arr1}</div>
+                  <div className="col-md-4 col-customize col-center">{arr2}</div>
+                  <div className="col-md-4 col-customize col-center">{arr3}</div>
+                </div>
+              );
+
               return (
                 <div className="data-wrapper">
-                  {
-                    keyArray0.map((item, index) => {
-                      if (item.includes("text")) {
-                        return (
-                          <p key={index}>
-                            {data0[keyArray0[index]]}
-                          </p>
-                        );
-                      }
-                    })
-                  }
-                  <div className="flex-wrapper dark-mode">
-                    <div className="flex-row">
-                      {
-                        imageIndex.length > 0 &&
-                        imageIndex.map((item, index) => {
-                          return (
-                            <div className="flex-column" key={index}>
-                              <img
-                                className={"wireframe-image" + item}
-                                src={data0[keyArray0[item]]}
-                                key={index}
-                              />
-                            </div>
-                          )
-                        })
-                      }
-                    </div>
-                  </div>
+                  {toDisplay}
                 </div>
               );
             }
           }
 
           else if (content.content_title === "brainstorm") {
+            let temp_i = 0;
+            let elements = keyArray0 || [];
+            let components = elements.map(
+              (item) => {
+                if (item.includes("text")) {
+                  return (
+                    <p className="brainstorm" key={temp_i++}>{data0[item]}</p>
+                  );
+                }
+                else {
+                  return (
+                    <img className="image-single" src={data0[item]} alt="image" />
+                  );
+                }
+              }
+            );
+
+            let toDisplay = [];
+            let arr0 = components.slice(0, 1);
+            let arr1 = components.slice(1);
+
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-12 col-customize">{arr0}</div>
+              </div>
+            );
+            toDisplay.push(
+              <div className="row row-customize focused-image-margin">
+                <div className="col-md-4 col-customize"></div>
+                <div className="col-md-4 col-customize">{arr1}</div>
+                <div className="col-md-4 col-customize"></div>
+              </div>
+            );
+
             return (
               <div className="data-wrapper">
-                {
-                  keyArray0.map((item, index) => {
-                    if (item.includes("text")) {
-                      return (
-                        <p className="brainstorm-p" key={index}>
-                          {data0[keyArray0[index]]}
-                        </p>
-                      )
-                    }
-                    else {
-                      return (
-                        <img
-                          className="image-single"
-                          src={data0[keyArray0[index]]}
-                          alt="image"
-                          key={index}
-                        />
-                      )
-                    }
-                  })
-                }
+                {toDisplay}
               </div>
             );
           }
@@ -693,20 +746,18 @@ export default class WorkDetail extends Component {
             (item) => {
               if (item.includes("text")) {
                 return (
-                  <p className="jazzin-p" key={temp_i++}>&#9657; {dataj[item]}</p>
+                  <p className="title-sm jazzin" key={temp_i++}>{dataj[item]}</p>
                 );
               }
               else if (item.includes("poster")) {
                 return (
-                  <div className="jazzin-poster" key={temp_i++}>
-                    <img className="image-single poster" src={dataj[item]} alt="poster" key={temp_i++} />
-                  </div>
+                  <img className="image-single full-width" src={dataj[item]} alt="poster" key={temp_i++} />
                 );
               }
               else if (item.includes("social")) {
                 if (item === "social9") {
                   return (
-                    <img className={"jazzin-" + item} src={dataj[item]} alt="social" key={temp_i++} />
+                    <img className="image-single" src={dataj[item]} alt="social" key={temp_i++} />
                   );
                 }
                 return (
@@ -715,7 +766,7 @@ export default class WorkDetail extends Component {
               }
               else if (item.includes("web")) {
                 return (
-                  <img className={"jazzin-" + item} src={dataj[item]} alt="web" key={temp_i++} />
+                  <img className="image-single full-width" src={dataj[item]} alt="web" key={temp_i++} />
                 );
               }
               else if (item.includes("app")) {
@@ -760,53 +811,83 @@ export default class WorkDetail extends Component {
           toDisplay.push(text[j]);
           if (j === 0) {
             toDisplay.push(
-              <div className="jazzin-poster-wrapper" key={temp_i++}>
-                {poster}
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize">{poster[0]}</div>
+                <div className="col-md-6 col-customize">{poster[1]}</div>
               </div>
             );
           }
           else if (j === 1) {
             toDisplay.push(
-              <div className="social-9-wrapper" key={temp_i++}>
-                {social.slice(0, 9)}
+              <div className="row row-customize">
+                <div className="col-md-12 col-customize">
+                  <div className="social-9-wrapper" key={temp_i++}>
+                    {social.slice(0, 9)}
+                  </div>
+                </div>
               </div>
             );
             toDisplay.push(
-              <div className="social-9-d-wrapper" key={temp_i++}>
-                <div className="d-post-wrapper">
-                  {/* <div className="line-vertical"></div> */}
+              <div className="row row-customize row-jazzin-img-margin">
+                <div className="col-md-4 col-customize col-align-bottom">
+                  <div className="social-sticker-wrapper" key={temp_i++}>
+                    {social.slice(10, 14)}
+                  </div>
+                </div>
+                <div className="col-md-2 col-customize"></div>
+                <div className="col-md-6 col-customize">
                   {social.slice(9, 10)}
                 </div>
               </div>
             );
             toDisplay.push(
-              <div className="social-sticker-wrapper" key={temp_i++}>
-                {social.slice(10, 14)}
+              <div className="row row-customize row-jazzin-img-margin">
+                <div className="col-md-12 col-customize col-align-bottom">
+                  {social.slice(14)}
+                </div>
               </div>
             );
             toDisplay.push(
-              <div className="social-schedule-wrapper" key={temp_i++}>
-                {social.slice(14)}
-                <div className="a-link-wrapper">
-                  <a className="a-link" href="https://www.instagram.com/jazzin_2019/" target="_blank">
-                    Click here to open jazzin's Instagram
-                  </a>
+              <div className="row row-customize">
+                <div className="col-md-12 col-customize col-center">
+                  <div className="a-link-wrapper">
+                    <a className="a-link" href="https://www.instagram.com/jazzin_2019/" target="_blank">
+                      Click here to open jazzin's Instagram
+                    </a>
+                  </div>
                 </div>
               </div>
             );
           }
           else if (j === 2) {
             toDisplay.push(
-              <div className="jazzin-web-wrapper" key={temp_i++}>
-                {web}
-                <a className="a-link" href="https://promotion-website.blueman3963.now.sh/" target="_blank">
-                  Click here to open the website
-                </a>
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize">
+                  {web[0]}
+                </div>
+                <div className="col-md-6 col-customize">
+                  {web[1]}
+                </div>
+              </div>
+            );
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-12 col-customize col-center">
+                  <a className="a-link" href="https://promotion-website.blueman3963.now.sh/" target="_blank">
+                    Click here to open the website
+                  </a>
+                </div>
               </div>
             );
           }
           else if (j === 3) {
-            toDisplay.push(app);
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-12 col-customize">
+                  {app}
+                </div>
+              </div>
+            );
           }
         }
 
@@ -819,45 +900,83 @@ export default class WorkDetail extends Component {
       case "yintech-website":
         let keyArrayy = Object.keys(content.content_data);
         let datay = content.content_data;
+        let temp_y = 0;
+
+        let elements1 = keyArrayy || [];
+        let components1 = elements1.map(
+          (item) => {
+            if (item.includes("title")) {
+              return (
+                <p className="title-sm" key={temp_y++}>{datay[item]}</p>
+              );
+            }
+            else if (item.includes("text")) {
+              return (
+                <p key={temp_y++}>{datay[item]}</p>
+              );
+            }
+            else if (item.includes("image")) {
+              return (
+                <img className="image-single full-width" src={datay[item]} alt="screenshots" />
+              );
+            }
+            else if (item.includes("vid")) {
+              return (
+                <div className="video-wrapper outline" key={temp_y++}>
+                  <iframe src={datay[item]} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+                </div>
+              );
+            }
+          }
+        );
+
+        let toDisplay1 = [];
+        let arr0 = components1.slice(0, 1);
+        let arr1 = components1.slice(1, 2);
+        let arr2 = components1.slice(2, 3);
+        let arr3 = components1.slice(3, 4);
+        let arr4 = components1.slice(4, 5);
+        let arr5 = components1.slice(5);
+
+        toDisplay1.push(
+          <div className="row row-customize">
+            <div className="col-md-12 col-customize">{arr0}</div>
+          </div>
+        );
+        toDisplay1.push(
+          <div className="row row-customize">
+            <div className="col-md-4 col-customize"></div>
+            <div className="col-md-4 col-customize">{arr1}</div>
+            <div className="col-md-4 col-customize"></div>
+          </div>
+        );
+        toDisplay1.push(
+          <div className="row row-customize yintech-row-margin">
+            <div className="col-md-12 col-customize">{arr2}</div>
+          </div>
+        );
+        toDisplay1.push(
+          <div className="row row-customize">
+            <div className="col-md-12 col-customize">{arr3}</div>
+          </div>
+        );
+        toDisplay1.push(
+          <div className="row row-customize yintech-row-margin">
+            <div className="col-md-12 col-customize">{arr4}</div>
+          </div>
+        );
+        toDisplay1.push(
+          <div className="row row-customize">
+            <div className="col-md-12 col-customize">{arr5}</div>
+          </div>
+        );
 
         return (
-          <div className="data-wrapper">
-            {
-              keyArrayy.map((item, index) => {
-                if (item.includes("title")) {
-                  return (
-                    <p class="website-title" key={index}>
-                      &#9657; {datay[keyArrayy[index]]}
-                    </p>
-                  )
-                }
-                else if (item.includes("text")) {
-                  return (
-                    <p className="website-p" key={index}>
-                      {datay[keyArrayy[index]]}
-                    </p>
-                  )
-                }
-                else if (item.includes("image")) {
-                  return (
-                    <img
-                      src={datay[keyArrayy[index]]}
-                      className="image-single yintech"
-                      key={index}
-                    />
-                  )
-                }
-                else if (item.includes("vid")) {
-                  return (
-                    <div className="video-wrapper">
-                      <iframe src={datay[keyArrayy[index]]} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
-                    </div>
-                  )
-                }
-              })
-            }
+          <div className='data-wrapper'>
+            {toDisplay1}
           </div>
-        )
+        );
+
 
       default:
         return (

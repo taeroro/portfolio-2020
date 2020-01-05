@@ -30,6 +30,8 @@
       font-weight: 700;
       line-height: 26px;
       color: #000; }
+  .thumbnail-wrapper .grey-background {
+    background: #fafafa; }
   .thumbnail-wrapper .img-wrapper {
     align-self: center;
     position: relative;
@@ -140,8 +142,8 @@ div[class^="content-"] {
     line-height: calc(var(--pQuoteSize) * 1.3);
     font-weight: 700;
     text-transform: uppercase; }
-  div[class^="content-"] .row-customize.focused-research {
-    margin-top: 10vh; }
+  div[class^="content-"] .row-customize.focused-image-margin {
+    margin-top: 5vh; }
   div[class^="content-"] .col-align-bottom {
     display: flex;
     flex-direction: row;
@@ -166,10 +168,19 @@ div[class^="content-"] {
       border: 0; }
   div[class^="content-"] .image-single.full-width {
     height: auto; }
-  div[class^="content-"] img[class^="wireframe-image"] {
-    align-self: center;
-    width: 260px;
-    object-fit: cover; }
+  div[class^="content-"] .col-center {
+    text-align: center; }
+  div[class^="content-"] .image-single.screenshot {
+    width: auto;
+    height: 80vh; }
+  div[class^="content-"] .focused-image1 {
+    margin-top: 100%; }
+  div[class^="content-"] .focused-image2 {
+    margin-top: 20%; }
+  div[class^="content-"] .focused-image3 {
+    margin-top: 50%; }
+  div[class^="content-"] .focused-image4 {
+    margin-top: 50%; }
   div[class^="content-"] .flex-wrapper {
     margin-top: 10vh; }
     div[class^="content-"] .flex-wrapper .flex-row {
@@ -194,7 +205,7 @@ div[class^="content-"] {
       margin-bottom: 0; }
   div[class^="content-"] .title-sm.video {
     margin-bottom: 0; }
-  div[class^="content-"] .video-p, div[class^="content-"] .jazzin-p {
+  div[class^="content-"] .jazzin-p {
     font-size: var(--pObjSize);
     line-height: calc(var(--pObjSize) * 1.6);
     font-weight: 500; }
@@ -213,58 +224,24 @@ div[class^="content-"] {
       left: 0;
       width: 100%;
       height: 100%; }
-  div[class^="content-"] .jazzin-image-wrapper {
-    background-color: #FFF;
-    width: 70%;
-    margin: 2.5vh 0; }
-  div[class^="content-"] .jazzin-image-wrapper:nth-of-type(2n) {
-    margin-left: auto;
-    margin-right: 0; }
-  div[class^="content-"] .jazzin-image-wrapper:first-of-type {
+  div[class^="content-"] .title-sm.jazzin {
+    margin-top: 20vh; }
+  div[class^="content-"] .title-sm.jazzin:first-of-type {
     margin-top: 0; }
-  div[class^="content-"] .jazzin-image-wrapper:last-of-type {
-    margin-bottom: 0; }
-  div[class^="content-"] .jazzin-poster-wrapper {
-    margin-top: 2vh;
-    margin-bottom: 30vh; }
-  div[class^="content-"] .jazzin-poster {
-    width: calc(((100vw - 80px)*0.8/2) - 30px);
-    margin: 0px 15px; }
-  div[class^="content-"] .jazzin-poster:last-of-type {
-    margin-top: 35%; }
-  div[class^="content-"] .image-single.poster {
-    width: 100%;
-    height: auto; }
+  div[class^="content-"] .row-jazzin-img-margin {
+    margin-top: 10vh; }
   div[class^="content-"] .social-9-wrapper {
     display: grid;
     grid-gap: 2px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    margin-top: 2vh; }
+    grid-template-rows: 1fr 1fr 1fr; }
     div[class^="content-"] .social-9-wrapper img[class^="jazzin-social"] {
       width: 100%;
       height: auto;
       object-fit: cover; }
-  div[class^="content-"] .social-9-d-wrapper {
-    width: 100%;
-    text-align: right;
-    margin-top: 20vh; }
-    div[class^="content-"] .social-9-d-wrapper .d-post-wrapper {
-      display: inline-block; }
-    div[class^="content-"] .social-9-d-wrapper .line-vertical {
-      width: 2px;
-      height: 20vh;
-      background-color: #000;
-      margin-left: 25%; }
-    div[class^="content-"] .social-9-d-wrapper img[class^="jazzin-social"] {
-      display: inline-block;
-      height: 80vh;
-      width: auto;
-      object-fit: cover; }
   div[class^="content-"] .social-sticker-wrapper {
-    margin-top: -20vh;
     display: grid;
-    width: 30%;
+    width: 100%;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr; }
@@ -272,24 +249,10 @@ div[class^="content-"] {
       width: 100%;
       height: auto;
       object-fit: cover; }
-  div[class^="content-"] .social-schedule-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20vh;
-    margin-bottom: 20vh; }
-    div[class^="content-"] .social-schedule-wrapper img[class^="jazzin-social"] {
-      align-self: center;
-      width: 100%;
-      height: auto;
-      object-fit: cover; }
-  div[class^="content-"] .jazzin-web-wrapper {
-    margin-bottom: 20vh;
-    text-align: center; }
-    div[class^="content-"] .jazzin-web-wrapper img[class^="jazzin-web"] {
-      width: 50%;
-      height: auto;
-      object-fit: cover;
-      margin-bottom: 2vh; }
+  div[class^="content-"] .jazzin-social14 {
+    width: 100%;
+    height: auto;
+    object-fit: cover; }
   div[class^="content-"] .a-link {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     font-size: var(--pSize);
@@ -307,13 +270,7 @@ div[class^="content-"] {
   div[class^="content-"] .a-link-wrapper {
     margin-top: 2vh;
     text-align: center; }
-  div[class^="content-"] .website-title {
-    font-size: var(--pObjSize);
-    line-height: calc(var(--pObjSize) * 1.6);
-    font-weight: 500; }
-  div[class^="content-"] .website-p {
-    margin-bottom: 10vh; }
-  div[class^="content-"] .image-single.yintech {
-    margin-bottom: 10vh; }
+  div[class^="content-"] .yintech-row-margin {
+    margin-top: 10vh; }
 
 /*# sourceMappingURL=work-detail.css.map */
