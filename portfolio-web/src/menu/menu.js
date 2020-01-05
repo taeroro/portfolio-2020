@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './menu.css';
+import { Link } from "react-router-dom";
 
 import gsap from 'gsap';
 import TextPlugin from "gsap/TextPlugin";
@@ -16,6 +17,7 @@ export default class Menu extends Component {
     };
 
     this.tl = gsap.timeline();
+    this.tlNew = gsap.timeline();
     gsap.registerPlugin(TextPlugin);
 
     this.menuRef = null;
@@ -24,6 +26,7 @@ export default class Menu extends Component {
     this.rt2Ref = null;
     this.rt3Ref = null;
     this.menuLabelRef = null;
+    this.menuContentRef = null;
 
     this.toggleMenu = this.toggleMenu.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -66,13 +69,17 @@ export default class Menu extends Component {
       this.tl.to(this.rt3Ref, {duration: 0.25, rotate: 45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
 
       this.tl.to(this.menuLabelRef, {duration: 0.5, text: {value: "CLOSE", delimiter: " "}, ease: "none"}, "-=0.5");
+      this.tl.to(this.menuContentRef, {duration: 0.5, display: "flex", opacity: 1, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+
 
       this.tl.to(this.menuRef, {duration: 0.5, boxShadow: '-10px 0px 20px rgba(0,0,0,0.5)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"} , "-=0.35");
       this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0.7', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
     }
     else {
-      this.tl.to(this.menuRef, {duration: 0, boxShadow: '-10px 0px 20px rgba(0,0,0,0.0)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-      this.tl.to(this.menuRef, {duration: 0.5, width: '70px', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+      this.tl.to(this.menuContentRef, {duration: 0.5, display: "none", opacity: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+
+      this.tl.to(this.menuRef, {duration: 0, boxShadow: '-10px 0px 20px rgba(0,0,0,0.0)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      this.tl.to(this.menuRef, {duration: 0.5, width: '70px', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
       this.tl.set(this.menuOverlayRef, {pointerEvents: "none"});
       this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
 
@@ -81,7 +88,7 @@ export default class Menu extends Component {
       this.tl.to(this.rt1Ref, {duration: 0.5, y: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
       this.tl.to(this.rt3Ref, {duration: 0.5, y: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
       this.tl.to(this.rt2Ref, {duration: 0.5, opacity: '1', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      this.tl.to(this.menuLabelRef, {duration: 0.5, text: {value: "MENU", delimiter: " "}, ease: "none"}, "-=0.5");
+      this.tl.to(this.menuLabelRef, {duration: 0.5, text: {value: "MENU", delimiter: " "}, ease: "none"}, "-=1");
 
       // this.tl.reverse();
     }
@@ -89,6 +96,27 @@ export default class Menu extends Component {
     this.setState({ isMenuExpanded: !this.state.isMenuExpanded });
   }
 
+
+  renderMenuContent() {
+    return (
+      <div
+        className={this.state.isMenuExpanded ? "menu-content-container" : "menu-content-container hidden"}
+        ref={div => this.menuContentRef = div}
+      >
+        <a className="title" href="/">WORK</a>
+        <a href="/work/apark" onClick={this.toggleMenu}>αPARK</a>
+        <a href="/work/focused" onClick={this.toggleMenu}>FOCUSED.</a>
+        <a href="/work/jazzin" onClick={this.toggleMenu}>JAZZIN</a>
+        <a href="https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a" target="_blank">
+          UX COLLECTIVE
+        </a>
+        <a href="/work/yintechlabs" onClick={this.toggleMenu}>YINTECH LABS</a>
+        <a href="/work/faces" onClick={this.toggleMenu}>FACES OF THE PORTRAITS</a>
+
+        <a className="title" href="/about">ABOUT</a>
+      </div>
+    );
+  }
 
   render() {
     return (
@@ -119,6 +147,8 @@ export default class Menu extends Component {
             <span ref={span => this.menuLabelRef = span}>MENU</span>
           </div>
         </div>
+
+        {this.renderMenuContent()}
       </div>
     );
   }

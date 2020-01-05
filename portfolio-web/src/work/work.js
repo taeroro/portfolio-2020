@@ -13,6 +13,14 @@ const mockup_img_path = [
   './work/yintech/Yintechlabs-01.jpg',
   './work/faces/faces.webm',
 ]
+const indexToPath = [
+  "apark",
+  "focused",
+  "jazzin",
+  "uxcollective",
+  "yintechlabs",
+  "faces",
+];
 
 class Work extends Component {
   constructor(props) {
@@ -170,7 +178,7 @@ class Work extends Component {
             // console.log(index);
 
             this.props.history.push({
-              pathname: '/work/' + index,
+              pathname: '/work/' + indexToPath[index],
               state: {
                 thumbnailPosX: x,
                 thumbnailPosY: y,

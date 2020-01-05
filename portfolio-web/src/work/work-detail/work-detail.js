@@ -7,6 +7,15 @@ import TextPlugin from "gsap/TextPlugin";
 
 import workData from './../work-detail-data';
 
+const indexToPath = [
+  "apark",
+  "focused",
+  "jazzin",
+  "uxcollective",
+  "yintechlabs",
+  "faces",
+];
+
 class WorkDetail extends Component {
   constructor(props) {
     super(props);
@@ -37,7 +46,7 @@ class WorkDetail extends Component {
       // TODO: animation
     }
 
-    const index = this.props.match.params.id;
+    const index = indexToPath.indexOf(this.props.match.params.id);
 
     this.setState({
       projectId: index,
