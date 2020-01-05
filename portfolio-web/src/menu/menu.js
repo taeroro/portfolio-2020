@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './menu.css';
 import { Link } from "react-router-dom";
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 import gsap from 'gsap';
 import TextPlugin from "gsap/TextPlugin";
 
 export default class Menu extends Component {
+  targetRef = React.createRef();
+  targetElement = null;
+
   constructor(props) {
     super(props);
 
@@ -36,6 +40,8 @@ export default class Menu extends Component {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
 
+    this.targetElement = this.targetRef.current;
+
     this.tl.set([this.rt1Ref, this.rt2Ref, this.rt3Ref], {transformOrigin: "50% 50%"});
   }
 
@@ -48,11 +54,20 @@ export default class Menu extends Component {
   }
 
   componentWillUnmount() {
+    clearAllBodyScrollLocks();
     window.removeEventListener('resize', this.updateWindowDimensions);
   }
 
   updateWindowDimensions() {
     this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
+  }
+
+  showTargetElement = () => {
+    disableBodyScroll(this.targetElement);
+  };
+
+  hideTargetElement = () => {
+    enableBodyScroll(this.targetElement);
   }
 
 
@@ -76,7 +91,7 @@ export default class Menu extends Component {
       this.tl.to(this.menuRef, {duration: 0.5, boxShadow: '-10px 0px 20px rgba(0,0,0,0.5)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"} , "-=0.35");
       this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0.7', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
 
-      this.disableScroll();
+      this.showTargetElement();
     }
     else {
       this.tl.to(this.menuContentRef, {duration: 0.5, display: "none", opacity: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
@@ -95,7 +110,7 @@ export default class Menu extends Component {
 
       // this.tl.reverse();
 
-      this.enableScroll();
+      this.hideTargetElement()
     }
 
     this.setState({ isMenuExpanded: !this.state.isMenuExpanded });
@@ -173,7 +188,7 @@ export default class Menu extends Component {
 
   render() {
     return (
-      <div className="menu-overlay-container">
+      <div className="menu-overlay-container" ref={this.targetRef}>
         <div
           className="menu-overlay"
           ref={div => this.menuOverlayRef = div}
