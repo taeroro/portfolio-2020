@@ -21,7 +21,6 @@ export default class Menu extends Component {
     };
 
     this.tl = gsap.timeline();
-    this.tlNew = gsap.timeline();
     gsap.registerPlugin(TextPlugin);
 
     this.menuRef = null;

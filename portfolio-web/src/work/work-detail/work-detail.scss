@@ -102,13 +102,16 @@ div[class^="content-"] {
     margin: 0 0 5vh 0;
     text-transform: uppercase;
 
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: #FFF;
     -webkit-text-stroke: 2px #000;
 
     position: sticky;
     position: -webkit-sticky;
     top: 0;
     z-index: 6;
+
+    // transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    text-shadow: 0 0 0 #0000FF;
   }
 
   .data-wrapper {
