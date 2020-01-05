@@ -165,10 +165,9 @@ class Work extends Component {
             let y = this.thumbnailRef[index].getBoundingClientRect().top;
             let h = this.thumbnailRef[index].clientHeight;
             let w = this.thumbnailRef[index].clientWidth;
-
-            console.log(x + ', ' + y + ' || ' + h + ', ' + w);
-
-            console.log(index);
+            let windowY = window.pageYOffset;
+            // console.log(x + ', ' + y + ' || ' + h + ', ' + w);
+            // console.log(index);
 
             this.props.history.push({
               pathname: '/work/' + index,
@@ -176,7 +175,8 @@ class Work extends Component {
                 thumbnailPosX: x,
                 thumbnailPosY: y,
                 thumbnailHeight: h,
-                thumbnailWidth: w
+                thumbnailWidth: w,
+                windowY: windowY
               }
             });
           }, 500);

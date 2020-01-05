@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from "react-router-dom";
 import './work-detail.css';
 
 import gsap from 'gsap';
@@ -6,7 +7,7 @@ import TextPlugin from "gsap/TextPlugin";
 
 import workData from './../work-detail-data';
 
-export default class WorkDetail extends Component {
+class WorkDetail extends Component {
   constructor(props) {
     super(props);
 
@@ -25,10 +26,6 @@ export default class WorkDetail extends Component {
     this.descriptionRef = null;
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-  }
-
-  componentDidUpdate(prevProps) {
-    // window.scrollTo(0, 0);
   }
 
   componentDidMount() {
@@ -1004,3 +1001,5 @@ export default class WorkDetail extends Component {
     );
   }
 }
+
+export default withRouter(WorkDetail);
