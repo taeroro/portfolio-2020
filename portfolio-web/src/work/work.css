@@ -89,21 +89,16 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none; }
-  .thumbnail-container .thumbnail-img-0 {
+  .thumbnail-container .thumbnail-img-0, .thumbnail-container .thumbnail-img-1, .thumbnail-container .thumbnail-img-2, .thumbnail-container .thumbnail-img-3 {
     position: absolute;
     top: -9999px;
     bottom: -9999px;
     left: -9999px;
     right: -9999px;
-    margin: auto;
+    margin: auto; }
+  .thumbnail-container .thumbnail-img-0 {
     transform: translateY(5vh); }
   .thumbnail-container .thumbnail-img-1 {
-    position: absolute;
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    margin: auto;
     transform: translateY(10%); }
   .thumbnail-container img[class^="thumbnail-img-"].mouse-over {
     filter: saturate(100%);

@@ -37,6 +37,8 @@ class Work extends Component {
     this.tl = gsap.timeline();
     gsap.registerPlugin(TextPlugin);
 
+    this.pageTransitionTl = gsap.timeline();
+
     this.introRef = null;
     this.introNameRef = null;
     this.thumbnailRef = [];
@@ -44,6 +46,7 @@ class Work extends Component {
     this.placeholderRef = null;
     this.descriptionRef = null;
     this.imgRef = [];
+    this.hugePageTransitionRef = null;
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     this.updateScroll = this.updateScroll.bind(this);
@@ -165,25 +168,17 @@ class Work extends Component {
 
   imgOnClick(index) {
     if (index !== 3) {
+      this.pageTransitionTl.to(this.hugePageTransitionRef, {duration: 0.5, opacity: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+
       this.setState(
         {mouseIsOver: -1},
         () => {
           setTimeout(() => {
-            let x = this.thumbnailRef[index].getBoundingClientRect().left;
-            let y = this.thumbnailRef[index].getBoundingClientRect().top;
-            let h = this.thumbnailRef[index].clientHeight;
-            let w = this.thumbnailRef[index].clientWidth;
             let windowY = window.pageYOffset;
-            // console.log(x + ', ' + y + ' || ' + h + ', ' + w);
-            // console.log(index);
 
             this.props.history.push({
               pathname: '/work/' + indexToPath[index],
               state: {
-                thumbnailPosX: x,
-                thumbnailPosY: y,
-                thumbnailHeight: h,
-                thumbnailWidth: w,
                 windowY: windowY
               }
             });
@@ -264,7 +259,7 @@ class Work extends Component {
   }
 
   renderThumbnail(index) {
-    const imgClass = "thumbnail-img-" + index + " ";
+    const imgClass = "thumbnail-img-" + index;
     let bottom = ((window.innerHeight - this.state.introHeight)/2 > 100) ? (window.innerHeight - this.state.introHeight)/2 : 100;
 
     return (
@@ -295,7 +290,7 @@ class Work extends Component {
           )
           : (
             <img
-              className={this.state.mouseIsOver === index ? imgClass + "mouse-over" : imgClass}
+              className={this.state.mouseIsOver === index ? imgClass + " mouse-over" : imgClass}
               src={mockup_img_path[index]}
               alt="thumbnail"
               ref={img => this.imgRef[index] = img}
@@ -318,7 +313,7 @@ class Work extends Component {
 
   render() {
     return (
-      <div className="main-container">
+      <div className="main-container" ref={div => this.hugePageTransitionRef = div}>
         {this.renderIntroduction()}
 
         <div className="thumbnail-feed">

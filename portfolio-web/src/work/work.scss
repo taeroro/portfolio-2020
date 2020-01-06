@@ -122,26 +122,20 @@
     -o-user-select: none;
   }
 
-  .thumbnail-img-0 {
+  .thumbnail-img-0, .thumbnail-img-1, .thumbnail-img-2, .thumbnail-img-3 {
     position: absolute;
     top: -9999px;
     bottom: -9999px;
     left: -9999px;
     right: -9999px;
     margin: auto;
+  }
 
+  .thumbnail-img-0 {
     transform: translateY(5vh);
-    // transform: translateY(-18%);
   }
 
   .thumbnail-img-1 {
-    position: absolute;
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    margin: auto;
-
     transform: translateY(10%);
   }
 

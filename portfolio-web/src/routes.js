@@ -17,5 +17,5 @@ export default () =>
 
       { /* Catch all unmatched routes */ }
       {/* <Route component={NotFound} /> */}
-    </Switch>;
+    </Switch>
   </ScrollIntoView>

@@ -28,12 +28,17 @@ class WorkDetail extends Component {
       titleDescHeight: 0,
     };
 
+    this.fadeInTl = gsap.timeline();
+    this.imgTl = gsap.timeline();
+
     this.isMouseScroll = false;
     this.oldY = window.pageYOffset;
 
+    this.fadeInRef = null;
     this.introNameRef = null;
     this.descriptionRef = null;
     this.fixedContainerRef = null;
+    this.thumbnailImageRef = null;
     this.titleRef = [];
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -41,20 +46,17 @@ class WorkDetail extends Component {
     this.onClickComplete = this.onClickComplete.bind(this);
 
     this.tl = [];
-    // this.tl = gsap.timeline();
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.updateWindowDimensions);
     window.addEventListener('scroll', this.updateScroll);
 
-    if (this.props.location.state) {
-      console.log(this.props.location.state);
-      // TODO: animation
-    }
+    this.fadeInTl.from(this.fadeInRef, {delay: 0.5, duration: 1, opacity: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+
+
 
     const index = indexToPath.indexOf(this.props.match.params.id).toString();
-
     this.setState({
       projectId: index,
       dataObj: workData[index],
@@ -191,6 +193,7 @@ class WorkDetail extends Component {
             className="thumbnail-img"
             src={imgPath}
             alt="thumbnail"
+            ref={img => this.thumbnailImageRef = img}
           />
         </div>
       </div>
@@ -1058,7 +1061,7 @@ class WorkDetail extends Component {
 
   render() {
     return (
-      <div className="work-detail-container">
+      <div className="work-detail-container" ref={div => this.fadeInRef = div}>
         {this.renderFixedContent()}
         {this.renderThumbnail()}
         {
