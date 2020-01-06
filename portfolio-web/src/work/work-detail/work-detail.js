@@ -72,6 +72,10 @@ class WorkDetail extends Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateWindowDimensions);
     window.removeEventListener('scroll', this.updateScroll);
+
+    this.fadeInTl.kill();
+    this.imgTl.kill();
+    for (let i = 0; i < this.tl.length; i++) this.tl[i].kill();
   }
 
   updateWindowDimensions() {

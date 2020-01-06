@@ -69,47 +69,68 @@ class Work extends Component {
     // console.log("bye");
     window.removeEventListener('resize', this.updateWindowDimensions);
     window.removeEventListener('scroll', this.updateScroll);
+
+    this.tl.kill();
+    this.pageTransitionTl.kill();
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.currentThumbNum !== this.state.currentThumbNum) {
       switch (this.state.currentThumbNum) {
         case -1:
+          // this.tl.progress(1).clear();
           this.tl.to(this.introNameRef, {duration: 0.25, text: "RYAN FAN"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '1', display: 'flex', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: ""}, "-=0.25");
           break;
         case 0:
+          this.tl.progress(1).clear();
           this.tl.to(this.introNameRef, {duration: 0.25, text: "αPARK", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 1:
+          this.tl.progress(1).clear();
+          this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
+
           this.tl.to(this.introNameRef, {duration: 0.25, text: "FOCUSED.", cursor: "default"});
-          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 2:
+          this.tl.progress(1).clear();
+          this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
+
           this.tl.to(this.introNameRef, {duration: 0.25, text: "JAZZIN", cursor: "default"});
-          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "BRAND DESIGN & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 3:
+          this.tl.progress(1).clear();
+          this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
+
           this.tl.to(this.introNameRef, {duration: 0.25, text: "UX COLLECTIVE", cursor: "default"});
-          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "PUBLICATION"}, "-=0.25");
           break;
         case 4:
+          this.tl.progress(1).clear();
+          this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
+
           this.tl.to(this.introNameRef, {duration: 0.25, text: "YINTECH LABS", cursor: "default"});
-          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "SOFTWARE DEVELOPMENT & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 5:
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "FACES OF THE PORTRAITS", cursor: "default"});
-          this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-          this.tl.to(this.descriptionRef, {duration: 0.25, text: "DESIGN AND TECHNOLOGY"}, "-=0.25");
+          this.tl.progress(1).clear();
+          this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
+
+          this.tl.to(this.introNameRef, {duration: 0.5, text: "FACES OF THE PORTRAITS", cursor: "default"});
+          // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "DESIGN AND TECHNOLOGY"}, "-=0.5");
           break;
         default:
+          this.tl.progress(1).clear();
           this.tl.to(this.introNameRef, {duration: 0.25, text: "RYAN FAN"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '1', display: 'flex', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: ""}, "-=0.25");
