@@ -38,17 +38,19 @@ export default class Menu extends Component {
   }
 
   componentDidMount() {
-    this.updateWindowDimensions();
+    this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
     window.addEventListener('resize', this.updateWindowDimensions);
 
     this.targetElement = this.targetRef.current;
 
     this.tl.set([this.rt1Ref, this.rt2Ref, this.rt3Ref], {transformOrigin: "50% 50%"});
 
+    let cWidth = this.state.windowWidth <= 768 ? "100vw" : "85vw";
+
     this.tl
-      .to(this.menuAnimateRef, {duration: 0.5, width: '85vw', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
-      .to(this.menuAnimateRef1, {duration: 0.25, width: '85vw', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
-      .to(this.menuRef, {duration: 0.5, width: '85vw', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
+      .to(this.menuAnimateRef, {duration: 0.5, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
+      .to(this.menuAnimateRef1, {duration: 0.25, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
+      .to(this.menuRef, {duration: 0.5, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
       .set(this.menuOverlayRef, {pointerEvents: "auto"})
       .to(this.rt2Ref, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
       .to(this.rt1Ref, {duration: 0.5, y: 8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
@@ -77,6 +79,32 @@ export default class Menu extends Component {
 
   updateWindowDimensions() {
     this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
+
+    console.log("here");
+
+    this.tl.kill();
+    this.tl = null;
+    this.tl = gsap.timeline({ paused: true });
+
+    this.tl.set([this.rt1Ref, this.rt2Ref, this.rt3Ref], {transformOrigin: "50% 50%"});
+
+    let cWidth = this.state.windowWidth <= 768 ? "100vw" : "85vw";
+
+    this.tl
+      .to(this.menuAnimateRef, {duration: 0.5, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
+      .to(this.menuAnimateRef1, {duration: 0.25, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
+      .to(this.menuRef, {duration: 0.5, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
+      .set(this.menuOverlayRef, {pointerEvents: "auto"})
+      .to(this.rt2Ref, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
+      .to(this.rt1Ref, {duration: 0.5, y: 8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
+      .to(this.rt3Ref, {duration: 0.5, y: -8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
+      .to(this.rt1Ref, {duration: 0.25, rotate: -45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
+      .to(this.rt3Ref, {duration: 0.25, rotate: 45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
+      .to(this.menuLabelRef, {duration: 0.5, text: {value: "CLOSE", delimiter: " "}, ease: "none"}, "-=0.5")
+      .to(this.menuContentRef, {duration: 0.5, display: "flex", opacity: 1, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
+      // .to(this.menuRef, {duration: 0.5, boxShadow: '-10px 0px 20px rgba(0,0,0,0.5)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"} , "-=0.35")
+      .to(this.menuOverlayRef, {duration: 0.5, opacity: '0.7', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
+      .reverse();
   }
 
   showTargetElement = () => {
@@ -216,7 +244,7 @@ export default class Menu extends Component {
         <div
           // className="menu-container"
           className={
-            this.state.path.match(/.*work.+/)
+            this.state.path.match(/.*work.+/) || this.state.windowWidth <= 768
             ?
               !this.state.isMenuExpanded ? "menu-container menu-compact" : "menu-container menu-compact compact-expand"
             :

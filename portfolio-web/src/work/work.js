@@ -268,7 +268,7 @@ class Work extends Component {
           <div>
             <h2>DESIGN DIGITAL PRODUCTS</h2>
             <h2>DEVELOP SOFTWARE</h2>
-            <h2>WRTIE BLOGS</h2>
+            <h2>WRITE BLOGS</h2>
           </div>
         </div>
       </div>

@@ -110,7 +110,7 @@
     margin-top: 5vh; }
   .menu-content-container .title {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
-    font-size: 100px;
+    font-size: 5.5vw;
     font-weight: 700;
     color: #FFF;
     margin: 0;
@@ -141,5 +141,12 @@
 .menu-content-container.hidden {
   z-index: 0;
   display: none; }
+
+@media only screen and (max-width: 768px) {
+  .menu-content-container {
+    width: calc(100vw - 70px); }
+
+  .title {
+    font-size: 50px !important; } }
 
 /*# sourceMappingURL=menu.css.map */
