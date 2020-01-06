@@ -26,6 +26,8 @@ class WorkDetail extends Component {
       dataObj: null,
       titleDescY: 0,
       titleDescHeight: 0,
+      windowWidth: 0,
+      windowHeight: 0,
     };
 
     this.fadeInTl = gsap.timeline();
@@ -81,6 +83,8 @@ class WorkDetail extends Component {
   updateWindowDimensions() {
     this.setState({
       titleDescY: window.getComputedStyle(this.introNameRef).getPropertyValue('margin-top'),
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight
     });
   }
 
@@ -224,11 +228,11 @@ class WorkDetail extends Component {
         return (
           <div className="data-wrapper">
             <div className="row row-customize">
-              <div className="col-md-4 col-customize"></div>
-              <div className="col-md-4 col-customize">
+              <div className="col-xl-4 col-lg-2 col-customize"></div>
+              <div className="col-xl-4 col-lg-8 col-customize">
                 <p>{content.content_data}</p>
               </div>
-              <div className="col-md-4 col-customize"></div>
+              <div className="col-xl-4 col-lg-2 col-customize"></div>
             </div>
           </div>
         );
@@ -265,19 +269,19 @@ class WorkDetail extends Component {
 
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-2 col-customize"></div>
-                <div className="col-md-4 col-customize">{arr0}</div>
-                <div className="col-md-4 col-customize">{arr1}</div>
-                <div className="col-md-2 col-customize"></div>
+                <div className="col-lg-2 col-customize"></div>
+                <div className="col-lg-4 col-customize">{arr0}</div>
+                <div className="col-lg-4 col-customize">{arr1}</div>
+                <div className="col-lg-2 col-customize"></div>
               </div>
             );
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-2 col-customize"></div>
-                <div className="col-md-8 col-customize">
+                <div className="col-lg-2 col-customize"></div>
+                <div className="col-lg-8 col-md-12 col-customize">
                   {arr2}
                 </div>
-                <div className="col-md-2 col-customize"></div>
+                <div className="col-lg-2 col-customize"></div>
               </div>
             );
 
@@ -335,24 +339,24 @@ class WorkDetail extends Component {
 
               toDisplay.push(
                 <div className="row row-customize">
-                  <div className="col-md-4 col-customize"></div>
-                  <div className="col-md-4 col-customize">{arr0}</div>
-                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
+                  <div className="col-xl-4 col-lg-8 col-customize">{arr0}</div>
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
                 </div>
               );
               toDisplay.push(
                 <div className="row row-customize">
-                  <div className="col-md-2 col-customize"></div>
-                  <div className="col-md-2 col-customize col-apark-research col-align-bottom">{arr2}</div>
-                  <div className="col-md-4 col-customize col-apark-research">{arr1}</div>
-                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-lg-2 col-customize"></div>
+                  <div className="col-lg-2 col-md-2 col-customize col-apark-research col-align-bottom">{arr2}</div>
+                  <div className="col-lg-4 col-md-8 col-customize col-apark-research">{arr1}</div>
+                  <div className="col-lg-4 col-md-2 col-customize"></div>
                 </div>
               );
               toDisplay.push(
                 <div className="row row-customize">
-                  <div className="col-md-4 col-customize"></div>
-                  <div className="col-md-4 col-customize">{arr3}</div>
-                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
+                  <div className="col-xl-4 col-lg-8 col-customize">{arr3}</div>
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
                 </div>
               );
 
@@ -416,8 +420,12 @@ class WorkDetail extends Component {
             <div className="data-wrapper">
               <div className="row row-customize">
                 <div className="col-md-2 col-customize"></div>
-                <div className={"col-md-" + content.content_data.size + " col-customize"}>
-                  <img src={content.content_data.img} className="image-single" alt="image" />
+                <div className={"col-lg-" + content.content_data.size + " col-md-12 col-customize"}>
+                  <img
+                    src={content.content_data.img}
+                    // className="image-single"
+                    className={this.state.windowWidth <= 768 ? "image-single full-width" : "image-single"}
+                    alt="image" />
                 </div>
                 <div className="col-md-2 col-customize"></div>
 
@@ -446,8 +454,8 @@ class WorkDetail extends Component {
 
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-6 col-customize">{arr0}</div>
-                <div className="col-md-6 col-customize">{arr1}</div>
+                <div className="col-lg-6 col-md-space col-customize">{arr0}</div>
+                <div className="col-lg-6 col-customize">{arr1}</div>
               </div>
             );
 
@@ -569,16 +577,16 @@ class WorkDetail extends Component {
 
               toDisplay.push(
                 <div className="row row-customize">
-                  <div className="col-md-4 col-customize"></div>
-                  <div className="col-md-4 col-customize">{arr0}</div>
-                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
+                  <div className="col-xl-4 col-lg-8 col-customize">{arr0}</div>
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
                 </div>
               );
               toDisplay.push(
                 <div className="row row-customize">
-                  <div className="col-md-2 col-customize"></div>
-                  <div className="col-md-8 col-customize">{arr1}</div>
-                  <div className="col-md-2 col-customize"></div>
+                  <div className="col-lg-2 col-customize"></div>
+                  <div className="col-lg-8 col-md-12 col-customize">{arr1}</div>
+                  <div className="col-lg-2 col-customize"></div>
                 </div>
               );
               toDisplay.push(
@@ -722,33 +730,33 @@ class WorkDetail extends Component {
 
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-4 col-customize"></div>
-                <div className="col-md-4 col-customize">{arr0}</div>
-                <div className="col-md-4 col-customize"></div>
+                <div className="col-xl-4 col-lg-2 col-customize"></div>
+                <div className="col-xl-4 col-lg-8 col-customize">{arr0}</div>
+                <div className="col-xl-4 col-lg-2 col-customize"></div>
               </div>
             );
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-6 col-customize">{arr1}</div>
-                <div className="col-md-6 col-customize"></div>
+                <div className="col-lg-6 col-customize">{arr1}</div>
+                <div className="col-lg-6 col-customize"></div>
               </div>
             );
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-6 col-customize"></div>
-                <div className="col-md-6 col-customize">{arr2}</div>
+                <div className="col-lg-6 col-customize"></div>
+                <div className="col-lg-6 col-customize">{arr2}</div>
               </div>
             );
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-6 col-customize">{arr3}</div>
-                <div className="col-md-6 col-customize"></div>
+                <div className="col-lg-6 col-customize">{arr3}</div>
+                <div className="col-lg-6 col-customize"></div>
               </div>
             );
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-6 col-customize">{arr4}</div>
-                <div className="col-md-6 col-customize">{arr5}</div>
+                <div className="col-lg-6 col-customize col-md-space">{arr4}</div>
+                <div className="col-lg-6 col-customize">{arr5}</div>
               </div>
             );
 

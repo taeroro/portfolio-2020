@@ -159,7 +159,7 @@
     transform: none !important; }
 
   .title-description {
-    font-size: 14px !important; } }
+    font-size: 12px !important; } }
 @media only screen and (max-width: 768px) {
   .main-container {
     width: 100vw; }
