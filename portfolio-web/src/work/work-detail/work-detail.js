@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
-import debounce from 'lodash/debounce';
 import './work-detail.css';
 
 import gsap from 'gsap';
@@ -29,8 +28,8 @@ class WorkDetail extends Component {
       titleDescHeight: 0,
     };
 
-    // this.tl = gsap.timeline();
-
+    this.isMouseScroll = false;
+    this.oldY = window.pageYOffset;
 
     this.introNameRef = null;
     this.descriptionRef = null;
@@ -39,22 +38,15 @@ class WorkDetail extends Component {
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     this.updateScroll = this.updateScroll.bind(this);
-    this.wheelEvent = this.wheelEvent.bind(this);
     this.onClickComplete = this.onClickComplete.bind(this);
 
-
-    this.tl = gsap.timeline();
-
-    this.debounceWheelEvent = debounce(this.wheelEvent, 1, {
-      'leading': true,
-      'trailing': false
-    });
+    this.tl = [];
+    // this.tl = gsap.timeline();
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.updateWindowDimensions);
     window.addEventListener('scroll', this.updateScroll);
-    window.addEventListener('mousewheel', this.debounceWheelEvent);
 
     if (this.props.location.state) {
       console.log(this.props.location.state);
@@ -79,7 +71,6 @@ class WorkDetail extends Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateWindowDimensions);
     window.removeEventListener('scroll', this.updateScroll);
-    window.removeEventListener('mousewheel', this.debounceWheelEvent);
   }
 
   updateWindowDimensions() {
@@ -93,41 +84,51 @@ class WorkDetail extends Component {
     //   console.log("reached");
     // }
 
-    // if (this.titleRef.length !== 0) {
-    //   for (let i = 0; i < this.titleRef.length; i++) {
-    //     this.titleRef[i]
-    //   }
-    // }
+    let dY = window.pageYOffset - this.oldY;
+
+    let dY_new = Math.abs(dY) > 20
+      ? dY >= 0 ? -20 : 20
+      : -dY;
+    const shadow = "5px " + dY_new + "px 0 #0000FF";
+
+    for (let i = 0; i < this.titleRef.length; i++) {
+      if (this.tl[i])
+        this.tl[i].kill();
+
+      this.tl[i] = gsap.timeline({onComplete: () => this.onClickComplete(i)});
+      this.tl[i].set(this.titleRef[i], {textShadow: "0 0 0 #0000FF"});
+      this.tl[i].to(this.titleRef[i], 0.25, {textShadow: shadow, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+    }
+
+    this.oldY = window.pageYOffset;
+    // this.isMouseScroll = false;
   }
 
-  wheelEvent(event) {
-    console.log(event);
-    console.log(event.deltaY);
-
-    const dY =
-      Math.abs(event.deltaY) > 20
-      ?
-        event.deltaY >= 0 ? -20 : 20
-      : -event.deltaY;
-    const shadow = "5px " + dY + "px 0 #0000FF";
-
-    this.tl.kill();
-    this.tl = gsap.timeline({onComplete: this.onClickComplete, onReverseComplete: this.onClickReverseComplete});
-    this.tl.set(this.titleRef[0], {textShadow: "0 0 0 #0000FF"});
-    this.tl.to(this.titleRef[0], 0.25, {textShadow: shadow, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-  }
-
-  onClickComplete() {
-    // if (this.state.clicked) {
-      console.log("here2");
-      // this.tl.reverse();
-      this.tl.to(this.titleRef[0], 0.25, {textShadow: "0px 0px 0 #0000FF", ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+  onClickComplete(index) {
+    if (this.tl[index]) {
+      this.tl[index].to(this.titleRef[index], 0.25, {textShadow: "0px 0px 0 #0000FF", ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
 
       setTimeout(() => {
-        this.tl.kill();
+        this.tl[index].kill();
       }, 300);
-    // }
+    }
   }
+
+  // wheelEvent(event) {
+    // this.isMouseScroll = true;
+    // console.log('mouse wheel');
+    // const dY =
+    //   Math.abs(event.deltaY) > 20
+    //   ?
+    //     event.deltaY >= 0 ? -20 : 20
+    //   : -event.deltaY;
+    // const shadow = "5px " + dY + "px 0 #0000FF";
+    //
+    // this.tl.kill();
+    // this.tl = gsap.timeline({onComplete: this.onClickComplete, onReverseComplete: this.onClickReverseComplete});
+    // this.tl.set(this.titleRef[0], {textShadow: "0 0 0 #0000FF"});
+    // this.tl.to(this.titleRef[0], 0.25, {textShadow: shadow, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+  // }
 
   renderFixedContent() {
     const title = this.state.dataObj && this.state.dataObj.title;
