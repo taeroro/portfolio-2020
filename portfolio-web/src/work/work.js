@@ -61,12 +61,9 @@ class Work extends Component {
       currentThumbNum: -1,
       titleDescY: window.getComputedStyle(this.introNameRef).getPropertyValue('margin-top'),
     });
-
-    // console.log("hi");
   }
 
   componentWillUnmount() {
-    // console.log("bye");
     window.removeEventListener('resize', this.updateWindowDimensions);
     window.removeEventListener('scroll', this.updateScroll);
 
@@ -130,7 +127,6 @@ class Work extends Component {
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DESIGN AND TECHNOLOGY"}, "-=0.5");
           break;
         default:
-          this.tl.progress(1).clear();
           this.tl.to(this.introNameRef, {duration: 0.25, text: "RYAN FAN"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '1', display: 'flex', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: ""}, "-=0.25");

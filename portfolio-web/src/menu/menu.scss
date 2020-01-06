@@ -6,8 +6,6 @@
   width: 70px;
   height: 100vh;
   overflow: hidden;
-  // background: rgba(0, 0, 0, 1);
-  // transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 
   --initialBgColor: rgba(0, 0, 0, 1);;
   --slideBgColor: rgba(0, 0, 0, 0);;
@@ -61,6 +59,28 @@
   display: block;
 }
 
+.menu-bg-animate {
+  position: fixed;
+  z-index: 18;
+  width: 0px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #0000FF;
+  pointer-events: none;
+}
+
+.menu-bg-animate-1 {
+  position: fixed;
+  z-index: 19;
+  width: 0px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #FFF;
+  pointer-events: none;
+}
+
 .menu-button-wrapper {
   float: right;
   display: flex;
@@ -95,7 +115,7 @@
 }
 
 .menu-overlay {
-  z-index: 19;
+  z-index: 17;
   position: fixed;
   width: 100vw;
   height: 100vh;

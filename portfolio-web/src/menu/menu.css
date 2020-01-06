@@ -40,6 +40,26 @@
 .menu-container.menu-open {
   display: block; }
 
+.menu-bg-animate {
+  position: fixed;
+  z-index: 18;
+  width: 0px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #0000FF;
+  pointer-events: none; }
+
+.menu-bg-animate-1 {
+  position: fixed;
+  z-index: 19;
+  width: 0px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #FFF;
+  pointer-events: none; }
+
 .menu-button-wrapper {
   float: right;
   display: flex;
@@ -65,7 +85,7 @@
     margin-bottom: 5px; }
 
 .menu-overlay {
-  z-index: 19;
+  z-index: 17;
   position: fixed;
   width: 100vw;
   height: 100vh;

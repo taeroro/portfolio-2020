@@ -30,6 +30,8 @@ export default class Menu extends Component {
     this.rt3Ref = null;
     this.menuLabelRef = null;
     this.menuContentRef = null;
+    this.menuAnimateRef = null;
+    this.menuAnimateRef1 = null;
 
     this.toggleMenu = this.toggleMenu.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -43,9 +45,10 @@ export default class Menu extends Component {
 
     this.tl.set([this.rt1Ref, this.rt2Ref, this.rt3Ref], {transformOrigin: "50% 50%"});
 
-
     this.tl
-      .to(this.menuRef, {duration: 0.5, width: '85vw', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
+      .to(this.menuAnimateRef, {duration: 0.5, width: '85vw', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
+      .to(this.menuAnimateRef1, {duration: 0.25, width: '85vw', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
+      .to(this.menuRef, {duration: 0.5, width: '85vw', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
       .set(this.menuOverlayRef, {pointerEvents: "auto"})
       .to(this.rt2Ref, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
       .to(this.rt1Ref, {duration: 0.5, y: 8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
@@ -202,6 +205,9 @@ export default class Menu extends Component {
   render() {
     return (
       <div className="menu-overlay-container" ref={this.targetRef}>
+        <div className="menu-bg-animate" ref={div => this.menuAnimateRef = div}></div>
+        <div className="menu-bg-animate-1" ref={div => this.menuAnimateRef1 = div}></div>
+
         <div
           className="menu-overlay"
           ref={div => this.menuOverlayRef = div}
