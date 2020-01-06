@@ -397,9 +397,9 @@ class WorkDetail extends Component {
               );
               toDisplay.push(
                 <div className="row row-customize focused-image-margin">
-                  <div className="col-md-4 col-customize"></div>
-                  <div className="col-md-4 col-customize">{arr3}</div>
-                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
+                  <div className="col-xl-4 col-lg-8 col-customize">{arr3}</div>
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
                 </div>
               );
 
@@ -420,7 +420,7 @@ class WorkDetail extends Component {
             <div className="data-wrapper">
               <div className="row row-customize">
                 <div className="col-md-2 col-customize"></div>
-                <div className={"col-lg-" + content.content_data.size + " col-md-12 col-customize"}>
+                <div className={"col-xl-" + content.content_data.size + " col-lg-12 col-customize"}>
                   <img
                     src={content.content_data.img}
                     // className="image-single"
@@ -485,14 +485,14 @@ class WorkDetail extends Component {
 
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-6 col-customize">{arr0}</div>
-                <div className="col-md-6 col-customize">{arr1}</div>
+                <div className="col-lg-6 col-customize col-md-space">{arr0}</div>
+                <div className="col-lg-6 col-customize">{arr1}</div>
               </div>
             );
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-6 col-customize">{arr2}</div>
-                <div className="col-md-6 col-customize">{arr3}</div>
+                <div className="col-lg-6 col-customize col-md-space">{arr2}</div>
+                <div className="col-lg-6 col-customize">{arr3}</div>
               </div>
             );
 
@@ -523,7 +523,7 @@ class WorkDetail extends Component {
 
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-6 col-customize">{arr0}</div>
+                <div className="col-md-6 col-customize col-md-space">{arr0}</div>
                 <div className="col-md-6 col-customize">{arr1}</div>
               </div>
             );
@@ -534,7 +534,7 @@ class WorkDetail extends Component {
             );
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-6 col-customize">{arr3}</div>
+                <div className="col-md-6 col-customize col-md-space">{arr3}</div>
                 <div className="col-md-6 col-customize">{arr4}</div>
               </div>
             );
@@ -639,16 +639,16 @@ class WorkDetail extends Component {
 
               toDisplay.push(
                 <div className="row row-customize">
-                  <div className="col-md-4 col-customize"></div>
-                  <div className="col-md-4 col-customize">{arr0}</div>
-                  <div className="col-md-4 col-customize"></div>
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
+                  <div className="col-xl-4 col-lg-8 col-customize">{arr0}</div>
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
                 </div>
               );
               toDisplay.push(
                 <div className="row row-customize">
-                  <div className="col-md-4 col-customize col-center">{arr1}</div>
-                  <div className="col-md-4 col-customize col-center">{arr2}</div>
-                  <div className="col-md-4 col-customize col-center">{arr3}</div>
+                  <div className="col-lg-4 col-customize col-center focused-wireframe">{arr1}</div>
+                  <div className="col-lg-4 col-customize col-center">{arr2}</div>
+                  <div className="col-lg-4 col-customize col-center focused-wireframe">{arr3}</div>
                 </div>
               );
 
@@ -689,9 +689,9 @@ class WorkDetail extends Component {
             );
             toDisplay.push(
               <div className="row row-customize focused-image-margin">
-                <div className="col-md-4 col-customize"></div>
-                <div className="col-md-4 col-customize">{arr1}</div>
-                <div className="col-md-4 col-customize"></div>
+                <div className="col-xl-4 col-lg-2 col-customize"></div>
+                <div className="col-xl-4 col-lg-8 col-customize">{arr1}</div>
+                <div className="col-xl-4 col-lg-2 col-customize"></div>
               </div>
             );
 
@@ -893,7 +893,7 @@ class WorkDetail extends Component {
           if (j === 0) {
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-md-6 col-customize">{poster[0]}</div>
+                <div className="col-md-6 col-customize col-md-space">{poster[0]}</div>
                 <div className="col-md-6 col-customize">{poster[1]}</div>
               </div>
             );
@@ -910,7 +910,7 @@ class WorkDetail extends Component {
             );
             toDisplay.push(
               <div className="row row-customize row-jazzin-img-margin">
-                <div className="col-md-4 col-customize col-align-bottom">
+                <div className="col-md-4 col-customize col-align-bottom col-md-space">
                   <div className="social-sticker-wrapper" key={temp_i++}>
                     {social.slice(10, 14)}
                   </div>

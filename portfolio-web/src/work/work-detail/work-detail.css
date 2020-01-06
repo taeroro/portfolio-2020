@@ -177,7 +177,8 @@ div[class^="content-"] {
     text-align: center; }
   div[class^="content-"] .image-single.screenshot {
     width: auto;
-    height: 80vh; }
+    max-height: 80vh;
+    height: auto; }
   div[class^="content-"] .focused-image1 {
     margin-top: 100%; }
   div[class^="content-"] .focused-image2 {
@@ -308,7 +309,21 @@ div[class^="content-"] {
   .row-customize.video {
     margin-bottom: 5vh !important; }
     .row-customize.video .video-wrapper {
-      margin: 1vh 0; } }
+      margin: 1vh 0; }
+
+  .quote-p {
+    font-size: 30px !important;
+    line-height: 39px !important; } }
+@media only screen and (max-width: 991px) {
+  .focused-wireframe img {
+    margin: 0 10px; }
+
+  .col-md-space {
+    margin-bottom: 20px; }
+
+  .focused-image0, .focused-image1, .focused-image2, .focused-image3, .focused-image4 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important; } }
 @media only screen and (max-width: 768px) {
   .objective-wrapper p {
     font-size: 18px !important;
@@ -316,14 +331,17 @@ div[class^="content-"] {
 
   div[class^="content-"] h2 {
     -webkit-text-stroke: 1.5px #000; }
-  div[class^="content-"] p, div[class^="content-"] .overview-dl {
+  div[class^="content-"] p:not(.quote-p), div[class^="content-"] .overview-dl, div[class^="content-"] .a-link {
     font-size: 18px !important;
     line-height: 28.8px  !important; }
   div[class^="content-"] .desc-p {
     font-size: 15px !important;
     line-height: 19.5px  !important; }
-
-  .col-md-space {
-    margin-bottom: 20px; } }
+  div[class^="content-"] .quote-p {
+    font-size: 20px !important;
+    line-height: 26px !important; } }
+@media only screen and (max-width: 767px) {
+  .col-apark-research.col-align-bottom {
+    padding-bottom: 0 !important; } }
 
 /*# sourceMappingURL=work-detail.css.map */
