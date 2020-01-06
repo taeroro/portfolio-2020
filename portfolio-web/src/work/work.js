@@ -56,10 +56,14 @@ class Work extends Component {
     window.addEventListener('resize', this.updateWindowDimensions);
     window.addEventListener('scroll', this.updateScroll);
 
+    let newY = window.getComputedStyle(this.introNameRef).getPropertyValue('margin-top');
+    if (window.innerWidth <= 768)
+      newY = parseFloat(newY) - 10 + "px";
+
     this.setState({
       introHeight: this.introRef.clientHeight + 105,
       currentThumbNum: -1,
-      titleDescY: window.getComputedStyle(this.introNameRef).getPropertyValue('margin-top'),
+      titleDescY: newY,
     });
   }
 
@@ -135,9 +139,13 @@ class Work extends Component {
   }
 
   updateWindowDimensions() {
+    let newY = window.getComputedStyle(this.introNameRef).getPropertyValue('margin-top');
+    if (window.innerWidth <= 768)
+      newY = parseFloat(newY) - 10 + "px";
+
     this.setState({
       introHeight: this.introRef.clientHeight + 105,
-      titleDescY: window.getComputedStyle(this.introNameRef).getPropertyValue('margin-top'),
+      titleDescY: newY,
     });
   }
 

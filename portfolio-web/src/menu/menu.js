@@ -81,8 +81,6 @@ export default class Menu extends Component {
   updateWindowDimensions() {
     this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
 
-    console.log("here");
-
     this.tl.kill();
     this.tl = null;
     this.tl = gsap.timeline({ paused: true });
