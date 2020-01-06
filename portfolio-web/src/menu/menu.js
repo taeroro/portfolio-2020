@@ -39,13 +39,14 @@ export default class Menu extends Component {
 
   componentDidMount() {
     this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
+
     window.addEventListener('resize', this.updateWindowDimensions);
 
     this.targetElement = this.targetRef.current;
 
     this.tl.set([this.rt1Ref, this.rt2Ref, this.rt3Ref], {transformOrigin: "50% 50%"});
 
-    let cWidth = this.state.windowWidth <= 768 ? "100vw" : "85vw";
+    let cWidth = window.innerWidth <= 768 ? "100vw" : "85vw";
 
     this.tl
       .to(this.menuAnimateRef, {duration: 0.5, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
@@ -88,7 +89,7 @@ export default class Menu extends Component {
 
     this.tl.set([this.rt1Ref, this.rt2Ref, this.rt3Ref], {transformOrigin: "50% 50%"});
 
-    let cWidth = this.state.windowWidth <= 768 ? "100vw" : "85vw";
+    let cWidth = window.innerWidth <= 768 ? "100vw" : "85vw";
 
     this.tl
       .to(this.menuAnimateRef, {duration: 0.5, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})

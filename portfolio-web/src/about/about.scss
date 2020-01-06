@@ -1,6 +1,6 @@
 .about-container {
   width: calc(100vw - 70px);
-  padding: 0 40px 5vh 40px;
+  padding: 0 40px 10vh 40px;
 }
 
 .name-container {
@@ -44,13 +44,14 @@
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 1vh;
+    margin-bottom: 1.5vh;
   }
 
   p {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 20px;
     font-weight: 400;
+    margin-bottom: 1vh;
   }
 
   a {
@@ -77,4 +78,29 @@
   margin-top: 10vh;
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
   opacity: 0.5;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-container {
+    width: 100vw;
+  }
+
+  .bio {
+    margin-top: 2vh;
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 50px !important;
+  }
+
+  .contact {
+    font-size: 18px !important;
+  }
+
+  .contact-wrapper {
+    p, a {
+      font-size: 18px;
+    }
+  }
 }
