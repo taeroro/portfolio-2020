@@ -55,7 +55,6 @@ class WorkDetail extends Component {
     this.fadeInTl.from(this.fadeInRef, {delay: 0.5, duration: 1, opacity: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
 
 
-
     const index = indexToPath.indexOf(this.props.match.params.id).toString();
     this.setState({
       projectId: index,

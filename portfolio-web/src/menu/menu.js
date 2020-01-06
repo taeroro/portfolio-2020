@@ -20,7 +20,7 @@ export default class Menu extends Component {
       windowHeight: 0,
     };
 
-    this.tl = gsap.timeline();
+    this.tl = gsap.timeline({ paused: true });
     gsap.registerPlugin(TextPlugin);
 
     this.menuRef = null;
@@ -42,6 +42,21 @@ export default class Menu extends Component {
     this.targetElement = this.targetRef.current;
 
     this.tl.set([this.rt1Ref, this.rt2Ref, this.rt3Ref], {transformOrigin: "50% 50%"});
+
+
+    this.tl
+      .to(this.menuRef, {duration: 0.5, width: '85vw', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
+      .set(this.menuOverlayRef, {pointerEvents: "auto"})
+      .to(this.rt2Ref, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
+      .to(this.rt1Ref, {duration: 0.5, y: 8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
+      .to(this.rt3Ref, {duration: 0.5, y: -8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
+      .to(this.rt1Ref, {duration: 0.25, rotate: -45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
+      .to(this.rt3Ref, {duration: 0.25, rotate: 45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
+      .to(this.menuLabelRef, {duration: 0.5, text: {value: "CLOSE", delimiter: " "}, ease: "none"}, "-=0.5")
+      .to(this.menuContentRef, {duration: 0.5, display: "flex", opacity: 1, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
+      // .to(this.menuRef, {duration: 0.5, boxShadow: '-10px 0px 20px rgba(0,0,0,0.5)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"} , "-=0.35")
+      .to(this.menuOverlayRef, {duration: 0.5, opacity: '0.7', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
+      .reverse();
   }
 
   componentWillMount() {
@@ -72,44 +87,43 @@ export default class Menu extends Component {
 
   // when user clicked the menu button
   toggleMenu() {
+    this.tl.reversed(!this.tl.reversed());
+
     if (!this.state.isMenuExpanded) {
-      // this.tl.play();
-
-      this.tl.to(this.menuRef, {duration: 0.5, width: '85vw', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-      this.tl.set(this.menuOverlayRef, {pointerEvents: "auto"});
-      this.tl.to(this.rt2Ref, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      this.tl.to(this.rt1Ref, {duration: 0.5, y: 8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      this.tl.to(this.rt3Ref, {duration: 0.5, y: -8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      this.tl.to(this.rt1Ref, {duration: 0.25, rotate: -45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-      this.tl.to(this.rt3Ref, {duration: 0.25, rotate: 45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-
-      this.tl.to(this.menuLabelRef, {duration: 0.5, text: {value: "CLOSE", delimiter: " "}, ease: "none"}, "-=0.5");
-      this.tl.to(this.menuContentRef, {duration: 0.5, display: "flex", opacity: 1, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-
-
-      this.tl.to(this.menuRef, {duration: 0.5, boxShadow: '-10px 0px 20px rgba(0,0,0,0.5)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"} , "-=0.35");
-      this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0.7', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      // real stuff ======
+      // this.tl.to(this.menuRef, {duration: 0.5, width: '85vw', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+      // this.tl.set(this.menuOverlayRef, {pointerEvents: "auto"});
+      // this.tl.to(this.rt2Ref, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      // this.tl.to(this.rt1Ref, {duration: 0.5, y: 8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      // this.tl.to(this.rt3Ref, {duration: 0.5, y: -8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      // this.tl.to(this.rt1Ref, {duration: 0.25, rotate: -45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+      // this.tl.to(this.rt3Ref, {duration: 0.25, rotate: 45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+      //
+      // this.tl.to(this.menuLabelRef, {duration: 0.5, text: {value: "CLOSE", delimiter: " "}, ease: "none"}, "-=0.5");
+      // this.tl.to(this.menuContentRef, {duration: 0.5, display: "flex", opacity: 1, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      //
+      // this.tl.to(this.menuRef, {duration: 0.5, boxShadow: '-10px 0px 20px rgba(0,0,0,0.5)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"} , "-=0.35");
+      // this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0.7', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      // real stuff ======
 
       this.showTargetElement();
     }
     else {
-      this.tl.to(this.menuContentRef, {duration: 0.5, display: "none", opacity: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+      // this.tl.to(this.menuContentRef, {duration: 0.5, display: "none", opacity: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+      //
+      // this.tl.to(this.menuRef, {duration: 0, boxShadow: '-10px 0px 20px rgba(0,0,0,0.0)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      // this.tl.to(this.menuRef, {duration: 0.5, width: '70px', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      // this.tl.set(this.menuOverlayRef, {pointerEvents: "none"});
+      // this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      //
+      // this.tl.to(this.rt1Ref, {duration: 0.25, rotate: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+      // this.tl.to(this.rt3Ref, {duration: 0.25, rotate: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+      // this.tl.to(this.rt1Ref, {duration: 0.5, y: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+      // this.tl.to(this.rt3Ref, {duration: 0.5, y: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      // this.tl.to(this.rt2Ref, {duration: 0.5, opacity: '1', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
+      // this.tl.to(this.menuLabelRef, {duration: 0.5, text: {value: "MENU", delimiter: " "}, ease: "none"}, "-=1");
 
-      this.tl.to(this.menuRef, {duration: 0, boxShadow: '-10px 0px 20px rgba(0,0,0,0.0)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      this.tl.to(this.menuRef, {duration: 0.5, width: '70px', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      this.tl.set(this.menuOverlayRef, {pointerEvents: "none"});
-      this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-
-      this.tl.to(this.rt1Ref, {duration: 0.25, rotate: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-      this.tl.to(this.rt3Ref, {duration: 0.25, rotate: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-      this.tl.to(this.rt1Ref, {duration: 0.5, y: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-      this.tl.to(this.rt3Ref, {duration: 0.5, y: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      this.tl.to(this.rt2Ref, {duration: 0.5, opacity: '1', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      this.tl.to(this.menuLabelRef, {duration: 0.5, text: {value: "MENU", delimiter: " "}, ease: "none"}, "-=1");
-
-      // this.tl.reverse();
-
-      this.hideTargetElement()
+      this.hideTargetElement();
     }
 
     this.setState({ isMenuExpanded: !this.state.isMenuExpanded });
