@@ -46,7 +46,7 @@ export default class Header extends Component {
               className="back-link"
               to={{pathname: "/"}}
              >
-              &#8598; BACK
+              &#8598; HOME
             </Link>
           </div>
 
