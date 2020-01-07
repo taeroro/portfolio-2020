@@ -172,31 +172,39 @@ export default class Menu extends Component {
 
 
         <div className="project-name-wrapper">
-          <a
+          <Link
             className={this.state.path.includes("/work/apark") ? "project-name active" : "project-name"}
-            href="/work/apark"
+            to={{
+              pathname: "/work/apark"
+            }}
             onClick={this.toggleMenu}
           >
             αPARK
-          </a>
+          </Link>
         </div>
         <div className="project-name-wrapper">
-          <a
+          <Link
             className={this.state.path.includes("/work/focused") ? "project-name active" : "project-name"}
-            href="/work/focused"
+            // href="/work/focused"
+            to={{
+              pathname: "/work/focused"
+            }}
             onClick={this.toggleMenu}
           >
             FOCUSED.
-          </a>
+          </Link>
         </div>
         <div className="project-name-wrapper">
-          <a
+          <Link
             className={this.state.path.includes("/work/jazzin") ? "project-name active" : "project-name"}
-            href="/work/jazzin"
+            // href="/work/jazzin"
+            to={{
+              pathname: "/work/jazzin"
+            }}
             onClick={this.toggleMenu}
           >
             JAZZIN
-          </a>
+          </Link>
         </div>
         <div className="project-name-wrapper">
           <a className="project-name" href="https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a" target="_blank">
@@ -204,26 +212,32 @@ export default class Menu extends Component {
           </a>
         </div>
         <div className="project-name-wrapper">
-          <a
+          <Link
             className={this.state.path.includes("/work/yintechlabs") ? "project-name active" : "project-name"}
-            href="/work/yintechlabs"
+            // href="/work/yintechlabs"
+            to={{
+              pathname: "/work/yintechlabs"
+            }}
             onClick={this.toggleMenu}
           >
             YINTECH LABS
-          </a>
+          </Link>
         </div>
         <div className="project-name-wrapper">
-          <a
+          <Link
             className={this.state.path.includes("/work/faces") ? "project-name active" : "project-name"}
-            href="/work/faces"
+            // href="/work/faces"
+            to={{
+              pathname: "/work/faces"
+            }}
             onClick={this.toggleMenu}
           >
             FACES OF THE PORTRAITS
-          </a>
+          </Link>
         </div>
 
         <div className="title-wrapper">
-          <a className="title" href="/about">ABOUT</a>
+          <Link className="title" to={{pathname: "/about"}} onClick={this.toggleMenu}>ABOUT</Link>
         </div>
       </div>
     );

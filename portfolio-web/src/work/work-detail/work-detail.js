@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom";
 import './work-detail.css';
 
 import gsap from 'gsap';
-import TextPlugin from "gsap/TextPlugin";
 
 import workData from './../work-detail-data';
 
@@ -51,12 +50,43 @@ class WorkDetail extends Component {
     this.tl = [];
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps.location.pathname);
+
+    this.oldY = window.pageYOffset;
+    this.fadeInRef = null;
+    this.introNameRef = null;
+    this.descriptionRef = null;
+    this.fixedContainerRef = null;
+    this.thumbnailImageRef = null;
+
+    this.tl = [];
+    this.forceUpdate(() => {
+      this.fadeInTl.from(this.fadeInRef, {delay: 0.5, duration: 1, opacity: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
+
+      const index = indexToPath.indexOf(nextProps.match.params.id).toString();
+      this.setState({
+        projectId: index,
+        dataObj: workData[index],
+      }, () => {
+        this.titleRef = [];
+        this.updateScroll();
+      });
+
+      setTimeout(() => {
+        this.setState({
+          titleDescHeight: this.descriptionRef.clientHeight,
+        });
+      }, 1);
+    });
+
+  }
+
   componentDidMount() {
     window.addEventListener('resize', this.updateWindowDimensions);
     window.addEventListener('scroll', this.updateScroll);
 
     this.fadeInTl.from(this.fadeInRef, {delay: 0.5, duration: 1, opacity: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-
 
     const index = indexToPath.indexOf(this.props.match.params.id).toString();
     this.setState({
@@ -91,11 +121,11 @@ class WorkDetail extends Component {
 
   updateScroll() {
     // this.titleRef.length !== 0 &&
-    if (!this.state.reachedFirst && window.pageYOffset >= this.titleRef[0].offsetTop - this.fixedContainerRef.clientHeight + 50) {
+    if (!this.state.reachedFirst && this.titleRef[0] && window.pageYOffset >= this.titleRef[0].offsetTop - this.fixedContainerRef.clientHeight + 50) {
       console.log("reached");
       this.setState({ reachedFirst: true });
     }
-    else if (this.state.reachedFirst && window.pageYOffset < this.titleRef[0].offsetTop - this.fixedContainerRef.clientHeight + 50) {
+    else if (this.state.reachedFirst && this.titleRef[0] && window.pageYOffset < this.titleRef[0].offsetTop - this.fixedContainerRef.clientHeight + 50) {
       this.setState({ reachedFirst: false });
     }
 
@@ -109,7 +139,7 @@ class WorkDetail extends Component {
     let dY_new = Math.abs(dY) > shadowYPreset
       ? dY >= 0 ? -shadowYPreset : shadowYPreset
       : -dY;
-    const shadow = "5px " + dY_new + "px 0 #0000FF";
+    let shadow = "5px " + dY_new + "px 0 #0000FF";
 
     for (let i = 0; i < this.titleRef.length; i++) {
       if (this.tl[i])
@@ -133,22 +163,6 @@ class WorkDetail extends Component {
       }, 300);
     }
   }
-
-  // wheelEvent(event) {
-    // this.isMouseScroll = true;
-    // console.log('mouse wheel');
-    // const dY =
-    //   Math.abs(event.deltaY) > 20
-    //   ?
-    //     event.deltaY >= 0 ? -20 : 20
-    //   : -event.deltaY;
-    // const shadow = "5px " + dY + "px 0 #0000FF";
-    //
-    // this.tl.kill();
-    // this.tl = gsap.timeline({onComplete: this.onClickComplete, onReverseComplete: this.onClickReverseComplete});
-    // this.tl.set(this.titleRef[0], {textShadow: "0 0 0 #0000FF"});
-    // this.tl.to(this.titleRef[0], 0.25, {textShadow: shadow, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-  // }
 
   renderFixedContent() {
     const title = this.state.dataObj && this.state.dataObj.title;
