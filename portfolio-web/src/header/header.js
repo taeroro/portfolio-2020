@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import './header.css';
 import { Link } from "react-router-dom";
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga';
 
 const logo_path = '/logo-new.svg';
+
+const history = createBrowserHistory();
+ReactGA.initialize('UA-131928857-1');
+
 
 export default class Header extends Component {
   constructor(props) {
@@ -11,6 +17,10 @@ export default class Header extends Component {
     this.state = {
       path: "/",
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    ReactGA.pageview(this.props.location.pathname);
   }
 
   componentWillMount() {

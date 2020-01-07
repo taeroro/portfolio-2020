@@ -51,7 +51,7 @@ class WorkDetail extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps.location.pathname);
+    // console.log(nextProps.location.pathname);
 
     this.oldY = window.pageYOffset;
     this.fadeInRef = null;
@@ -122,7 +122,7 @@ class WorkDetail extends Component {
   updateScroll() {
     // this.titleRef.length !== 0 &&
     if (!this.state.reachedFirst && this.titleRef[0] && window.pageYOffset >= this.titleRef[0].offsetTop - this.fixedContainerRef.clientHeight + 50) {
-      console.log("reached");
+      // console.log("reached");
       this.setState({ reachedFirst: true });
     }
     else if (this.state.reachedFirst && this.titleRef[0] && window.pageYOffset < this.titleRef[0].offsetTop - this.fixedContainerRef.clientHeight + 50) {

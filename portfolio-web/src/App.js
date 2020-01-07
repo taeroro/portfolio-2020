@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import './App.css';
 import { withRouter } from 'react-router-dom';
 
@@ -9,11 +9,11 @@ import Routes from './routes';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header {...this.props} />
-        <Menu {...this.props} />
-        <Routes />
-      </div>
+        <div className="App">
+          <Header {...this.props} />
+          <Menu {...this.props} />
+          <Routes />
+        </div>
     );
   }
 }
