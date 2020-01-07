@@ -195,13 +195,22 @@
 @media only screen and (max-width: 768px) {
   .menu-content-container {
     width: calc(100vw - 70px);
+    padding: 10vh 15vw 0;
   }
   .title {
     font-size: 50px !important;
   }
+  .title-wrapper {
+    margin-bottom: 3vh !important;
+  }
+
+  .project-name-wrapper {
+    margin-bottom: 2vh !important;
+  }
 
   .project-name {
     font-size: 18px !important;
+    line-height: 18px !important;
   }
 
   .menu-container.menu-compact {

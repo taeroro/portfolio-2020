@@ -276,7 +276,7 @@ class WorkDetail extends Component {
           <p>{objText}</p>
         </div>
 
-        <div className="img-wrapper grey-background">
+        <div className={"img-wrapper grey-background first-img-" + this.state.projectId}>
           <img
             className="thumbnail-img"
             src={imgPath}
