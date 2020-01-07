@@ -20,7 +20,7 @@ export default class Menu extends Component {
       windowHeight: 0,
     };
 
-    this.tl = gsap.timeline({ paused: true });
+    this.tl = gsap.timeline({ paused: true, onReverseComplete: this.hideTargetElement });
     gsap.registerPlugin(TextPlugin);
 
     this.menuRef = null;
@@ -83,7 +83,7 @@ export default class Menu extends Component {
 
     this.tl.kill();
     this.tl = null;
-    this.tl = gsap.timeline({ paused: true });
+    this.tl = gsap.timeline({ paused: true, onReverseComplete: this.hideTargetElement });
 
     this.tl.set([this.rt1Ref, this.rt2Ref, this.rt3Ref], {transformOrigin: "50% 50%"});
 
@@ -153,7 +153,7 @@ export default class Menu extends Component {
       // this.tl.to(this.rt2Ref, {duration: 0.5, opacity: '1', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
       // this.tl.to(this.menuLabelRef, {duration: 0.5, text: {value: "MENU", delimiter: " "}, ease: "none"}, "-=1");
 
-      this.hideTargetElement();
+      // this.hideTargetElement();
     }
 
     this.setState({ isMenuExpanded: !this.state.isMenuExpanded });

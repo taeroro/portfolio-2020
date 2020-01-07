@@ -105,7 +105,9 @@
     filter: saturate(100%);
     opacity: 0.7; }
   .thumbnail-container .thumbnail-vid {
-    width: 100%;
+    width: auto;
+    min-width: 100%;
+    max-height: 100%;
     height: auto;
     opacity: 0.2;
     transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);

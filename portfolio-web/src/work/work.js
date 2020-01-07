@@ -287,12 +287,14 @@ class Work extends Component {
     const imgClass = "thumbnail-img-" + index;
     let bottom = ((window.innerHeight - this.state.introHeight)/2 > 100) ? (window.innerHeight - this.state.introHeight)/2 : 100;
 
+    let containerClass = mockup_img_path[index].includes("webm") ? "thumbnail-container video" : "thumbnail-container";
+
     return (
       <div
         className={
           this.state.mouseIsOver === index
-          ? "thumbnail-container mouse-over"
-          : "thumbnail-container"
+          ? containerClass + " mouse-over"
+          : containerClass
         }
         style={{marginBottom: bottom}}
         ref={div => this.thumbnailRef[index] = div}
