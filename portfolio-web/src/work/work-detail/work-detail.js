@@ -28,6 +28,7 @@ class WorkDetail extends Component {
       titleDescHeight: 0,
       windowWidth: 0,
       windowHeight: 0,
+      reachedFirst: false,
     };
 
     this.fadeInTl = gsap.timeline();
@@ -67,7 +68,7 @@ class WorkDetail extends Component {
     setTimeout(() => {
       this.setState({
         titleDescHeight: this.descriptionRef.clientHeight,
-      })
+      });
     }, 1);
   }
 
@@ -89,14 +90,24 @@ class WorkDetail extends Component {
   }
 
   updateScroll() {
-    // if (this.titleRef.length !== 0 && window.pageYOffset >= this.titleRef[0].offsetTop - this.fixedContainerRef.clientHeight) {
-    //   console.log("reached");
-    // }
+    // this.titleRef.length !== 0 &&
+    if (!this.state.reachedFirst && window.pageYOffset >= this.titleRef[0].offsetTop - this.fixedContainerRef.clientHeight + 50) {
+      console.log("reached");
+      this.setState({ reachedFirst: true });
+    }
+    else if (this.state.reachedFirst && window.pageYOffset < this.titleRef[0].offsetTop - this.fixedContainerRef.clientHeight + 50) {
+      this.setState({ reachedFirst: false });
+    }
+
 
     let dY = window.pageYOffset - this.oldY;
+    let shadowYPreset = 10;
+    if (window.innerWidth < 576) {
+      shadowYPreset = 5;
+    }
 
-    let dY_new = Math.abs(dY) > 20
-      ? dY >= 0 ? -20 : 20
+    let dY_new = Math.abs(dY) > shadowYPreset
+      ? dY >= 0 ? -shadowYPreset : shadowYPreset
       : -dY;
     const shadow = "5px " + dY_new + "px 0 #0000FF";
 
@@ -145,9 +156,33 @@ class WorkDetail extends Component {
 
     let calcTop = parseInt(this.state.titleDescY, 10) - (this.state.titleDescHeight*0.9);
 
+    if (this.state.projectId === -1 || this.state.projectId === "5") {
+      return (
+        <div
+          className="introduction-container detail-page"
+          ref={div => this.fixedContainerRef = div}
+        >
+          <span
+            className="title-description"
+            style={{marginTop: calcTop}}
+            ref={span => this.descriptionRef = span}
+          >
+
+          </span>
+           <h1
+             className="name"
+             ref={h1 => this.introNameRef = h1}
+           >
+
+           </h1>
+        </div>
+      );
+    }
+
     return (
       <div
-        className="introduction-container detail-page"
+        // className="introduction-container detail-page"
+        className={this.state.reachedFirst ? "introduction-container detail-page hidden" : "introduction-container detail-page"}
         ref={div => this.fixedContainerRef = div}
       >
         <span
@@ -172,20 +207,52 @@ class WorkDetail extends Component {
     const objText = this.state.dataObj && this.state.dataObj.objective;
 
     if (this.state.dataObj && this.state.dataObj.thumbnail_image_path.includes("webm")) {
+      // return (
+      //   <div className="thumbnail-wrapper">
+      //     <div className="img-wrapper">
+      //       <video
+      //         playsInline loop muted autoPlay
+      //         preload="none"
+      //         className="thumbnail-vid"
+      //       >
+      //         <source src={imgPath} type="video/webm" />
+      //         <source src={imgPath.replace("webm", "mp4")} type="video/mp4" />
+      //       </video>
+      //     </div>
+      //   </div>
+      // );
       return (
-        <div className="thumbnail-wrapper">
-          <div className="img-wrapper">
-            <video
-              playsInline loop muted autoPlay
-              preload="none"
-              className="thumbnail-vid"
-            >
-              <source src={imgPath} type="video/webm" />
-              <source src={imgPath.replace("webm", "mp4")} type="video/mp4" />
-            </video>
-          </div>
+        <div style={
+          {
+            width: "100vw",
+            height: "100vh",
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }
+        }>
+          <img
+            src="/work/noun_Construction_1624974.svg"
+            alt="construction"
+            style={
+              {
+                alignSelf: "center",
+                width: "25%",
+                height: "25%",
+              }
+            }
+          />
+          <p style={
+            {
+              alignSelf: "center",
+              fontSize: "20px",
+            }
+          }>
+            This case study is currently not available
+          </p>
         </div>
-      )
+      );
     }
 
 
@@ -1026,9 +1093,9 @@ class WorkDetail extends Component {
         );
         toDisplay1.push(
           <div className="row row-customize">
-            <div className="col-md-4 col-customize"></div>
-            <div className="col-md-4 col-customize">{arr1}</div>
-            <div className="col-md-4 col-customize"></div>
+            <div className="col-xl-4 col-lg-2 col-customize"></div>
+            <div className="col-xl-4 col-lg-8 col-customize">{arr1}</div>
+            <div className="col-xl-4 col-lg-2 col-customize"></div>
           </div>
         );
         toDisplay1.push(
@@ -1047,7 +1114,7 @@ class WorkDetail extends Component {
           </div>
         );
         toDisplay1.push(
-          <div className="row row-customize">
+          <div className="row row-customize video">
             <div className="col-md-12 col-customize">{arr5}</div>
           </div>
         );

@@ -8,7 +8,8 @@
   display: inline-block;
   width: 100%;
   height: 55px;
-  padding: 25px 40px;
+  margin: 25px 0;
+  padding: 0 40px;
   text-align: center; }
   .header-desktop .logo-wrapper {
     position: absolute;
@@ -41,5 +42,9 @@
   .header-desktop .back-button.hide-button {
     opacity: 0;
     pointer-events: none; }
+
+@media only screen and (max-width: 1024px) {
+  .back-button {
+    display: none !important; } }
 
 /*# sourceMappingURL=header.css.map */

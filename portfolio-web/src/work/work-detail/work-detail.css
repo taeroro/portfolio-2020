@@ -10,6 +10,9 @@
 .introduction-container.detail-page .name {
   font-size: 5.5vw  !important; }
 
+.introduction-container.detail-page.hidden {
+  display: none; }
+
 .thumbnail-wrapper {
   align-self: flex-end;
   width: 100%;
@@ -313,7 +316,10 @@ div[class^="content-"] {
 
   .quote-p {
     font-size: 30px !important;
-    line-height: 39px !important; } }
+    line-height: 39px !important; }
+
+  .yintech-row-margin {
+    margin-bottom: 0 !important; } }
 @media only screen and (max-width: 991px) {
   .focused-wireframe img {
     margin: 0 10px; }

@@ -147,6 +147,12 @@
     width: calc(100vw - 70px); }
 
   .title {
-    font-size: 50px !important; } }
+    font-size: 50px !important; }
+
+  .project-name {
+    font-size: 18px !important; }
+
+  .menu-container.menu-compact span {
+    display: none !important; } }
 
 /*# sourceMappingURL=menu.css.map */

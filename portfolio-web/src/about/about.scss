@@ -80,6 +80,8 @@
   opacity: 0.5;
 }
 
+
+
 @media only screen and (max-width: 768px) {
   .about-container {
     width: 100vw;
@@ -101,6 +103,28 @@
   .contact-wrapper {
     p, a {
       font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .contact-wrapper {
+    p {
+      margin-bottom: 2vh !important;
+    }
+  }
+
+  .another-contact-wrapper {
+    div {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        align-self: flex-start;
+        display: inline-block;
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
     }
   }
 }
