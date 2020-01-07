@@ -68,9 +68,9 @@ export default class About extends Component {
           <div className="another-contact-wrapper">
             <p>Email: <a href="mailto:ryanfan1996@gmail.com">ryanfan1996@gmail.com</a></p>
             <div>
-              <a href="https://www.linkedin.com/in/zuyuanfan/" target="_blank">LinkedIn</a>
-              <a href="https://www.instagram.com/ryantf11/" target="_blank">Instagram</a>
-              <a href="https://github.com/taeroro" target="_blank">Github</a>
+              <a href="https://www.linkedin.com/in/zuyuanfan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.instagram.com/ryantf11/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://github.com/taeroro" target="_blank" rel="noopener noreferrer">Github</a>
             </div>
           </div>
         </div>
