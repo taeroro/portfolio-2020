@@ -58,7 +58,7 @@ export default class About extends Component {
         </div>
 
         <p className="bio" ref={p => this.bioRef = p}>
-          is a digital product designer and engineer with a concentration in the practice of user experience design. He holds a Bachelor of Science degree in Computer Science from Purdue University (2019), and is attaining a Masters of Professional Studies degree in Communication Design at Parsons School of Design (2020).
+          is a digital product designer and front-end engineer with a concentration in the practice of user experience design. He holds a Bachelor of Science degree in Computer Science from Purdue University (2019), and is attaining a Masters of Professional Studies degree in Communication Design at Parsons School of Design (2020).
           <br /><br />
           With the rapidly growing demand in digital product design, he stands at the intersection of design and engineering, uniting disciplines to facilitate and create thoughtful user experiences of digital products.
         </p>
