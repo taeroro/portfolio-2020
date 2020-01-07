@@ -216,7 +216,7 @@ class Work extends Component {
         {mouseIsOver: -1},
         () => {
           setTimeout(() => {
-            window.open("https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a", '_blank');
+            window.open("https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a", '_blank', 'noopener noreferrer');
           }, 500);
         }
       )

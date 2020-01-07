@@ -83,6 +83,7 @@ export default class Menu extends Component {
 
     this.tl.kill();
     this.tl = null;
+
     this.tl = gsap.timeline({ paused: true, onReverseComplete: this.hideTargetElement });
 
     this.tl.set([this.rt1Ref, this.rt2Ref, this.rt3Ref], {transformOrigin: "50% 50%"});
@@ -207,7 +208,7 @@ export default class Menu extends Component {
           </Link>
         </div>
         <div className="project-name-wrapper">
-          <a className="project-name" href="https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a" target="_blank">
+          <a className="project-name" href="https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a" target="_blank" rel="noopener noreferrer">
             UX COLLECTIVE
           </a>
         </div>
