@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './header.css';
 import { Link } from "react-router-dom";
-import { createBrowserHistory } from 'history';
+// import { createBrowserHistory } from 'history';
 import ReactGA from 'react-ga';
 
 const logo_path = '/logo-new.svg';
 
-const history = createBrowserHistory();
+// const history = createBrowserHistory();
 ReactGA.initialize('UA-131928857-1');
 
 

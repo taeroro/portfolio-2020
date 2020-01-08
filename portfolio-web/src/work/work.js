@@ -274,9 +274,9 @@ class Work extends Component {
           ref={div => this.skillRef = div}
         >
           <div>
-            <h2>DESIGN DIGITAL PRODUCTS</h2>
-            <h2>DEVELOP SOFTWARE</h2>
-            <h2>WRITE BLOGS</h2>
+            <h2>DESIGNS DIGITAL PRODUCTS</h2>
+            <h2>DEVELOPS SOFTWARE</h2>
+            <h2>WRITES BLOGS</h2>
           </div>
         </div>
       </div>

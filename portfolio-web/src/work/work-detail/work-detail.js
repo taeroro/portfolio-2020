@@ -404,8 +404,12 @@ class WorkDetail extends Component {
                   );
                 }
                 else if (item.includes("quote")) {
+                  let str = data[item];
+                  str = str.replace(/(^|\s)(")/g, "$1“");
+                  str = str.replace(/"/g, "”");
+                  
                   return (
-                    <p className="quote-p" key={temp_i++}>{data[item]}</p>
+                    <p className="quote-p" key={temp_i++}>{str}</p>
                   );
                 }
               }

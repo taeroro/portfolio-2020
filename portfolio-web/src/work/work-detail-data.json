@@ -18,7 +18,7 @@
             "platform": "Mobile",
             "deliverables": "High-fidelity Prototype\nFinal Presentation",
             "timeline": "Sep 2019 - Oct 2019",
-            "_details": "Parking has always not been easy. Looking at businesses like Airbnb which connect home owners with travelers, inspired me to design a similar experience but to solve the parking problem."
+            "_details": "Finding parking has not always been easy. Inspired by business models such as that of Airbnb, which connects home owners with travels, I designed a similar experience in response to the parking problem."
         }
       },
       {
@@ -36,7 +36,7 @@
         "content_data_type": "text-complex",
         "content_data": {
           "title0": "Existing Solutions & Problems",
-          "text0": "Before diving into the actual design process, I started looking for existing apps or solutions that has similar features; Pavemint and ParqEx are the two products that match with my idea. However, these apps have more or less some problematic user experience, sometimes confuses users. That’s why I decided to research and identify what the existing problems are, then improve the user experience of my product.",
+          "text0": "Before diving into the actual design process, I started by looking for existing apps or solutions that have similar features. Pavemint and ParqEx are two products that matched my idea. However, these apps suffer from a challenging user experience, with an interface that is often confusing to users. That’s why I decided to research and target existing problems in order to enhance the user experience of my product.",
           "image0": "/work/apark/ParqEx.jpg",
           "desc0": "For instance, ParqEx has a really small date and time picker, comparing to the size of the screen, which could leads users to select at the wrong date or time",
           "title1": "User Interviews",

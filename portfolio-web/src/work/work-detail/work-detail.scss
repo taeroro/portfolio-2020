@@ -10,9 +10,6 @@
 .introduction-container.detail-page {
   // position: fixed !important;
 
-  // position: sticky !important;
-  // position: -webkit-sticky !important;
-  // top: 0;
 
   & .title-description {
     // font-size: 48px;
@@ -111,10 +108,10 @@ div[class^="content-"] {
     -webkit-text-fill-color: #FFF;
     -webkit-text-stroke: 2px #000;
 
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 6;
+    // position: sticky;
+    // position: -webkit-sticky;
+    // top: 0;
+    // z-index: 6;
 
     text-shadow: 0 0 0 #0000FF;
   }
@@ -219,7 +216,7 @@ div[class^="content-"] {
   .quote-p {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     font-size: var(--pQuoteSize);
-    line-height: calc(var(--pQuoteSize) * 1.3);
+    line-height: calc(var(--pQuoteSize) * 1.2);
     font-weight: 700;
     text-transform: uppercase;
   }
@@ -496,7 +493,7 @@ div[class^="content-"] {
 
   .quote-p {
     font-size: 30px !important;
-    line-height: 39px !important;
+    line-height: 36px !important;
   }
 
   .yintech-row-margin {
@@ -547,7 +544,7 @@ div[class^="content-"] {
 
     .quote-p {
       font-size: 20px !important;
-      line-height: 26px !important;
+      line-height: 24px !important;
     }
   }
 
