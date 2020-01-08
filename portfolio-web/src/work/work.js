@@ -9,7 +9,7 @@ const mockup_img_path = [
   './work/apark/small_apark_rendered-01.jpg',
   './work/focused/focused_mockup.jpg',
   './work/jazzin/jazzin.png',
-  './work/driving/uxdesign.cc_the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a.png',
+  './work/driving/uxdesign.cc_the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a.jpg',
   './work/yintech/Yintechlabs-01.jpg',
   './work/faces/faces.webm',
 ]
