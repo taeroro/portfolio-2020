@@ -13,7 +13,7 @@ class App extends Component {
       <div className="App">
         <Helmet>
           <title>Ryan Fan</title>
-          <meta name="description" content="Ryan Fan is a digital product designer and front-end engineer with a concentration in the practice of user experience design." />
+          <meta name="description" content="Ryan Fan is a designer uniting design and engineering to create thoughtful digital products." />
         </Helmet>
 
         <Header {...this.props} />

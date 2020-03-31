@@ -45,8 +45,8 @@
         "content_data_type": "jazzin-deliverables",
         "content_data": {
             "text0": "Poster",
-            "poster0": "/work/jazzin/Poster.jpg",
-            "poster1": "/work/jazzin/Poster_Schedule.jpg",
+            "poster0": "/work/jazzin/Poster_Mockup-0.jpg",
+            "poster1": "/work/jazzin/Poster_Mockup-1.jpg",
             "text1": "Social Media Campaign",
             "social0": "/work/jazzin/social_media-01.jpg",
             "social1": "/work/jazzin/social_media-02.jpg",
@@ -74,7 +74,7 @@
         "content_id": 4,
         "content_title": "summary",
         "content_data_type": "text-plain",
-        "content_data": "I’m thankful that our instructor Jacob Heftmann invited many talented and experienced designers to critique and giving feedback on our work at different check point, which really helped us moving forward to the end.\n\nOverall, this was a great opportunity for us to practice design in different medium, to collaborate and work as a team, and to overcome challenges."
+        "content_data": "I’m thankful that our project owner Jacob Heftmann invited many talented and experienced designers to critique and giving feedback on our work at different check point, which really helped us moving forward to the end.\n\nOverall, this was a great opportunity for us to practice design in different medium, to collaborate and work as a team, and to overcome challenges."
       }
     ]
   },
@@ -159,11 +159,11 @@
         "content_data_type": "video",
         "content_data": {
           "text0": "Introduction & Onboarding",
-          "vid0": "https://player.vimeo.com/video/382318276?title=0&byline=0&portrait=0",
+          "vid0": "https://player.vimeo.com/video/382318276?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0",
           "text1": "Driving",
-          "vid1": "https://player.vimeo.com/video/382318281?title=0&byline=0&portrait=0",
+          "vid1": "https://player.vimeo.com/video/382318281?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0",
           "text2": "Summary & Achievement",
-          "vid2": "https://player.vimeo.com/video/382318286?title=0&byline=0&portrait=0"
+          "vid2": "https://player.vimeo.com/video/382318286?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
         }
       },
       {
@@ -259,11 +259,11 @@
         "content_data_type": "video",
         "content_data": {
           "text0": "Booking",
-          "vid0": "https://player.vimeo.com/video/382359011?title=0&byline=0&portrait=0",
+          "vid0": "https://player.vimeo.com/video/382359011?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0",
           "text1": "After Booking",
-          "vid1": "https://player.vimeo.com/video/382359008?title=0&byline=0&portrait=0",
+          "vid1": "https://player.vimeo.com/video/382359008?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0",
           "text2": "Menu",
-          "vid2": "https://player.vimeo.com/video/382358620?title=0&byline=0&portrait=0"
+          "vid2": "https://player.vimeo.com/video/382358620?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
         }
       },
       {
@@ -312,7 +312,7 @@
             "title1": "Key Interfaces",
             "image0": "/work/yintech/Yintechlabs-02.jpg",
             "title2": "Interaction Video",
-            "vid0": "https://player.vimeo.com/video/382538184?title=0&byline=0&portrait=0"
+            "vid0": "https://player.vimeo.com/video/382538184?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
         }
       }
     ]

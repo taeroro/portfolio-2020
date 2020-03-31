@@ -917,7 +917,7 @@ class WorkDetail extends Component {
               }
               else if (item.includes("poster")) {
                 return (
-                  <img className="image-single full-width" src={dataj[item]} alt="poster" key={temp_i++} />
+                  <img className="image-single" src={dataj[item]} alt="poster" key={temp_i++} />
                 );
               }
               else if (item.includes("social")) {
