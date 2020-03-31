@@ -9,7 +9,7 @@
   z-index: 4;
   width: calc(100vw - 70px);
   margin-top: 105px;
-  position: fixed !important;
+  position: fixed;
   // background-color: rgba(0,0,255,0.5);
 
   .title-description {
@@ -136,12 +136,12 @@
     margin: auto;
   }
 
-  .thumbnail-img-0 {
-    transform: translateY(5vh);
+  .thumbnail-img-1 {
+    // transform: translateY(10%);
   }
 
-  .thumbnail-img-1 {
-    transform: translateY(10%);
+  .thumbnail-img-2 {
+    transform: translateY(5vh);
   }
 
   img[class^="thumbnail-img-"].mouse-over {

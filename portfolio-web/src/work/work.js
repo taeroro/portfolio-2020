@@ -6,17 +6,17 @@ import gsap from 'gsap';
 import TextPlugin from "gsap/TextPlugin";
 
 const mockup_img_path = [
+  './work/jazzin/jazzin_new.jpg',
+  './work/focused/focused_new.jpg',
   './work/apark/small_apark_rendered-01.jpg',
-  './work/focused/focused_mockup.jpg',
-  './work/jazzin/jazzin.png',
   './work/driving/uxdesign.cc_the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a.jpg',
   './work/yintech/Yintechlabs-01.jpg',
   './work/faces/faces.webm',
 ]
 const indexToPath = [
-  "apark",
-  "focused",
   "jazzin",
+  "focused",
+  "apark",
   "uxcollective",
   "yintechlabs",
   "faces",
@@ -86,9 +86,11 @@ class Work extends Component {
           break;
         case 0:
           this.tl.progress(1).clear();
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "αPARK", cursor: "default"});
+          this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
+
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "JAZZIN", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-          this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "BRANDING & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 1:
           this.tl.progress(1).clear();
@@ -100,11 +102,9 @@ class Work extends Component {
           break;
         case 2:
           this.tl.progress(1).clear();
-          this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
-
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "JAZZIN", cursor: "default"});
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "αPARK", cursor: "default"});
           // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-          this.tl.to(this.descriptionRef, {duration: 0.25, text: "BRAND DESIGN & DIGITAL PRODUCT DESIGN"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         case 3:
           this.tl.progress(1).clear();

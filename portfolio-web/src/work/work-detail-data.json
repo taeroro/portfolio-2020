@@ -1,101 +1,80 @@
 [
   {
     "id": 0,
-    "title": "αPARK",
-    "category": "DIGITAL PRODUCT DESIGN",
-    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg",
-    "objective": "αPark connects drivers looking for parking with parking space owners and businesses.",
+    "title": "JAZZIN",
+    "category": "BRANDING & DIGITAL PRODUCT DESIGN",
+    "thumbnail_image_path": "/work/jazzin/jazzin_new.jpg",
+    "objective": "Jazzin is a 3-day jazz festival supporting local jazz bars and artists to raise awareness of their groups to the public.",
     "content": [
       {
         "content_id": 0,
         "content_title": "overview",
         "content_data_type": "text-complex",
         "content_data": {
-            "role": "Designer (Graduate Studies)",
+            "role": "Designer, Strategist (Graduate Studies)",
             "affiliation": "MPS Communication Design Program at Parsons School of Design",
-            "category": "Digital Product Design\nUX Design",
-            "collaborators": "None (Individual Project)",
-            "platform": "Mobile",
-            "deliverables": "High-fidelity Prototype\nFinal Presentation",
-            "timeline": "Sep 2019 - Oct 2019",
-            "_details": "Finding parking has not always been easy. Inspired by business models such as that of Airbnb, which connects home owners with travels, I designed a similar experience in response to the parking problem."
+            "category": "Brand Design\nSocial Media Strategy\nDigital Product Design",
+            "collaborators": "Yuri Ha (Designer)\nYifu Zhang (Designer)",
+            "medium": "Print\nSocial Media\nWebsite\nMobile",
+            "deliverables": "Poster\nSocial Media Campaign\nWebsite\nMobile App",
+            "timeline": "Sep 2019 - Dec 2019",
+            "_details": "For this project, we were given the prompt to plan and design a music festival, strictly using typographic forms with minimum amount of photography or illustration for the graphic elements in the design system.\n\nThis is my first time doing brand design, working with two experienced designers helped me understanding more about the process and philosophy of graphic design."
         }
       },
       {
         "content_id": 1,
-        "content_title": "design process",
-        "content_data_type": "image-single",
+        "content_title": "design system",
+        "content_data_type": "image-multi",
         "content_data": {
-          "img": "/work/apark/design_process.png",
-          "size": 8
+            "image0": "/work/jazzin/Direction-02.jpg",
+            "image1": "/work/jazzin/Direction-04.jpg",
+            "image2": "/work/jazzin/Direction-05.jpg",
+            "image3": "/work/jazzin/Direction-06.jpg",
+            "image4": "/work/jazzin/Direction-07.jpg"
         }
       },
       {
         "content_id": 2,
-        "content_title": "research",
-        "content_data_type": "text-complex",
-        "content_data": {
-          "title0": "Existing Solutions & Problems",
-          "text0": "Before diving into the actual design process, I started by looking for existing apps or solutions that have similar features. Pavemint and ParqEx are two products that matched my idea. However, these apps suffer from a challenging user experience, with an interface that is often confusing to users. That’s why I decided to research and target existing problems in order to enhance the user experience of my product.",
-          "image0": "/work/apark/ParqEx.jpg",
-          "desc0": "For instance, ParqEx has a really small date and time picker, comparing to the size of the screen, which could leads users to select at the wrong date or time",
-          "title1": "User Interviews",
-          "text1_0": "After conducting interviews with potential users in person, I summarized the results into these points:",
-          "points1": "- All expressed the need for this specific product\n- The distance from the parking spot to the destination is the most important factor for users\n- Some users would pay more for a closer parking spot to their destination\n- Most of the users usually don’t look at reviews to find parking",
-          "text1_1": "These points helped me to understand what users need the most, and what features should I prioritize in my product experience."
-
-        }
+        "content_title": "what did i do?",
+        "content_data_type": "text-plain",
+        "content_data": "I was in charge of coming up with design and strategy for the social media campaign, the artist and the schedule interfaces for mobile application as well as working closely with the team, exchanging ideas and suggestions with my teammates."
       },
       {
         "content_id": 3,
-        "content_title": "analyze",
-        "content_data_type": "mixed-image",
+        "content_title": "deliverables",
+        "content_data_type": "jazzin-deliverables",
         "content_data": {
-            "text0": "After doing the researching, I started brainstorming, then created persona to assist me understand more about what I should be designing. Also, I made user flows based on the persona I created, to have a better understanding of the structure and experience of this application.",
-            "image0": "/work/apark/Persona1.jpg",
-            "image1": "/work/apark/Persona2.jpg",
-            "image2": "/work/apark/Persona3.jpg",
-            "image3": "/work/apark/UserFlow1.jpg",
-            "image4": "/work/apark/UserFlow2.jpg"
-          }
+            "text0": "Poster",
+            "poster0": "/work/jazzin/Poster.jpg",
+            "poster1": "/work/jazzin/Poster_Schedule.jpg",
+            "text1": "Social Media Campaign",
+            "social0": "/work/jazzin/social_media-01.jpg",
+            "social1": "/work/jazzin/social_media-02.jpg",
+            "social2": "/work/jazzin/social_media-03.jpg",
+            "social3": "/work/jazzin/social_media-04.jpg",
+            "social4": "/work/jazzin/social_media-05.jpg",
+            "social5": "/work/jazzin/social_media-06.jpg",
+            "social6": "/work/jazzin/social_media-07.jpg",
+            "social7": "/work/jazzin/social_media-08.jpg",
+            "social8": "/work/jazzin/social_media-09.jpg",
+            "social9": "/work/jazzin/social-d.jpg",
+            "social10": "/work/jazzin/Jazz_sitcker_1-04.png",
+            "social11": "/work/jazzin/Jazz_sitcker_1-05.png",
+            "social12": "/work/jazzin/Jazz_sitcker_1-06.png",
+            "social13": "/work/jazzin/Jazz_sitcker_1-07.png",
+            "social14": "/work/jazzin/social-s.jpg",
+            "text2": "Website",
+            "web0": "/work/jazzin/web1.jpg",
+            "web1": "/work/jazzin/web2.jpg",
+            "text3": "Mobile App",
+            "app0": "https://player.vimeo.com/video/382519544?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
+        }
       },
       {
         "content_id": 4,
-        "content_title": "wireframe",
-        "content_data_type": "mixed-image",
-        "content_data": {
-          "text0": "Then I translated these sketches into wireframes.",
-          "image0": "/work/apark/sketches.jpg",
-          "image1": "/work/apark/Wireframe.png"
-        }
-      },
-      {
-        "content_id": 5,
-        "content_title": "ui kit",
-        "content_data_type": "image-multi",
-        "content_data": {
-          "image0": "/work/apark/logos_colors.jpg",
-          "image1": "/work/apark/typography_buttons_elements.jpg"
-        }
-      },
-      {
-        "content_id": 6,
-        "content_title": "prototype",
-        "content_data_type": "video",
-        "content_data": {
-          "text0": "Booking",
-          "vid0": "https://player.vimeo.com/video/382359011?title=0&byline=0&portrait=0",
-          "text1": "After Booking",
-          "vid1": "https://player.vimeo.com/video/382359008?title=0&byline=0&portrait=0",
-          "text2": "Menu",
-          "vid2": "https://player.vimeo.com/video/382358620?title=0&byline=0&portrait=0"
-        }
-      },
-      {
-        "content_id": 7,
         "content_title": "summary",
         "content_data_type": "text-plain",
-        "content_data": "I think one of the challenges of this design is the map, how should I redesign it to display more parking space but doesn’t look too chaotic? Finding more references which have visual solutions for large quantity of data should be the next step."
+        "content_data": "I’m thankful that our instructor Jacob Heftmann invited many talented and experienced designers to critique and giving feedback on our work at different check point, which really helped us moving forward to the end.\n\nOverall, this was a great opportunity for us to practice design in different medium, to collaborate and work as a team, and to overcome challenges."
       }
     ]
   },
@@ -103,7 +82,7 @@
     "id": 1,
     "title": "FOCUSED.",
     "category": "DIGITAL PRODUCT DESIGN",
-    "thumbnail_image_path": "/work/focused/focused_mockup.jpg",
+    "thumbnail_image_path": "/work/focused/focused_new.jpg",
     "objective": "Focused helps drivers stay focused on the road by eliminating distractions on their mobile phones.",
     "content": [
       {
@@ -197,80 +176,101 @@
   },
   {
     "id": 2,
-    "title": "JAZZIN",
-    "category": "BRAND DESIGN & DIGITAL PRODUCT DESIGN",
-    "thumbnail_image_path": "/work/jazzin/jazzin.png",
-    "objective": "Jazzin is a 3-day jazz festival supporting local jazz bars and artists to raise awareness of their groups to the public.",
+    "title": "αPARK",
+    "category": "DIGITAL PRODUCT DESIGN",
+    "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg",
+    "objective": "αPark connects drivers looking for parking with parking space owners and businesses.",
     "content": [
       {
         "content_id": 0,
         "content_title": "overview",
         "content_data_type": "text-complex",
         "content_data": {
-            "role": "Designer, Strategist (Graduate Studies)",
+            "role": "Designer (Graduate Studies)",
             "affiliation": "MPS Communication Design Program at Parsons School of Design",
-            "category": "Brand Design\nSocial Media Strategy\nDigital Product Design",
-            "collaborators": "Yuri Ha (Designer)\nYifu Zhang (Designer)",
-            "medium": "Print\nSocial Media\nWebsite\nMobile",
-            "deliverables": "Poster\nSocial Media Campaign\nWebsite\nMobile App",
-            "timeline": "Sep 2019 - Dec 2019",
-            "_details": "For this project, we were given the prompt to plan and design a music festival, strictly using typographic forms with minimum amount of photography or illustration for the graphic elements in the design system.\n\nThis is my first time doing brand design, working with two experienced designers helped me understanding more about the process and philosophy of graphic design."
+            "category": "Digital Product Design\nUX Design",
+            "collaborators": "None (Individual Project)",
+            "platform": "Mobile",
+            "deliverables": "High-fidelity Prototype\nFinal Presentation",
+            "timeline": "Sep 2019 - Oct 2019",
+            "_details": "Finding parking has not always been easy. Inspired by business models such as that of Airbnb, which connects home owners with travels, I designed a similar experience in response to the parking problem."
         }
       },
       {
         "content_id": 1,
-        "content_title": "design system",
-        "content_data_type": "image-multi",
+        "content_title": "design process",
+        "content_data_type": "image-single",
         "content_data": {
-            "image0": "/work/jazzin/Direction-02.jpg",
-            "image1": "/work/jazzin/Direction-04.jpg",
-            "image2": "/work/jazzin/Direction-05.jpg",
-            "image3": "/work/jazzin/Direction-06.jpg",
-            "image4": "/work/jazzin/Direction-07.jpg"
+          "img": "/work/apark/design_process.png",
+          "size": 8
         }
       },
       {
         "content_id": 2,
-        "content_title": "what did i do?",
-        "content_data_type": "text-plain",
-        "content_data": "I was in charge of coming up with design and strategy for the social media campaign, the artist and the schedule interfaces for mobile application as well as working closely with the team, exchanging ideas and suggestions with my teammates."
-      },
-      {
-        "content_id": 3,
-        "content_title": "deliverables",
-        "content_data_type": "jazzin-deliverables",
+        "content_title": "research",
+        "content_data_type": "text-complex",
         "content_data": {
-            "text0": "Poster",
-            "poster0": "/work/jazzin/Poster.jpg",
-            "poster1": "/work/jazzin/Poster_Schedule.jpg",
-            "text1": "Social Media Campaign",
-            "social0": "/work/jazzin/social_media-01.jpg",
-            "social1": "/work/jazzin/social_media-02.jpg",
-            "social2": "/work/jazzin/social_media-03.jpg",
-            "social3": "/work/jazzin/social_media-04.jpg",
-            "social4": "/work/jazzin/social_media-05.jpg",
-            "social5": "/work/jazzin/social_media-06.jpg",
-            "social6": "/work/jazzin/social_media-07.jpg",
-            "social7": "/work/jazzin/social_media-08.jpg",
-            "social8": "/work/jazzin/social_media-09.jpg",
-            "social9": "/work/jazzin/social-d.jpg",
-            "social10": "/work/jazzin/Jazz_sitcker_1-04.png",
-            "social11": "/work/jazzin/Jazz_sitcker_1-05.png",
-            "social12": "/work/jazzin/Jazz_sitcker_1-06.png",
-            "social13": "/work/jazzin/Jazz_sitcker_1-07.png",
-            "social14": "/work/jazzin/social-s.jpg",
-            "text2": "Website",
-            "web0": "/work/jazzin/web1.jpg",
-            "web1": "/work/jazzin/web2.jpg",
-            "text3": "Mobile App",
-            "app0": "https://player.vimeo.com/video/382519544?title=0&byline=0&portrait=0"
+          "title0": "Existing Solutions & Problems",
+          "text0": "Before diving into the actual design process, I started by looking for existing apps or solutions that have similar features. Pavemint and ParqEx are two products that matched my idea. However, these apps suffer from a challenging user experience, with an interface that is often confusing to users. That’s why I decided to research and target existing problems in order to enhance the user experience of my product.",
+          "image0": "/work/apark/ParqEx.jpg",
+          "desc0": "For instance, ParqEx has a really small date and time picker, comparing to the size of the screen, which could leads users to select the wrong date or time",
+          "title1": "User Interviews",
+          "text1_0": "After conducting interviews with potential users in person, I summarized the results into these points:",
+          "points1": "- All expressed the need for this specific product\n- The distance from the parking spot to the destination is the most important factor for users\n- Some users would pay more for a closer parking spot to their destination\n- Most of the users usually don’t look at reviews to find parking",
+          "text1_1": "These points helped me to understand what users need the most, and what features should I prioritize in my product experience."
+
         }
       },
       {
+        "content_id": 3,
+        "content_title": "analyze",
+        "content_data_type": "mixed-image",
+        "content_data": {
+            "text0": "After doing the researching, I started brainstorming, then created persona to assist me understand more about what I should be designing. Also, I made user flows based on the persona I created, to have a better understanding of the structure and experience of this application.",
+            "image0": "/work/apark/Persona1.jpg",
+            "image1": "/work/apark/Persona2.jpg",
+            "image2": "/work/apark/Persona3.jpg",
+            "image3": "/work/apark/UserFlow1.jpg",
+            "image4": "/work/apark/UserFlow2.jpg"
+          }
+      },
+      {
         "content_id": 4,
+        "content_title": "wireframe",
+        "content_data_type": "mixed-image",
+        "content_data": {
+          "text0": "Then I translated these sketches into wireframes.",
+          "image0": "/work/apark/sketches.jpg",
+          "image1": "/work/apark/Wireframe.png"
+        }
+      },
+      {
+        "content_id": 5,
+        "content_title": "ui kit",
+        "content_data_type": "image-multi",
+        "content_data": {
+          "image0": "/work/apark/logos_colors.jpg",
+          "image1": "/work/apark/typography_buttons_elements.jpg"
+        }
+      },
+      {
+        "content_id": 6,
+        "content_title": "prototype",
+        "content_data_type": "video",
+        "content_data": {
+          "text0": "Booking",
+          "vid0": "https://player.vimeo.com/video/382359011?title=0&byline=0&portrait=0",
+          "text1": "After Booking",
+          "vid1": "https://player.vimeo.com/video/382359008?title=0&byline=0&portrait=0",
+          "text2": "Menu",
+          "vid2": "https://player.vimeo.com/video/382358620?title=0&byline=0&portrait=0"
+        }
+      },
+      {
+        "content_id": 7,
         "content_title": "summary",
         "content_data_type": "text-plain",
-        "content_data": "I’m thankful that our instructor Jacob Heftmann invited many talented and experienced designers to critique and giving feedback on our work at different check point, which really helped us moving forward to the end.\n\nOverall this was a great opportunity for us to practice design in different medium, to collaborate and work as a team, and to overcome challenges."
+        "content_data": "I think one of the challenges of this design is the map, how should I redesign it to display more parking space but doesn’t look too chaotic? Finding more references which have visual solutions for large quantity of data should be the next step."
       }
     ]
   },

@@ -58,15 +58,15 @@ export default class About extends Component {
         </div>
 
         <p className="bio" ref={p => this.bioRef = p}>
-          is a digital product designer and front-end engineer with a concentration in the practice of user experience design. He holds a Bachelor of Science degree in Computer Science from Purdue University (2019), and is attaining a Masters of Professional Studies degree in Communication Design at Parsons School of Design (2020).
+          is a digital product designer and front-end engineer with a concentration in the practice of user experience design. He holds a Bachelor of Science degree in Computer Science from Purdue University and is obtaining a Master of Professional Studies degree in Communication Design at Parsons School of Design.
           <br /><br />
-          With the rapidly growing demand in digital product design, he stands at the intersection of design and engineering, uniting disciplines to facilitate and create thoughtful user experiences of digital products.
+          Ryan’s background and experience allow him to easily translate between design and engineering teams to build cohesive, thoughtful digital products.
         </p>
 
         <div className="contact-wrapper" ref={div => this.contactRef = div}>
           <h2 className="contact">CONTACT</h2>
           <div className="another-contact-wrapper">
-            <p>Email: <a href="mailto:ryanfan1996@gmail.com">ryanfan1996@gmail.com</a></p>
+            <p>Email: <a href="mailto:hello@ryanfandesign.com">hello@ryanfandesign.com</a></p>
             <div>
               <a href="https://www.linkedin.com/in/zuyuanfan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href="https://www.instagram.com/ryantf11/" target="_blank" rel="noopener noreferrer">Instagram</a>

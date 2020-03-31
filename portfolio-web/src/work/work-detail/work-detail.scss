@@ -8,7 +8,7 @@
 }
 
 .introduction-container.detail-page {
-  // position: fixed !important;
+  position: absolute;
 
 
   & .title-description {
@@ -548,13 +548,13 @@ div[class^="content-"] {
     }
   }
 
-  .img-wrapper.grey-background.first-img-2 {
-    height: auto !important;
+  // .img-wrapper.grey-background.first-img-0 {
+    // height: auto !important;
 
-    .thumbnail-img {
-      transform: rotate(90deg) scale(1.5);
-    }
-  }
+    // .thumbnail-img {
+    //   transform: rotate(90deg) scale(1.5);
+    // }
+  // }
 
   .title-description {
     max-width: calc(100vw - 80px);

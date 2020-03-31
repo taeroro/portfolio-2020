@@ -4,11 +4,13 @@
   width: 100vw;
   padding-bottom: 20vh; }
 
-.introduction-container.detail-page .title-description {
-  font-size: 2.6vw !important;
-  font-weight: 700; }
-.introduction-container.detail-page .name {
-  font-size: 5.5vw  !important; }
+.introduction-container.detail-page {
+  position: absolute; }
+  .introduction-container.detail-page .title-description {
+    font-size: 2.6vw !important;
+    font-weight: 700; }
+  .introduction-container.detail-page .name {
+    font-size: 5.5vw  !important; }
 
 .introduction-container.detail-page.hidden {
   display: none; }
@@ -343,11 +345,6 @@ div[class^="content-"] {
   div[class^="content-"] .quote-p {
     font-size: 20px !important;
     line-height: 24px !important; }
-
-  .img-wrapper.grey-background.first-img-2 {
-    height: auto !important; }
-    .img-wrapper.grey-background.first-img-2 .thumbnail-img {
-      transform: rotate(90deg) scale(1.5); }
 
   .title-description {
     max-width: calc(100vw - 80px); } }

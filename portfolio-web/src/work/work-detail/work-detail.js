@@ -7,9 +7,9 @@ import gsap from 'gsap';
 import workData from './../work-detail-data';
 
 const indexToPath = [
-  "apark",
-  "focused",
   "jazzin",
+  "focused",
+  "apark",
   "uxcollective",
   "yintechlabs",
   "faces",
@@ -407,7 +407,7 @@ class WorkDetail extends Component {
                   let str = data[item];
                   str = str.replace(/(^|\s)(")/g, "$1“");
                   str = str.replace(/"/g, "”");
-                  
+
                   return (
                     <p className="quote-p" key={temp_i++}>{str}</p>
                   );
@@ -522,7 +522,7 @@ class WorkDetail extends Component {
           let keyArray1 = Object.keys(content.content_data);
           let data1 = content.content_data;
 
-          if (this.state.projectId === "0") {
+          if (this.state.projectId === "2") {
             let temp_i = 0;
             let elements = keyArray1 || [];
             let components = elements.map(
@@ -588,7 +588,7 @@ class WorkDetail extends Component {
             );
           }
 
-          else if (this.state.projectId === "2") {
+          else if (this.state.projectId === "0") {
             let temp_i = 0;
             let elements = keyArray1 || [];
             let components = elements.map(

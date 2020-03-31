@@ -79,31 +79,6 @@ export default class Menu extends Component {
 
   updateWindowDimensions() {
     this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
-
-    // this.tl.kill();
-    // this.tl = null;
-    //
-    // this.tl = gsap.timeline({ paused: true, onReverseComplete: this.hideTargetElement });
-    //
-    // this.tl.set([this.rt1Ref, this.rt2Ref, this.rt3Ref], {transformOrigin: "50% 50%"});
-    //
-    // let cWidth = window.innerWidth <= 768 ? "100vw" : "85vw";
-    //
-    // this.tl
-    //   .to(this.menuAnimateRef, {duration: 0.5, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
-    //   .to(this.menuAnimateRef1, {duration: 0.25, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
-    //   .to(this.menuRef, {duration: 0.5, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
-    //   .set(this.menuOverlayRef, {pointerEvents: "auto"})
-    //   .to(this.rt2Ref, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
-    //   .to(this.rt1Ref, {duration: 0.5, y: 8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
-    //   .to(this.rt3Ref, {duration: 0.5, y: -8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
-    //   .to(this.rt1Ref, {duration: 0.25, rotate: -45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
-    //   .to(this.rt3Ref, {duration: 0.25, rotate: 45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
-    //   .to(this.menuLabelRef, {duration: 0.5, text: {value: "CLOSE", delimiter: " "}, ease: "none"}, "-=0.5")
-    //   .to(this.menuContentRef, {duration: 0.5, display: "flex", opacity: 1, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
-    //   // .to(this.menuRef, {duration: 0.5, boxShadow: '-10px 0px 20px rgba(0,0,0,0.5)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"} , "-=0.35")
-    //   .to(this.menuOverlayRef, {duration: 0.5, opacity: '0.7', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
-    //   .reverse();
   }
 
   showTargetElement = () => {
@@ -120,40 +95,10 @@ export default class Menu extends Component {
     this.tl.reversed(!this.tl.reversed());
 
     if (!this.state.isMenuExpanded) {
-      // real stuff ======
-      // this.tl.to(this.menuRef, {duration: 0.5, width: '85vw', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-      // this.tl.set(this.menuOverlayRef, {pointerEvents: "auto"});
-      // this.tl.to(this.rt2Ref, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      // this.tl.to(this.rt1Ref, {duration: 0.5, y: 8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      // this.tl.to(this.rt3Ref, {duration: 0.5, y: -8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      // this.tl.to(this.rt1Ref, {duration: 0.25, rotate: -45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-      // this.tl.to(this.rt3Ref, {duration: 0.25, rotate: 45, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-      //
-      // this.tl.to(this.menuLabelRef, {duration: 0.5, text: {value: "CLOSE", delimiter: " "}, ease: "none"}, "-=0.5");
-      // this.tl.to(this.menuContentRef, {duration: 0.5, display: "flex", opacity: 1, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      //
-      // this.tl.to(this.menuRef, {duration: 0.5, boxShadow: '-10px 0px 20px rgba(0,0,0,0.5)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"} , "-=0.35");
-      // this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0.7', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      // real stuff ======
-
       this.showTargetElement();
     }
     else {
-      // this.tl.to(this.menuContentRef, {duration: 0.5, display: "none", opacity: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-      //
-      // this.tl.to(this.menuRef, {duration: 0, boxShadow: '-10px 0px 20px rgba(0,0,0,0.0)', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      // this.tl.to(this.menuRef, {duration: 0.5, width: '70px', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      // this.tl.set(this.menuOverlayRef, {pointerEvents: "none"});
-      // this.tl.to(this.menuOverlayRef, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      //
-      // this.tl.to(this.rt1Ref, {duration: 0.25, rotate: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-      // this.tl.to(this.rt3Ref, {duration: 0.25, rotate: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-      // this.tl.to(this.rt1Ref, {duration: 0.5, y: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
-      // this.tl.to(this.rt3Ref, {duration: 0.5, y: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      // this.tl.to(this.rt2Ref, {duration: 0.5, opacity: '1', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5");
-      // this.tl.to(this.menuLabelRef, {duration: 0.5, text: {value: "MENU", delimiter: " "}, ease: "none"}, "-=1");
 
-      // this.hideTargetElement();
     }
 
     this.setState({ isMenuExpanded: !this.state.isMenuExpanded });
