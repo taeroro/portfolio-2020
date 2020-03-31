@@ -210,8 +210,8 @@ export default class Menu extends Component {
           }
           ref={div => this.menuRef = div}
         >
-          <div className="menu-button-wrapper">
-            <div className="menu-bt" onClick={this.toggleMenu}>
+          <div className="menu-button-wrapper" onClick={this.toggleMenu}>
+            <div className="menu-bt">
               <div className="menu-bt-rt-1" ref={div => this.rt1Ref = div}></div>
               <div className="menu-bt-rt-2" ref={div => this.rt2Ref = div}></div>
               <div className="menu-bt-rt-3" ref={div => this.rt3Ref = div}></div>

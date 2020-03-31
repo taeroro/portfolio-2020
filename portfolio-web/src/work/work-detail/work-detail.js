@@ -415,7 +415,7 @@ class WorkDetail extends Component {
               }
             );
 
-            if (this.state.projectId === "0") {
+            if (this.state.projectId === "2") {
               let toDisplay = [];
               let arr0 = components.slice(0, 2);
               let arr1 = components.slice(2, 3);
@@ -637,7 +637,7 @@ class WorkDetail extends Component {
           let data0 = content.content_data;
 
           if (content.content_title === "wireframe") {
-            if (this.state.projectId === "0") {
+            if (this.state.projectId === "2") {
               let temp_i = 0;
               let elements = keyArray0 || [];
               let components = elements.map(
