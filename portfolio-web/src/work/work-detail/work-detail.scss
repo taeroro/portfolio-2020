@@ -10,6 +10,8 @@
 .introduction-container.detail-page {
   position: absolute;
 
+  // z-index: 999;
+  // mix-blend-mode: difference;
 
   & .title-description {
     // font-size: 48px;

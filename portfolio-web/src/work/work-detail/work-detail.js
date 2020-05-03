@@ -356,19 +356,22 @@ class WorkDetail extends Component {
 
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-lg-2 col-customize"></div>
-                <div className="col-lg-4 col-customize">{arr0}</div>
-                <div className="col-lg-4 col-customize">{arr1}</div>
-                <div className="col-lg-2 col-customize"></div>
+                <div className="col-lg-4 col-customize"></div>
+                <div className="col-lg-2 col-customize">{arr0}</div>
+                <div className="col-lg-2 col-customize">{arr1}</div>
+                <div className="col-lg-4 col-customize"></div>
               </div>
             );
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-lg-2 col-customize"></div>
-                <div className="col-lg-8 col-md-12 col-customize">
+                {/* <div className="col-lg-4 col-customize"></div>
+                <div className="col-lg-4 col-md-12 col-customize">
                   {arr2}
                 </div>
-                <div className="col-lg-2 col-customize"></div>
+                <div className="col-lg-4 col-customize"></div> */}
+                <div className="col-xl-4 col-lg-2 col-customize"></div>
+                <div className="col-xl-4 col-lg-8 col-customize">{arr2}</div>
+                <div className="col-xl-4 col-lg-2 col-customize"></div>
               </div>
             );
 
@@ -689,11 +692,13 @@ class WorkDetail extends Component {
               );
               toDisplay.push(
                 <div className="row row-customize">
-                  <div className="col-md-12 col-customize">
+                  <div className="col-lg-2 col-customize"></div>
+                  <div className="col-lg-8 col-md-12 col-customize">
                     <div className="apark-wireframe">
                       {arr2}
                     </div>
                   </div>
+                  <div className="col-lg-2 col-customize"></div>
                 </div>
               );
 
@@ -763,7 +768,13 @@ class WorkDetail extends Component {
                 }
                 else {
                   return (
-                    <img className="image-single" src={data0[item]} alt="image" />
+                    <div className="row row-customize">
+                      <div className="col-md-2 col-customize"></div>
+                      <div class="col-xl-8 col-lg-12 col-customize">
+                        <img className="image-single full-width" src={data0[item]} alt="image" />
+                      </div>
+                      <div className="col-md-2 col-customize"></div>
+                    </div>
                   );
                 }
               }

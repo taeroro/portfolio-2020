@@ -172,7 +172,7 @@
         "content_title": "overview",
         "content_data_type": "text-complex",
         "content_data": {
-            "role": "Designer (Graduate Studies)",
+            "role": "Designer",
             "category": "Digital Product Design\nUI/UX Design",
             "collaborators": "Solo",
             "platform": "Mobile",
@@ -278,7 +278,7 @@
             "tools and frameworks": "React\nExpress.js\nAWS (EC2, S3, Route 53)",
             "deliverables": "Landing Website\nStock Model Training Web Application\nMobile App",
             "timeline": "May 2018 - Aug 2018",
-            "_details": "Worked at a machine learning and big data lab under an investment company as a UX Engineer, where I led the design and developed several projects from start to end."
+            "_details": "Worked at a machine learning and big data lab under an investment company as a UX Engineer, where I led the design and developed several projects from start to end. Updated the design of the landing website, and increased the number of the visitors by 273% compared to the previous design."
         }
       },
       {
