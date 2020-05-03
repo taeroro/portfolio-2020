@@ -85,7 +85,7 @@
         "content_data": {
             "role": "Designer",
             "category": "Digital Product Design\nUI/UX Design",
-            "collaborators": "None",
+            "collaborators": "Solo",
             "platform": "Mobile",
             "deliverables": "High-fidelity Prototype\nFinal Presentation",
             "timeline": "Nov 2019 - Dec 2019",
@@ -174,7 +174,7 @@
         "content_data": {
             "role": "Designer (Graduate Studies)",
             "category": "Digital Product Design\nUI/UX Design",
-            "collaborators": "None",
+            "collaborators": "Solo",
             "platform": "Mobile",
             "deliverables": "High-fidelity Prototype\nFinal Presentation",
             "timeline": "Sep 2019 - Oct 2019",
@@ -278,7 +278,7 @@
             "tools and frameworks": "React\nExpress.js\nAWS (EC2, S3, Route 53)",
             "deliverables": "Landing Website\nStock Model Training Web Application\nMobile App",
             "timeline": "May 2018 - Aug 2018",
-            "_details": "I was a software engineer intern at Yintech Investment Holdings - Innovation Labs in the greater Boston area in the summer of 2018. Since the size of the team in Boston is really small (under 10 employees), I had the valuable opportunity to design digital products before coding them into the real products."
+            "_details": "Worked at a machine learning and big data lab under an investment company as a UX Engineer, where I led the design and developed several projects from start to end."
         }
       },
       {
@@ -290,7 +290,7 @@
             "text0": "The previous Yintech Innovation Labs website was an adequate, yet older website made by an engineer using Wix. I have been requested to update the old design to a more modern, clean, aesthetically pleasing, and responsive website.\n\nSince the theme of the website is business and finance, I picked one color as the primary color to maintain a clean and clear interface. I then resorted to the use of several images to convey the spirit of Yintech Innovation Labs. The choice of blue is because the parent company has chosen blue and orange as its primary colors. The blue color I chose is a variation of the blue color from the parent company so it represents the relationship and connections between these two companies, but also their status as distinct entities.",
             "title1": "Key Interfaces",
             "image0": "/work/yintech/Yintechlabs-02.jpg",
-            "title2": "Interaction Video",
+            "title2": "Demo",
             "vid0": "https://player.vimeo.com/video/382538184?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
         }
       }
@@ -299,7 +299,7 @@
   {
     "id": 5,
     "title": "FACES OF THE PORTRAITS",
-    "category": "DESIGN AND TECHNOLOGY",
+    "category": "CREATIVE CODING",
     "thumbnail_image_path": "/work/faces/faces.webm"
   }
 ]

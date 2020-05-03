@@ -128,7 +128,7 @@ class Work extends Component {
 
           this.tl.to(this.introNameRef, {duration: 0.5, text: "FACES OF THE PORTRAITS", cursor: "default"});
           // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-          this.tl.to(this.descriptionRef, {duration: 0.25, text: "DESIGN AND TECHNOLOGY"}, "-=0.5");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "CREATIVE CODING"}, "-=0.5");
           break;
         default:
           this.tl.to(this.introNameRef, {duration: 0.25, text: "RYAN FAN"});
