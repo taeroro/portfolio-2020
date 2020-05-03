@@ -29,6 +29,11 @@
   display: none;
 }
 
+.parallax-outer, .parallax-inner {
+  width: 100%;
+  height: 100%;
+}
+
 .thumbnail-wrapper {
   align-self: flex-end;
   width: 100%;
