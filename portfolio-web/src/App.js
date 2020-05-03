@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import { withRouter } from 'react-router-dom';
 import { Helmet } from "react-helmet";

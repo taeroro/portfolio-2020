@@ -1,9 +1,9 @@
-import React, { Component, useController, useLayoutEffect } from 'react';
+import React, { Component, useLayoutEffect } from 'react';
 import { withRouter } from "react-router-dom";
 import './work-detail.css';
 
 import gsap from 'gsap';
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax, useController } from 'react-scroll-parallax';
 
 import workData from './../work-detail-data';
 import Image from './../../Image';
@@ -17,17 +17,6 @@ const indexToPath = [
   "faces",
 ];
 
-export const ParallaxCache = () => {
-    const { parallaxController } = useController();
-
-    useLayoutEffect(() => {
-        const handler = () => parallaxController.update();
-        window.addEventListener('load', handler);
-        return () => window.removeEventListener('load', handler);
-    }, [parallaxController]);
-
-    return null;
-};
 
 class WorkDetail extends Component {
   constructor(props) {
@@ -91,9 +80,11 @@ class WorkDetail extends Component {
         this.setState({
           titleDescHeight: this.descriptionRef.clientHeight,
         });
+
+        window.scrollTo(0, 1);
+        window.scrollTo(0, 0);
       }, 1);
     });
-
   }
 
   componentDidMount() {
@@ -113,6 +104,8 @@ class WorkDetail extends Component {
       this.setState({
         titleDescHeight: this.descriptionRef.clientHeight,
       });
+      window.scrollTo(0, 1);
+      window.scrollTo(0, 0);
     }, 1);
   }
 
@@ -1188,10 +1181,10 @@ class WorkDetail extends Component {
     );
   }
 
+
   render() {
     return (
       <div className="work-detail-container" ref={div => this.fadeInRef = div}>
-        <ParallaxCache />
         {this.renderFixedContent()}
         {this.renderThumbnail()}
         {
