@@ -276,7 +276,8 @@ class Work extends Component {
           <div>
             <h2>DESIGNS DIGITAL PRODUCTS</h2>
             <h2>DEVELOPS SOFTWARE</h2>
-            <h2>WRITES BLOGS</h2>
+            <h2>CODES CREATIVELY</h2>
+            {/* <h2>WRITES BLOGS</h2> */}
           </div>
         </div>
       </div>

@@ -33,6 +33,13 @@
 
   opacity: 0;
   transform: translateY(30%);
+
+  width: 50%;
+  line-height: calc(1.6 * 20px);
+
+  span {
+    font-family: 'Major Mono Display', monospace;
+  }
 }
 
 .contact-wrapper {

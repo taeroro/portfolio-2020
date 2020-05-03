@@ -11,14 +11,13 @@
         "content_title": "overview",
         "content_data_type": "text-complex",
         "content_data": {
-            "role": "Designer, Strategist (Graduate Studies)",
-            "affiliation": "MPS Communication Design Program at Parsons School of Design",
-            "category": "Brand Design\nSocial Media Strategy\nDigital Product Design",
+            "role": "Designer",
+            "category": "Branding\nSocial Media Strategy\nDigital Product Design",
             "collaborators": "Yuri Ha (Designer)\nYifu Zhang (Designer)",
-            "medium": "Print\nSocial Media\nWebsite\nMobile",
-            "deliverables": "Poster\nSocial Media Campaign\nWebsite\nMobile App",
             "timeline": "Sep 2019 - Dec 2019",
-            "_details": "For this project, we were given the prompt to plan and design a music festival, strictly using typographic forms with minimum amount of photography or illustration for the graphic elements in the design system.\n\nThis is my first time doing brand design, working with two experienced designers helped me understanding more about the process and philosophy of graphic design."
+            "medium": "Print\nSocial Media\nWebsite\nMobile",
+            "deliverables": "Brand System\nPoster\nSocial Media Campaign\nLanding Website\nMobile App",
+            "_details": ""
         }
       },
       {
@@ -37,7 +36,7 @@
         "content_id": 2,
         "content_title": "what did i do?",
         "content_data_type": "text-plain",
-        "content_data": "I was in charge of coming up with design and strategy for the social media campaign, the artist and the schedule interfaces for mobile application as well as working closely with the team, exchanging ideas and suggestions with my teammates."
+        "content_data": "I was leading the design and strategy of the social media campaign, designing several interfaces for mobile application as well as working closely with the team, supporting, exchanging ideas and contributing creativity with my fellow designers."
       },
       {
         "content_id": 3,
@@ -63,18 +62,12 @@
             "social12": "/work/jazzin/Jazz_sitcker_1-06.png",
             "social13": "/work/jazzin/Jazz_sitcker_1-07.png",
             "social14": "/work/jazzin/social-s.jpg",
-            "text2": "Website",
+            "text2": "Landing Website",
             "web0": "/work/jazzin/web1.jpg",
             "web1": "/work/jazzin/web2.jpg",
             "text3": "Mobile App",
             "app0": "https://player.vimeo.com/video/382519544?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
         }
-      },
-      {
-        "content_id": 4,
-        "content_title": "summary",
-        "content_data_type": "text-plain",
-        "content_data": "I’m thankful that our project owner Jacob Heftmann invited many talented and experienced designers to critique and giving feedback on our work at different check point, which really helped us moving forward to the end.\n\nOverall, this was a great opportunity for us to practice design in different medium, to collaborate and work as a team, and to overcome challenges."
       }
     ]
   },
@@ -90,14 +83,13 @@
         "content_title": "overview",
         "content_data_type": "text-complex",
         "content_data": {
-            "role": "Designer (Graduate Studies)",
-            "affiliation": "MPS Communication Design Program at Parsons School of Design",
-            "category": "Digital Product Design\nUX Design",
-            "collaborators": "None (Individual Project)",
+            "role": "Designer",
+            "category": "Digital Product Design\nUI/UX Design",
+            "collaborators": "None",
             "platform": "Mobile",
             "deliverables": "High-fidelity Prototype\nFinal Presentation",
             "timeline": "Nov 2019 - Dec 2019",
-            "_details": "For this project, we were given the prompt to use the principle of human-centered design to design a digital product which attempts to reduce a user’s engagement with a specific product, service, or platform.\n\nI, as a road-trip enthusiast, am aware of the seriousness and the consequences of distracted driving (text-and-drive to be exact), decided to design a mobile-based experience/digital product to reduce the chances of driver’s getting distracted by their phones."
+            "_details": "As a road-trip enthusiast, I’m aware of the seriousness and the consequences of distracted driving(like text-and-drive). Focused is a mobile experience that reduces user engagement and aims to save lives."
         }
       },
       {
@@ -165,12 +157,6 @@
           "text2": "Summary & Achievement",
           "vid2": "https://player.vimeo.com/video/382318286?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
         }
-      },
-      {
-        "content_id": 7,
-        "content_title": "summary",
-        "content_data_type": "text-plain",
-        "content_data": "For this project, I primarily focused on the animation and finding out the visual solution to incorporate driving speed with color saturation, instead of finding out the visual style I want to achieve.\n\nFor next step, I would spend more time finding more visual references, creating mood-board to redesign the visual style of this digital product, will have the potential to attract more users.\n\nOverall, I really appreciate this project opportunity provided by Brendan Griffiths, and the help from my talented friends."
       }
     ]
   },
@@ -187,9 +173,8 @@
         "content_data_type": "text-complex",
         "content_data": {
             "role": "Designer (Graduate Studies)",
-            "affiliation": "MPS Communication Design Program at Parsons School of Design",
-            "category": "Digital Product Design\nUX Design",
-            "collaborators": "None (Individual Project)",
+            "category": "Digital Product Design\nUI/UX Design",
+            "collaborators": "None",
             "platform": "Mobile",
             "deliverables": "High-fidelity Prototype\nFinal Presentation",
             "timeline": "Sep 2019 - Oct 2019",
@@ -239,7 +224,6 @@
         "content_title": "wireframe",
         "content_data_type": "mixed-image",
         "content_data": {
-          "text0": "Then I translated these sketches into wireframes.",
           "image0": "/work/apark/sketches.jpg",
           "image1": "/work/apark/Wireframe.png"
         }
@@ -265,12 +249,6 @@
           "text2": "Menu",
           "vid2": "https://player.vimeo.com/video/382358620?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
         }
-      },
-      {
-        "content_id": 7,
-        "content_title": "summary",
-        "content_data_type": "text-plain",
-        "content_data": "I think one of the challenges of this design is the map, how should I redesign it to display more parking space but doesn’t look too chaotic? Finding more references which have visual solutions for large quantity of data should be the next step."
       }
     ]
   },
@@ -285,19 +263,20 @@
     "title": "YINTECH LABS",
     "category": "SOFTWARE DEVELOPMENT & DIGITAL PRODUCT DESIGN",
     "thumbnail_image_path": "/work/yintech/Yintechlabs-01.jpg",
+    "objective": "Design and develop digital products from start to end.",
     "content": [
       {
         "content_id": 0,
         "content_title": "overview",
         "content_data_type": "text-complex",
         "content_data": {
-            "role": "Software Engineer, Designer (Internship)",
+            "role": "UX Engineer, Designer",
             "affiliation": "Yintech Investment Holdings - Innovation Labs (Boston)",
-            "category": "Full Stack Development\niOS Development\nDigital Product Design",
+            "category": "Digital Product Design\nFront-end Development\nBack-end Development\niOS Development",
             "collaborators": " Data Scientists, Machine Learning Engineers, Back-end Developers",
             "platform": "Web\nMobile",
             "tools and frameworks": "React\nExpress.js\nAWS (EC2, S3, Route 53)",
-            "deliverables": "Landing Website\nStock Model Training Web Application\nMobile App\nPresentation",
+            "deliverables": "Landing Website\nStock Model Training Web Application\nMobile App",
             "timeline": "May 2018 - Aug 2018",
             "_details": "I was a software engineer intern at Yintech Investment Holdings - Innovation Labs in the greater Boston area in the summer of 2018. Since the size of the team in Boston is really small (under 10 employees), I had the valuable opportunity to design digital products before coding them into the real products."
         }

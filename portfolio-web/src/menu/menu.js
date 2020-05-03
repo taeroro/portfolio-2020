@@ -115,30 +115,6 @@ export default class Menu extends Component {
           <a className="title" href="/">WORK</a>
         </div>
 
-
-        <div className="project-name-wrapper">
-          <Link
-            className={this.state.path.includes("/work/apark") ? "project-name active" : "project-name"}
-            to={{
-              pathname: "/work/apark"
-            }}
-            onClick={this.toggleMenu}
-          >
-            αPARK
-          </Link>
-        </div>
-        <div className="project-name-wrapper">
-          <Link
-            className={this.state.path.includes("/work/focused") ? "project-name active" : "project-name"}
-            // href="/work/focused"
-            to={{
-              pathname: "/work/focused"
-            }}
-            onClick={this.toggleMenu}
-          >
-            FOCUSED.
-          </Link>
-        </div>
         <div className="project-name-wrapper">
           <Link
             className={this.state.path.includes("/work/jazzin") ? "project-name active" : "project-name"}
@@ -151,6 +127,32 @@ export default class Menu extends Component {
             JAZZIN
           </Link>
         </div>
+
+        <div className="project-name-wrapper">
+          <Link
+            className={this.state.path.includes("/work/focused") ? "project-name active" : "project-name"}
+            // href="/work/focused"
+            to={{
+              pathname: "/work/focused"
+            }}
+            onClick={this.toggleMenu}
+          >
+            FOCUSED.
+          </Link>
+        </div>
+        
+        <div className="project-name-wrapper">
+          <Link
+            className={this.state.path.includes("/work/apark") ? "project-name active" : "project-name"}
+            to={{
+              pathname: "/work/apark"
+            }}
+            onClick={this.toggleMenu}
+          >
+            αPARK
+          </Link>
+        </div>
+
         <div className="project-name-wrapper">
           <a className="project-name" href="https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a" target="_blank" rel="noopener noreferrer">
             UX COLLECTIVE

@@ -344,9 +344,15 @@ class WorkDetail extends Component {
             );
 
             let toDisplay = [];
-            let arr0 = components.slice(0,4);
-            let arr1 = components.slice(4, components.length-1);
+            let arr0 = components.slice(0,3);
+            let arr1 = components.slice(3, components.length-1);
             let arr2 = components.slice(components.length-1);
+
+            if (this.state.dataObj.title === "JAZZIN" || this.state.dataObj.title === "YINTECH LABS") {
+              arr0 = components.slice(0,4);
+              arr1 = components.slice(4, components.length-1);
+              arr2 = components.slice(components.length-1);
+            }
 
             toDisplay.push(
               <div className="row row-customize">
@@ -656,17 +662,17 @@ class WorkDetail extends Component {
               );
 
               let toDisplay = [];
-              let arr0 = components.slice(0, 1);
-              let arr1 = components.slice(1, 2);
-              let arr2 = components.slice(2);
+              // let arr0 = components.slice(0, 1);
+              let arr1 = components.slice(0, 1);
+              let arr2 = components.slice(1);
 
-              toDisplay.push(
-                <div className="row row-customize">
-                  <div className="col-xl-4 col-lg-2 col-customize"></div>
-                  <div className="col-xl-4 col-lg-8 col-customize">{arr0}</div>
-                  <div className="col-xl-4 col-lg-2 col-customize"></div>
-                </div>
-              );
+              // toDisplay.push(
+              //   <div className="row row-customize">
+              //     <div className="col-xl-4 col-lg-2 col-customize"></div>
+              //     <div className="col-xl-4 col-lg-8 col-customize">{arr0}</div>
+              //     <div className="col-xl-4 col-lg-2 col-customize"></div>
+              //   </div>
+              // );
               toDisplay.push(
                 <div className="row row-customize">
                   <div className="col-lg-2 col-customize"></div>

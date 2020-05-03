@@ -58,9 +58,18 @@ export default class About extends Component {
         </div>
 
         <p className="bio" ref={p => this.bioRef = p}>
-          is a digital product designer and front-end engineer with a concentration in the practice of user experience design. He holds a Bachelor of Science degree in Computer Science from Purdue University and is obtaining a Master of Professional Studies degree in Communication Design at Parsons School of Design.
+          is a <i><b>digital product designer</b></i> and <i><b>front-end engineer</b></i> with a concentration in the practice of user experience design based in NYC. He holds a Bachelor of Science degree in Computer Science from Purdue University and is obtaining a Master of Professional Studies degree in Communication Design at Parsons School of Design.
           <br /><br />
           Ryan’s background and experience allow him to easily translate between design and engineering teams to build cohesive, thoughtful digital products.
+          <br /><br />
+          Before attending graduate school, he worked at a machine learning and big data lab under an investment company as a UX Engineer, where he led the design and developed projects from start to end; he also led the design of the new landing website as a freelance UI/UX designer for an organization of aspiring entrepreneurs.
+          <br /><br />
+          After several years practicing as a software engineer, Ryan made the switch to product design in an effort to help humans understand machines better.
+          <br /><br />
+          More recently, he has been working as a contract front-end UI developer in NYC. He is collaborative by nature, looking to sharpen his skills and gain experience as a creative practitioner, bridging the gap between engineers and designers to make teams more efficient and cohesive.
+          <br /><br />
+          <hr />
+          <span>when he's not working, he is a serial driver, road trip enthusiast and frequent flyer. he enjoys outdoor activities like snowboarding; cooking while watching bon Appétit test kitchen videos, and a boston terrier lover!</span>
         </p>
 
         <div className="contact-wrapper" ref={div => this.contactRef = div}>
@@ -71,6 +80,7 @@ export default class About extends Component {
               <a href="https://www.linkedin.com/in/zuyuanfan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href="https://www.instagram.com/ryantf11/" target="_blank" rel="noopener noreferrer">Instagram</a>
               <a href="https://github.com/taeroro" target="_blank" rel="noopener noreferrer">Github</a>
+              <a href="https://drive.google.com/file/d/1hQGhCN-FATjePo5-kOivhYxNmeKNbVWX/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
           </div>
         </div>
