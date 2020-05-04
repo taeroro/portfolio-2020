@@ -8,7 +8,7 @@
 .header-desktop {
   display: inline-block;
   width: 100%;
-  height: 55px;
+  height: 45px;
   margin: 25px 0;
   padding: 0 40px;
   text-align: center;
@@ -24,7 +24,7 @@
     }
 
     img {
-      height: 55px;
+      height: 45px;
     }
   }
 
@@ -60,6 +60,14 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .header-desktop {
+    height: 35px;
+
+    .logo-wrapper img {
+      height: 35px;
+    }
+  }
+
   .back-button {
     display: none !important;
   }

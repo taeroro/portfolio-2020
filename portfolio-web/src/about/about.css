@@ -70,7 +70,8 @@
 
   .bio {
     margin-top: 2vh;
-    font-size: 18px; }
+    font-size: 18px;
+    width: 100%; }
 
   .name {
     font-size: 50px !important; }

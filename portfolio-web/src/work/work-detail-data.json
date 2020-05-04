@@ -271,7 +271,7 @@
         "content_data_type": "text-complex",
         "content_data": {
             "role": "UX Engineer, Designer",
-            "affiliation": "Yintech Investment Holdings - Innovation Labs (Boston)",
+            "affiliation": "Yintech Investment Holdings - Innovation Labs",
             "category": "Digital Product Design\nFront-end Development\nBack-end Development\niOS Development",
             "collaborators": " Data Scientists, Machine Learning Engineers, Back-end Developers",
             "platform": "Web\nMobile",
@@ -299,7 +299,7 @@
   {
     "id": 5,
     "title": "FACES OF THE PORTRAITS",
-    "category": "CREATIVE CODING",
-    "thumbnail_image_path": "/work/faces/faces.webm"
+    "category": "CREATIVE CODING & DATA VISUALIZATION",
+    "thumbnail_image_path": "/work/faces/faces.mp4"
   }
 ]

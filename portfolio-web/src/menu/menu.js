@@ -140,7 +140,7 @@ export default class Menu extends Component {
             FOCUSED.
           </Link>
         </div>
-        
+
         <div className="project-name-wrapper">
           <Link
             className={this.state.path.includes("/work/apark") ? "project-name active" : "project-name"}
@@ -154,10 +154,24 @@ export default class Menu extends Component {
         </div>
 
         <div className="project-name-wrapper">
+          <Link
+            className={this.state.path.includes("/work/faces") ? "project-name active" : "project-name"}
+            // href="/work/faces"
+            to={{
+              pathname: "/work/faces"
+            }}
+            onClick={this.toggleMenu}
+          >
+            FACES OF THE PORTRAITS
+          </Link>
+        </div>
+
+        <div className="project-name-wrapper">
           <a className="project-name" href="https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a" target="_blank" rel="noopener noreferrer">
             UX COLLECTIVE
           </a>
         </div>
+
         <div className="project-name-wrapper">
           <Link
             className={this.state.path.includes("/work/yintechlabs") ? "project-name active" : "project-name"}
@@ -168,18 +182,6 @@ export default class Menu extends Component {
             onClick={this.toggleMenu}
           >
             YINTECH LABS
-          </Link>
-        </div>
-        <div className="project-name-wrapper">
-          <Link
-            className={this.state.path.includes("/work/faces") ? "project-name active" : "project-name"}
-            // href="/work/faces"
-            to={{
-              pathname: "/work/faces"
-            }}
-            onClick={this.toggleMenu}
-          >
-            FACES OF THE PORTRAITS
           </Link>
         </div>
 

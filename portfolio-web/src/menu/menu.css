@@ -1,3 +1,9 @@
+.menu-content-container::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */ }
+
 .menu-container {
   z-index: 20;
   position: fixed;
@@ -105,23 +111,29 @@
   overflow: scroll;
   display: flex;
   flex-direction: column;
-  opacity: 0; }
+  opacity: 0;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */ }
   .menu-content-container .title-wrapper:last-of-type {
     margin-top: 5vh; }
   .menu-content-container .title {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 5.5vw;
     font-weight: 700;
-    color: #FFF;
+    color: rgba(0, 0, 255, 0);
     margin: 0;
     text-transform: uppercase;
     text-decoration: none;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px #FFF; }
+    -webkit-text-fill-color: rgba(0, 0, 255, 0);
+    -webkit-text-stroke: 2px #FFF;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); }
   .menu-content-container .title:hover {
-    -webkit-text-fill-color: #0000FF;
-    color: #0000FF;
-    -webkit-text-stroke: 0; }
+    -webkit-text-fill-color: blue;
+    color: blue;
+    -webkit-text-stroke: 0;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); }
   .menu-content-container .project-name-wrapper {
     margin-bottom: 1vh; }
   .menu-content-container .project-name {
@@ -142,6 +154,12 @@
   z-index: 0;
   display: none; }
 
+@media only screen and (max-width: 1024px) {
+  .menu-content-container .title {
+    -webkit-text-stroke: 1.5px #FFF; }
+
+  .menu-button-wrapper {
+    margin-top: 35px; } }
 @media only screen and (max-width: 768px) {
   .menu-content-container {
     width: calc(100vw - 70px);
@@ -161,6 +179,12 @@
     line-height: 18px !important; }
 
   .menu-container.menu-compact span {
-    display: none !important; } }
+    display: none !important; }
+
+  .menu-content-container .title {
+    -webkit-text-stroke: 1px #FFF; }
+
+  .menu-button-wrapper {
+    margin-top: 32px; } }
 
 /*# sourceMappingURL=menu.css.map */

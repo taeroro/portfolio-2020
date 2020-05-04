@@ -69,7 +69,7 @@ export default class About extends Component {
           More recently, he has been working as a contract front-end UI developer in NYC. He is collaborative by nature, looking to sharpen his skills and gain experience as a creative practitioner, bridging the gap between engineers and designers to make teams more efficient and cohesive.
           <br /><br />
           <hr />
-          <span>when he's not working, he is a serial driver, road trip enthusiast and frequent flyer. he enjoys outdoor activities like snowboarding; cooking while watching bon Appétit test kitchen videos, and a boston terrier lover!</span>
+          <span>when he's not working, he is a serial driver, road trip enthusiast and frequent flyer. he enjoys outdoor activities like snowboarding; cooking while watching bon Appétit test kitchen videos, and loves boston terrier!</span>
         </p>
 
         <div className="contact-wrapper" ref={div => this.contactRef = div}>

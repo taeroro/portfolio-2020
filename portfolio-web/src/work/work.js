@@ -9,17 +9,17 @@ const mockup_img_path = [
   './work/jazzin/jazzin_new.jpg',
   './work/focused/focused_new.jpg',
   './work/apark/small_apark_rendered-01.jpg',
+  './work/faces/faces.mp4',
   './work/driving/uxdesign.cc_the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a.jpg',
   './work/yintech/Yintechlabs-01.jpg',
-  './work/faces/faces.webm',
 ]
 const indexToPath = [
   "jazzin",
   "focused",
   "apark",
+  "faces",
   "uxcollective",
   "yintechlabs",
-  "faces",
 ];
 
 class Work extends Component {
@@ -110,25 +110,25 @@ class Work extends Component {
           this.tl.progress(1).clear();
           this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
 
+          this.tl.to(this.introNameRef, {duration: 0.5, text: "FACES OF THE PORTRAITS", cursor: "default"});
+          // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "CREATIVE CODING & DATA VISUALIZATION"}, "-=0.5");
+          break;
+        case 4:
+          this.tl.progress(1).clear();
+          this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
+
           this.tl.to(this.introNameRef, {duration: 0.25, text: "UX COLLECTIVE", cursor: "default"});
           // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "PUBLICATION"}, "-=0.25");
           break;
-        case 4:
+        case 5:
           this.tl.progress(1).clear();
           this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
 
           this.tl.to(this.introNameRef, {duration: 0.25, text: "YINTECH LABS", cursor: "default"});
           // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "SOFTWARE DEVELOPMENT & DIGITAL PRODUCT DESIGN"}, "-=0.25");
-          break;
-        case 5:
-          this.tl.progress(1).clear();
-          this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
-
-          this.tl.to(this.introNameRef, {duration: 0.5, text: "FACES OF THE PORTRAITS", cursor: "default"});
-          // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-          this.tl.to(this.descriptionRef, {duration: 0.25, text: "CREATIVE CODING"}, "-=0.5");
           break;
         default:
           this.tl.to(this.introNameRef, {duration: 0.25, text: "RYAN FAN"});
@@ -192,7 +192,7 @@ class Work extends Component {
   }
 
   imgOnClick(index) {
-    if (index !== 3) {
+    if (index !== 4) {
       this.pageTransitionTl.to(this.hugePageTransitionRef, {duration: 0.5, opacity: 0, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"});
 
       this.setState(
@@ -288,7 +288,7 @@ class Work extends Component {
     const imgClass = "thumbnail-img-" + index;
     let bottom = ((window.innerHeight - this.state.introHeight)/2 > 100) ? (window.innerHeight - this.state.introHeight)/2 : 100;
 
-    let containerClass = mockup_img_path[index].includes("webm") ? "thumbnail-container video" : "thumbnail-container";
+    let containerClass = mockup_img_path[index].includes("mp4") ? "thumbnail-container video" : "thumbnail-container";
 
     return (
       <div
@@ -304,7 +304,7 @@ class Work extends Component {
         onClick={() => this.imgOnClick(index)}
       >
         {
-          mockup_img_path[index].includes("webm")
+          mockup_img_path[index].includes("mp4")
           ? (
             <video
               playsInline loop muted autoPlay
@@ -312,8 +312,9 @@ class Work extends Component {
               className={this.state.mouseIsOver === index ? "thumbnail-vid mouse-over" : "thumbnail-vid"}
               ref={video => this.imgRef[index] = video}
             >
-              <source src={mockup_img_path[index]} type="video/webm" />
-              <source src={mockup_img_path[index].replace("webm", "mp4")} type="video/mp4" />
+              {/* <source src={mockup_img_path[index]} type="video/webm" /> */}
+              {/* .replace("webm", "mp4") */}
+              <source src={mockup_img_path[index]} type="video/mp4" />
             </video>
           )
           : (
@@ -333,7 +334,7 @@ class Work extends Component {
             : "open-bar-container"
           }
         >
-          <span>&#8593; OPEN</span>
+          <span>&#8598; OPEN</span>
         </div>
       </div>
     );

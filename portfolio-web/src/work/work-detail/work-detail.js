@@ -138,15 +138,15 @@ class WorkDetail extends Component {
 
 
     let dY = window.pageYOffset - this.oldY;
-    let shadowYPreset = 10;
+    let shadowYPreset = 5;
     if (window.innerWidth < 576) {
-      shadowYPreset = 5;
+      shadowYPreset = 2;
     }
 
     let dY_new = Math.abs(dY) > shadowYPreset
       ? dY >= 0 ? -shadowYPreset : shadowYPreset
       : -dY;
-    let shadow = "5px " + dY_new + "px 0 #0000FF";
+    let shadow = "3px " + dY_new + "px 0 #0000FF";
 
     for (let i = 0; i < this.titleRef.length; i++) {
       if (this.tl[i])
@@ -199,6 +199,30 @@ class WorkDetail extends Component {
         </div>
       );
     }
+    // JAZZIN background color
+    else if (this.state.projectId === "0") {
+      return (
+        <div
+          // className="introduction-container detail-page"
+          className={this.state.reachedFirst ? "introduction-container detail-page hidden" : "introduction-container detail-page"}
+          ref={div => this.fixedContainerRef = div}
+        >
+          <span
+            className="title-description jazzin"
+            style={{marginTop: calcTop}}
+            ref={span => this.descriptionRef = span}
+          >
+            {category}
+          </span>
+           <h1
+             className="name jazzin"
+             ref={h1 => this.introNameRef = h1}
+           >
+             {title}
+           </h1>
+        </div>
+      );
+    }
 
     return (
       <div
@@ -227,7 +251,7 @@ class WorkDetail extends Component {
     const imgPath = this.state.dataObj && this.state.dataObj.thumbnail_image_path;
     const objText = this.state.dataObj && this.state.dataObj.objective;
 
-    if (this.state.dataObj && this.state.dataObj.thumbnail_image_path.includes("webm")) {
+    if (this.state.dataObj && this.state.dataObj.thumbnail_image_path.includes("mp4")) {
       // return (
       //   <div className="thumbnail-wrapper">
       //     <div className="img-wrapper">
@@ -270,7 +294,8 @@ class WorkDetail extends Component {
               fontSize: "20px",
             }
           }>
-            This case study is currently not available
+            {/* This case study is currently not available */}
+            This case study is protected, content available on request via email.
           </p>
         </div>
       );
@@ -365,10 +390,10 @@ class WorkDetail extends Component {
 
             toDisplay.push(
               <div className="row row-customize">
-                <div className="col-lg-4 col-customize"></div>
-                <div className="col-lg-2 col-customize">{arr0}</div>
-                <div className="col-lg-2 col-customize">{arr1}</div>
-                <div className="col-lg-4 col-customize"></div>
+                <div className="col-xl-4 col-lg-2 col-customize"></div>
+                <div className="col-xl-2 col-lg-4 col-md-6 col-customize">{arr0}</div>
+                <div className="col-xl-2 col-lg-4 col-md-6 col-customize">{arr1}</div>
+                <div className="col-xl-4 col-lg-2 col-customize"></div>
               </div>
             );
             toDisplay.push(
