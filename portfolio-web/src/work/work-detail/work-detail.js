@@ -83,7 +83,7 @@ class WorkDetail extends Component {
 
         window.scrollTo(0, 1);
         window.scrollTo(0, 0);
-      }, 1);
+      }, 10);
     });
   }
 
@@ -106,7 +106,7 @@ class WorkDetail extends Component {
       });
       window.scrollTo(0, 1);
       window.scrollTo(0, 0);
-    }, 1);
+    }, 10);
   }
 
   componentWillUnmount() {
@@ -308,7 +308,7 @@ class WorkDetail extends Component {
           <p>{objText}</p>
         </div>
 
-          <div className={"img-wrapper grey-background first-img-" + this.state.projectId}>
+          <div className={"img-wrapper first-img-" + this.state.projectId}>
             <Parallax y={[-20, 20]}>
               <Image
                 className="thumbnail-img"

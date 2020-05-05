@@ -65,6 +65,9 @@ class Work extends Component {
       currentThumbNum: -1,
       titleDescY: newY,
     });
+
+    // VIDEO PLAYING ON MOBILE
+    this.imgRef[3].setAttribute('muted', true);
   }
 
   componentWillUnmount() {
@@ -76,6 +79,8 @@ class Work extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    this.imgRef[3].setAttribute('muted', true);
+
     if (prevState.currentThumbNum !== this.state.currentThumbNum) {
       switch (this.state.currentThumbNum) {
         case -1:
@@ -307,7 +312,7 @@ class Work extends Component {
           mockup_img_path[index].includes("mp4")
           ? (
             <video
-              playsInline loop muted autoPlay
+              playsInline loop autoPlay muted
               preload="none"
               className={this.state.mouseIsOver === index ? "thumbnail-vid mouse-over" : "thumbnail-vid"}
               ref={video => this.imgRef[index] = video}
@@ -334,7 +339,7 @@ class Work extends Component {
             : "open-bar-container"
           }
         >
-          <span>&#8598; OPEN</span>
+          <span>&#8598;&#xFE0E; OPEN</span>
         </div>
       </div>
     );
