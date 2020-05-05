@@ -14,12 +14,12 @@ const mockup_img_path = [
   './work/yintech/Yintechlabs-01.jpg',
 ]
 const indexToPath = [
-  "jazzin",
-  "focused",
-  "apark",
-  "faces",
-  "uxcollective",
-  "yintechlabs",
+  "jazzin/",
+  "focused/",
+  "apark/",
+  "faces/",
+  "uxcollective/",
+  "yintechlabs/",
 ];
 
 class Work extends Component {

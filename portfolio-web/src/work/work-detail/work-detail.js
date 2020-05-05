@@ -1,9 +1,9 @@
-import React, { Component, useLayoutEffect } from 'react';
+import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
 import './work-detail.css';
 
 import gsap from 'gsap';
-import { Parallax, useController } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
 
 import workData from './../work-detail-data';
 import Image from './../../Image';
@@ -82,7 +82,7 @@ class WorkDetail extends Component {
         });
 
         window.scrollTo(0, 1);
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0 });
       }, 10);
     });
   }
@@ -104,18 +104,23 @@ class WorkDetail extends Component {
       this.setState({
         titleDescHeight: this.descriptionRef.clientHeight,
       });
+
       window.scrollTo(0, 1);
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0 });
     }, 10);
   }
 
   componentWillUnmount() {
+    window.scrollTo({ top: 0 });
+    console.log(window.pageYOffset);
+
     window.removeEventListener('resize', this.updateWindowDimensions);
     window.removeEventListener('scroll', this.updateScroll);
 
     this.fadeInTl.kill();
     this.imgTl.kill();
     for (let i = 0; i < this.tl.length; i++) this.tl[i].kill();
+
   }
 
   updateWindowDimensions() {
@@ -295,7 +300,7 @@ class WorkDetail extends Component {
             }
           }>
             {/* This case study is currently not available */}
-            This case study is protected, content available on request via email.
+            This project is protected, content available on request via email.
           </p>
         </div>
       );
