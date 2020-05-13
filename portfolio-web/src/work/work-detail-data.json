@@ -14,7 +14,7 @@
             "role": "Designer",
             "category": "Digital Product Design\nBranding",
             "collaborators": "Solo",
-            "timeline": "15 Weeks (Jan 2020 - May 2020)",
+            "timeline": "15 Weeks\n(Jan 2020 - May 2020)",
             "medium": "Mobile",
             "deliverables": "Mobile App\nBrand System",
             "_details": "With the legalization of marijuana across the United States and Canada, more people are getting out of their comfort zones and trying cannabis products to help with anxiety, depression, or even just boost their mood and creativity.\n\n I spent 15 weeks to ideate, research, test, and design an app that moves the entire in-store dispensary experience online. Users can take the quiz and get personal recommendations to find the right cannabis.\n\n Four Twenty is designed for newcomers to learn and discover, and offers experienced users a platform to explore different varieties of cannabis."
@@ -32,6 +32,17 @@
             "image4": "/work/fourtwenty/FOURTWENTY-6.jpg",
             "image5": "/work/fourtwenty/FOURTWENTY-7.jpg",
             "image6": "/work/fourtwenty/FOURTWENTY-8.jpg"
+        }
+      },
+      {
+        "content_id": 2,
+        "content_title": "",
+        "content_data_type": "video",
+        "content_data": {
+          "vid0": "https://player.vimeo.com/video/417911198?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0",
+          "vid1": "https://player.vimeo.com/video/417911212?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0",
+          "vid2": "https://player.vimeo.com/video/417911944?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0",
+          "vid3": "https://player.vimeo.com/video/417911952?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
         }
       }
     ]
@@ -51,7 +62,7 @@
             "role": "Designer",
             "category": "Branding\nSocial Media Strategy\nDigital Product Design",
             "collaborators": "Yuri Ha (Designer)\nYifu Zhang (Designer)",
-            "timeline": "Sep 2019 - Dec 2019",
+            "timeline": "8 Weeks\n(Sep 2019 - Dec 2019)",
             "medium": "Print\nSocial Media\nWebsite\nMobile",
             "deliverables": "Brand System\nPoster\nSocial Media Campaign\nLanding Website\nMobile App",
             "_details": ""
@@ -124,8 +135,8 @@
             "category": "Digital Product Design\nUI/UX Design",
             "collaborators": "Solo",
             "platform": "Mobile",
-            "deliverables": "High-fidelity Prototype\nFinal Presentation",
-            "timeline": "Nov 2019 - Dec 2019",
+            "deliverables": "High-fidelity Prototype",
+            "timeline": "8 Weeks\n(Nov 2019 - Dec 2019)",
             "_details": "As a road-trip enthusiast, I’m aware of the seriousness and the consequences of distracted driving(like text-and-drive). Focused is a mobile experience that reduces user engagement and aims to save lives."
         }
       },
@@ -213,8 +224,8 @@
             "category": "Digital Product Design\nUI/UX Design",
             "collaborators": "Solo",
             "platform": "Mobile",
-            "deliverables": "High-fidelity Prototype\nFinal Presentation",
-            "timeline": "Sep 2019 - Oct 2019",
+            "deliverables": "High-fidelity Prototype",
+            "timeline": "4 Weeks\n(Sep 2019 - Oct 2019)",
             "_details": "Finding parking has not always been easy. Inspired by business models such as that of Airbnb, which connects home owners with travels, I designed a similar experience in response to the parking problem."
         }
       },

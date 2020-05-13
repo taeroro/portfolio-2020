@@ -204,6 +204,30 @@ class WorkDetail extends Component {
         </div>
       );
     }
+    // FOURTWENTY
+    else if (this.state.projectId === "0") {
+      return (
+        <div
+          // className="introduction-container detail-page"
+          className={this.state.reachedFirst ? "introduction-container detail-page hidden" : "introduction-container detail-page"}
+          ref={div => this.fixedContainerRef = div}
+        >
+          <span
+            className="title-description fourtwenty"
+            style={{marginTop: calcTop}}
+            ref={span => this.descriptionRef = span}
+          >
+            {category}
+          </span>
+           <h1
+             className="name fourtwenty"
+             ref={h1 => this.introNameRef = h1}
+           >
+             {title}
+           </h1>
+        </div>
+      );
+    }
     // JAZZIN background color
     else if (this.state.projectId === "1") {
       return (
@@ -984,6 +1008,39 @@ class WorkDetail extends Component {
         case "video":
           let keyArray2 = Object.keys(content.content_data);
           let data2 = content.content_data;
+
+
+          if (this.state.projectId === "0") {
+            let temp_q = 0;
+            let elements = keyArray2 || [];
+
+            let components = elements.map(
+              (item) => {
+                return (
+                  <div className="video-wrapper fourtwenty" key={temp_q++}>
+                    <iframe src={data2[item]} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+                  </div>
+                );
+              }
+            );
+
+            let toDisplay9 = [];
+
+            toDisplay9.push(
+              <div className="row row-customize">
+                <div className="col-md-3 col-customize fourtwenty">{components[0]}</div>
+                <div className="col-md-3 col-customize fourtwenty">{components[1]}</div>
+                <div className="col-md-3 col-customize fourtwenty">{components[2]}</div>
+                <div className="col-md-3 col-customize fourtwenty">{components[3]}</div>
+              </div>
+            );
+
+            return (
+              <div className="data-wrapper">
+                {toDisplay9}
+              </div>
+            );
+          }
 
           let temp_i_0 = 0;
           let elements0 = keyArray2 || [];
