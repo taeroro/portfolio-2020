@@ -18,7 +18,7 @@
     color: rgba(0, 0, 0, 0.2); }
   .introduction-container .name {
     display: inline-block;
-    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'Proxima Nova', 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 11vw;
     font-weight: 700;
     color: #000;
@@ -50,7 +50,7 @@
     .introduction-container .skill-wrapper h2 {
       display: inline-block;
       font-family: 'Helvetica Neue', 'Arial', sans-serif;
-      font-size: 2.3vw;
+      font-size: 2.2vw;
       font-weight: 400;
       color: #000;
       margin: 0;
@@ -97,7 +97,7 @@
     left: -9999px;
     right: -9999px;
     margin: auto; }
-  .thumbnail-container .thumbnail-img-2 {
+  .thumbnail-container .thumbnail-img-3 {
     transform: translateY(5vh); }
   .thumbnail-container img[class^="thumbnail-img-"].mouse-over {
     filter: saturate(100%);

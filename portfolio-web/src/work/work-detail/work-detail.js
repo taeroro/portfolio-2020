@@ -9,10 +9,10 @@ import workData from './../work-detail-data';
 import Image from './../../Image';
 
 const indexToPath = [
+  "fourtwenty",
   "jazzin",
   "focused",
   "apark",
-  "uxcollective",
   "yintechlabs",
   "faces",
 ];
@@ -205,7 +205,7 @@ class WorkDetail extends Component {
       );
     }
     // JAZZIN background color
-    else if (this.state.projectId === "0") {
+    else if (this.state.projectId === "1") {
       return (
         <div
           // className="introduction-container detail-page"
@@ -314,20 +314,29 @@ class WorkDetail extends Component {
         </div>
 
           <div className={"img-wrapper first-img-" + this.state.projectId}>
-            <Parallax y={[-20, 20]}>
+            {/* <Parallax y={[-20, 20]}> */}
               <Image
                 className="thumbnail-img"
                 src={imgPath}
                 alt="thumbnail"
                 ref={img => this.thumbnailImageRef = img}
               />
-            </Parallax>
+            {/* </Parallax> */}
           </div>
       </div>
     );
   }
 
   renderContent(content) {
+    if (this.state.projectId === "0" && content.content_id === 1) {
+      return (
+
+        <div className={"content-" + content.content_id + " portfolio-view"} key={content.content_id}>
+          {this.renderDetailedContent(content)}
+        </div>
+      );
+    }
+
     return (
       <div className={"content-" + content.content_id} key={content.content_id}>
         <h2
@@ -463,7 +472,7 @@ class WorkDetail extends Component {
               }
             );
 
-            if (this.state.projectId === "2") {
+            if (this.state.projectId === "3") {
               let toDisplay = [];
               let arr0 = components.slice(0, 2);
               let arr1 = components.slice(2, 3);
@@ -500,7 +509,7 @@ class WorkDetail extends Component {
               );
             }
 
-            else if (this.state.projectId === "1") {
+            else if (this.state.projectId === "2") {
               let toDisplay = [];
               let arr0 = components.slice(0, 1);
               let arr1 = components.slice(1, 2);
@@ -570,7 +579,65 @@ class WorkDetail extends Component {
           let keyArray1 = Object.keys(content.content_data);
           let data1 = content.content_data;
 
-          if (this.state.projectId === "2") {
+          // FOURTWENTY
+          if (this.state.projectId === "0") {
+            let temp_i = 0;
+            let elements = keyArray1 || [];
+            let components = elements.map(
+              (item, index) => {
+                if (index >= 0 && index <= 3) {
+                  return (
+                    <img className="image-single full-width" src={data1[item]} alt="image" />
+                  );
+                }
+                return (
+                  <img className="image-single outline full-width" src={data1[item]} alt="image" />
+                );
+              }
+            );
+
+            let toDisplay = [];
+
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-12 col-customize">{components[4]}</div>
+              </div>
+            );
+
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize col-md-space">{components[0]}</div>
+                <div className="col-md-6 col-customize">{components[1]}</div>
+              </div>
+            );
+
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-6 col-customize col-md-space">{components[2]}</div>
+                <div className="col-md-6 col-customize">{components[3]}</div>
+              </div>
+            );
+
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-12 col-customize">{components[5]}</div>
+              </div>
+            );
+
+            toDisplay.push(
+              <div className="row row-customize">
+                <div className="col-md-12 col-customize">{components[6]}</div>
+              </div>
+            );
+
+            return (
+              <div className="data-wrapper">
+                {toDisplay}
+              </div>
+            );
+          }
+
+          else if (this.state.projectId === "3") {
             let temp_i = 0;
             let elements = keyArray1 || [];
             let components = elements.map(
@@ -599,7 +666,7 @@ class WorkDetail extends Component {
             );
           }
 
-          else if (this.state.projectId === "1") {
+          else if (this.state.projectId === "2") {
             let temp_i = 0;
             let elements = keyArray1 || [];
             let components = elements.map(
@@ -636,7 +703,7 @@ class WorkDetail extends Component {
             );
           }
 
-          else if (this.state.projectId === "0") {
+          else if (this.state.projectId === "1") {
             let temp_i = 0;
             let elements = keyArray1 || [];
             let components = elements.map(
@@ -685,7 +752,7 @@ class WorkDetail extends Component {
           let data0 = content.content_data;
 
           if (content.content_title === "wireframe") {
-            if (this.state.projectId === "2") {
+            if (this.state.projectId === "3") {
               let temp_i = 0;
               let elements = keyArray0 || [];
               let components = elements.map(
@@ -748,7 +815,7 @@ class WorkDetail extends Component {
               );
             }
 
-            else if (this.state.projectId === "1") {
+            else if (this.state.projectId === "2") {
               let temp_i = 0;
               let elements = keyArray0 || [];
               let components = elements.map(
@@ -1222,6 +1289,14 @@ class WorkDetail extends Component {
           this.state.dataObj.content.map((item, index) => {
             return this.renderContent(item);
           })
+        }
+        {
+          this.state.dataObj && this.state.dataObj.id === 0 &&
+          <div className="content-99">
+            <span>
+              Full case study coming soon
+            </span>
+          </div>
         }
       </div>
     );

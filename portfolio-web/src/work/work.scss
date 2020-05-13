@@ -25,7 +25,8 @@
 
   .name {
     display: inline-block;
-    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    // font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'Proxima Nova', 'Helvetica Neue', 'Arial', sans-serif;
     // font-size: 200px;
     font-size: 11vw;
     font-weight: 700;
@@ -68,7 +69,7 @@
       display: inline-block;
       font-family: 'Helvetica Neue', 'Arial', sans-serif;
       // font-size: 42px;
-      font-size: 2.3vw;
+      font-size: 2.2vw;
       font-weight: 400;
       color: #000;
       margin: 0;
@@ -140,7 +141,7 @@
     // transform: translateY(10%);
   }
 
-  .thumbnail-img-2 {
+  .thumbnail-img-3 {
     transform: translateY(5vh);
   }
 

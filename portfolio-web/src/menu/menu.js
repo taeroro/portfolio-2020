@@ -117,6 +117,19 @@ export default class Menu extends Component {
 
         <div className="project-name-wrapper">
           <Link
+            className={this.state.path.includes("/work/fourtwenty") ? "project-name active" : "project-name"}
+            // href="/work/jazzin"
+            to={{
+              pathname: "/work/fourtwenty"
+            }}
+            onClick={this.toggleMenu}
+          >
+            FOUR TWENTY
+          </Link>
+        </div>
+
+        <div className="project-name-wrapper">
+          <Link
             className={this.state.path.includes("/work/jazzin") ? "project-name active" : "project-name"}
             // href="/work/jazzin"
             to={{
@@ -164,12 +177,6 @@ export default class Menu extends Component {
           >
             FACES OF THE PORTRAITS
           </Link>
-        </div>
-
-        <div className="project-name-wrapper">
-          <a className="project-name" href="https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a" target="_blank" rel="noopener noreferrer">
-            UX COLLECTIVE
-          </a>
         </div>
 
         <div className="project-name-wrapper">

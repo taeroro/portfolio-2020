@@ -1,6 +1,43 @@
 [
   {
     "id": 0,
+    "title": "FOUR TWENTY",
+    "category": "DIGITAL PRODUCT DESIGN & BRANDING",
+    "thumbnail_image_path": "/work/fourtwenty/fourtwenty.jpg",
+    "objective": "Four Twenty moves the entire in-store dispensary experience online.",
+    "content": [
+      {
+        "content_id": 0,
+        "content_title": "overview",
+        "content_data_type": "text-complex",
+        "content_data": {
+            "role": "Designer",
+            "category": "Digital Product Design\nBranding",
+            "collaborators": "Solo",
+            "timeline": "15 Weeks (Jan 2020 - May 2020)",
+            "medium": "Mobile",
+            "deliverables": "Mobile App\nBrand System",
+            "_details": "With the legalization of marijuana across the United States and Canada, more people are getting out of their comfort zones and trying cannabis products to help with anxiety, depression, or even just boost their mood and creativity.\n\n I spent 15 weeks to ideate, research, test, and design an app that moves the entire in-store dispensary experience online. Users can take the quiz and get personal recommendations to find the right cannabis.\n\n Four Twenty is designed for newcomers to learn and discover, and offers experienced users a platform to explore different varieties of cannabis."
+        }
+      },
+      {
+        "content_id": 1,
+        "content_title": "",
+        "content_data_type": "image-multi",
+        "content_data": {
+            "image0": "/work/fourtwenty/FOURTWENTY-2.jpg",
+            "image1": "/work/fourtwenty/FOURTWENTY-3.jpg",
+            "image2": "/work/fourtwenty/FOURTWENTY-4.jpg",
+            "image3": "/work/fourtwenty/FOURTWENTY-5.jpg",
+            "image4": "/work/fourtwenty/FOURTWENTY-6.jpg",
+            "image5": "/work/fourtwenty/FOURTWENTY-7.jpg",
+            "image6": "/work/fourtwenty/FOURTWENTY-8.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1,
     "title": "JAZZIN",
     "category": "BRANDING & DIGITAL PRODUCT DESIGN",
     "thumbnail_image_path": "/work/jazzin/jazzin_new.jpg",
@@ -72,7 +109,7 @@
     ]
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "FOCUSED.",
     "category": "DIGITAL PRODUCT DESIGN",
     "thumbnail_image_path": "/work/focused/focused_new.jpg",
@@ -161,7 +198,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "αPARK",
     "category": "DIGITAL PRODUCT DESIGN",
     "thumbnail_image_path": "/work/apark/small_apark_rendered-01.jpg",
@@ -251,12 +288,6 @@
         }
       }
     ]
-  },
-  {
-    "id": 3,
-    "title": "UX COLLECTIVE",
-    "category": "PUBLICATION",
-    "thumbnail_image_path": "/work/driving/uxdesign.cc_the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a.jpg"
   },
   {
     "id": 4,

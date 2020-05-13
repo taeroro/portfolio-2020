@@ -12,7 +12,7 @@
 
   & .title-description {
     // font-size: 48px;
-    font-size: 2.6vw !important;
+    font-size: 2.3vw !important;
     font-weight: 700;
 
     color: rgba(220, 220, 220, 1);
@@ -20,7 +20,7 @@
 
   & .name {
     // font-size: 100px;
-    font-size: 5.5vw  !important;
+    font-size: 5.6vw  !important;
 
     color: rgba(20, 20, 20, 1);
   }
@@ -94,6 +94,22 @@
   padding: 0 40px !important;
 }
 
+// TODO: DELETE THIS AFTER FINISHED
+.content-99 {
+  span {
+    text-align: center;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+  }
+}
+.portfolio-view {
+  padding: 10vh 40px 0 !important;
+}
+
+
 div[class^="content-"] {
   display: flex;
   flex-direction: column;
@@ -106,7 +122,8 @@ div[class^="content-"] {
   background-color: #FFF;
 
   h2 {
-    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    // font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'Proxima Nova', 'Helvetica Neue', 'Arial', sans-serif;
     // font-size: 80px;
     font-size: 3.5vw;
     font-weight: 700;

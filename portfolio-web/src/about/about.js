@@ -58,7 +58,7 @@ export default class About extends Component {
         </div>
 
         <p className="bio" ref={p => this.bioRef = p}>
-          is a <i><b>digital product designer</b></i> and <i><b>front-end engineer</b></i> with a concentration in the practice of user experience design based in NYC. He holds a Bachelor of Science degree in Computer Science from Purdue University and is obtaining a Master's degree in Communication Design at Parsons School of Design.
+          is a <i><b>digital product designer</b></i> and <i><b>front-end engineer</b></i> with a concentration in the practice of user experience design based in NYC. He holds a Master's degree in Communication Design at Parsons School of Design and a Bachelor of Science degree in Computer Science from Purdue University.
           <br /><br />
           Ryan’s background and experience allow him to easily translate between design and engineering teams to build cohesive, thoughtful digital products.
           <br /><br />
@@ -79,6 +79,7 @@ export default class About extends Component {
             <div>
               <a href="https://www.linkedin.com/in/zuyuanfan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href="https://www.instagram.com/ryantf11/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://uxdesign.cc/the-gradual-disappearance-of-tactile-interaction-in-the-driving-experience-fe894f83188a" target="_blank" rel="noopener noreferrer">Medium</a>
               <a href="https://github.com/taeroro" target="_blank" rel="noopener noreferrer">Github</a>
               <a href="https://drive.google.com/file/d/1hQGhCN-FATjePo5-kOivhYxNmeKNbVWX/view?usp=sharing" target="_blank" rel="noopener noreferrer">Résumé</a>
             </div>
