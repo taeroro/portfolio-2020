@@ -100,7 +100,7 @@ div[class^="content-"] {
   --pDescSize: 15px;
   --pQuoteSize: 50px; }
   div[class^="content-"] h2 {
-    font-family: 'Proxima Nova', 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'proxima-nova', 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 3.5vw;
     font-weight: 700;
     color: #000;
@@ -251,7 +251,7 @@ div[class^="content-"] {
     margin-bottom: 0; }
   div[class^="content-"] .video-wrapper {
     position: relative;
-    padding: 100% 0;
+    padding: 49.86% 0 0 0;
     margin: 2vh 0;
     border: 1px solid #000; }
     div[class^="content-"] .video-wrapper iframe {
@@ -261,6 +261,7 @@ div[class^="content-"] {
       width: 100%;
       height: 100%; }
   div[class^="content-"] .video-wrapper.fourtwenty {
+    padding: 100% 0 !important;
     border: none !important; }
   div[class^="content-"] .title-sm.jazzin {
     margin-top: 20vh; }
