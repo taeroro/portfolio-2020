@@ -58,7 +58,7 @@ export default class About extends Component {
         </div>
 
         <p className="bio" ref={p => this.bioRef = p}>
-          is a <i><b>digital product designer</b></i> and <i><b>front-end engineer</b></i> with a concentration in the practice of user experience design based in NYC. He holds a Master's degree in Communication Design from Parsons School of Design and a Bachelor of Science degree in Computer Science from Purdue University.
+          is a <i><b>hybrid digital product designer & developer</b></i> with a concentration in the practice of user experience design based in NYC. He holds a Master's degree in Communication Design from Parsons School of Design and a Bachelor of Science degree in Computer Science from Purdue University.
           <br /><br />
           Ryan’s background and experience allow him to easily translate between design and engineering teams to build cohesive, thoughtful digital products.
           <br /><br />

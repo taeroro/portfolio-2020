@@ -73,6 +73,9 @@
     right: 0;
     margin: auto; }
 
+.first-img-6 > .thumbnail-img {
+  transform: translateY(10vh); }
+
 .content-0 {
   margin: 10vh 0 0 0 !important;
   padding: 0 40px !important; }
@@ -80,10 +83,21 @@
 .content-99 span {
   text-align: center;
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
   color: #000; }
+.content-99 a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #0000FF;
+  background-color: rgba(0, 0, 255, 0);
+  transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+.content-99 a:hover {
+  color: #FFF;
+  background-color: blue; }
+
+.content-99.no-padding {
+  padding: 0; }
 
 .portfolio-view {
   padding: 10vh 40px 0 !important; }

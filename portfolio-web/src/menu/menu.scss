@@ -67,25 +67,76 @@
 
 .menu-bg-animate {
   position: fixed;
+  z-index: 13;
+  width: 0px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #b1b1ff;
+  pointer-events: none;
+}
+
+.menu-bg-animate-1 {
+  position: fixed;
+  z-index: 14;
+  width: 0px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #7676ff;
+  pointer-events: none;
+}
+.menu-bg-animate-2 {
+  position: fixed;
+  z-index: 15;
+  width: 0px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #3b3bff;
+  pointer-events: none;
+}
+.menu-bg-animate-3 {
+  position: fixed;
+  z-index: 16;
+  width: 0px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #0000ff;
+  pointer-events: none;
+}
+.menu-bg-animate-4 {
+  position: fixed;
+  z-index: 17;
+  width: 0px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #0000c4;
+  pointer-events: none;
+}
+.menu-bg-animate-5 {
+  position: fixed;
   z-index: 18;
   width: 0px;
   height: 100vh;
   top: 0;
   right: 0;
-  background-color: #0000FF;
+  background-color: #000089;
   pointer-events: none;
 }
-
-.menu-bg-animate-1 {
+.menu-bg-animate-6 {
   position: fixed;
   z-index: 19;
   width: 0px;
   height: 100vh;
   top: 0;
   right: 0;
-  background-color: #FFF;
+  background-color: #00004e;
   pointer-events: none;
 }
+
 
 .menu-button-wrapper {
   float: right;

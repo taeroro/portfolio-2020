@@ -128,7 +128,7 @@
     -o-user-select: none;
   }
 
-  .thumbnail-img-0, .thumbnail-img-1, .thumbnail-img-2, .thumbnail-img-3 {
+  .thumbnail-img-0, .thumbnail-img-1, .thumbnail-img-2, .thumbnail-img-3, .thumbnail-img-4 {
     position: absolute;
     top: -9999px;
     bottom: -9999px;
@@ -137,11 +137,11 @@
     margin: auto;
   }
 
-  .thumbnail-img-1 {
-    // transform: translateY(10%);
+  .thumbnail-img-0 {
+    transform: translateY(5vh);
   }
 
-  .thumbnail-img-3 {
+  .thumbnail-img-4 {
     transform: translateY(5vh);
   }
 

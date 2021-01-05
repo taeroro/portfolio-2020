@@ -31,6 +31,12 @@ export default class Menu extends Component {
     this.menuContentRef = null;
     this.menuAnimateRef = null;
     this.menuAnimateRef1 = null;
+    this.menuAnimateRef2 = null;
+    this.menuAnimateRef3 = null;
+    this.menuAnimateRef4 = null;
+    this.menuAnimateRef5 = null;
+    this.menuAnimateRef6 = null;
+
 
     this.toggleMenu = this.toggleMenu.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -48,9 +54,15 @@ export default class Menu extends Component {
     let cWidth = window.innerWidth <= 768 ? "100vw" : "85vw";
 
     this.tl
-      .to(this.menuAnimateRef, {duration: 0.5, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"})
-      .to(this.menuAnimateRef1, {duration: 0.25, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
-      .to(this.menuRef, {duration: 0.5, width: cWidth, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25")
+      .to(this.menuAnimateRef, {duration: 0.5, width: cWidth, ease: "expo.inOut"})
+      .to(this.menuAnimateRef1, {duration: 0.58, width: cWidth, ease: "expo.inOut"}, "-=0.5")
+      .to(this.menuAnimateRef2, {duration: 0.66, width: cWidth, ease: "expo.inOut"}, "-=0.58")
+      .to(this.menuAnimateRef3, {duration: 0.74, width: cWidth, ease: "expo.inOut"}, "-=0.66")
+      .to(this.menuAnimateRef4, {duration: 0.82, width: cWidth, ease: "expo.inOut"}, "-=0.74")
+      .to(this.menuAnimateRef5, {duration: 0.90, width: cWidth, ease: "expo.inOut"}, "-=0.82")
+      .to(this.menuAnimateRef6, {duration: 0.98, width: cWidth, ease: "expo.inOut"}, "-=0.90")
+      .to(this.menuRef, {duration: 1.06, width: cWidth, ease: "expo.inOut"}, "-=0.98")
+
       .set(this.menuOverlayRef, {pointerEvents: "auto"})
       .to(this.rt2Ref, {duration: 0.5, opacity: '0', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
       .to(this.rt1Ref, {duration: 0.5, y: 8, ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.5")
@@ -117,6 +129,20 @@ export default class Menu extends Component {
 
         <div className="project-name-wrapper">
           <Link
+            className={this.state.path.includes("/work/michaelkors") ? "project-name active" : "project-name"}
+            // href="/work/michaelkors"
+            to={{
+              pathname: "/work/michaelkors"
+            }}
+            onClick={this.toggleMenu}
+          >
+            MICHAEL KORS
+          </Link>
+        </div>
+
+
+        <div className="project-name-wrapper">
+          <Link
             className={this.state.path.includes("/work/fourtwenty") ? "project-name active" : "project-name"}
             // href="/work/jazzin"
             to={{
@@ -179,19 +205,6 @@ export default class Menu extends Component {
           </Link>
         </div>
 
-        <div className="project-name-wrapper">
-          <Link
-            className={this.state.path.includes("/work/yintechlabs") ? "project-name active" : "project-name"}
-            // href="/work/yintechlabs"
-            to={{
-              pathname: "/work/yintechlabs"
-            }}
-            onClick={this.toggleMenu}
-          >
-            YINTECH LABS
-          </Link>
-        </div>
-
         <div className="title-wrapper">
           <Link className="title" to={{pathname: "/about"}} onClick={this.toggleMenu}>ABOUT</Link>
         </div>
@@ -204,6 +217,12 @@ export default class Menu extends Component {
       <div className="menu-overlay-container" ref={this.targetRef}>
         <div className="menu-bg-animate" ref={div => this.menuAnimateRef = div}></div>
         <div className="menu-bg-animate-1" ref={div => this.menuAnimateRef1 = div}></div>
+        <div className="menu-bg-animate-2" ref={div => this.menuAnimateRef2 = div}></div>
+        <div className="menu-bg-animate-3" ref={div => this.menuAnimateRef3 = div}></div>
+        <div className="menu-bg-animate-4" ref={div => this.menuAnimateRef4 = div}></div>
+        <div className="menu-bg-animate-5" ref={div => this.menuAnimateRef5 = div}></div>
+        <div className="menu-bg-animate-6" ref={div => this.menuAnimateRef6 = div}></div>
+
 
         <div
           className="menu-overlay"

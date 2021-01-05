@@ -6,20 +6,22 @@ import gsap from 'gsap';
 import TextPlugin from "gsap/TextPlugin";
 
 const mockup_img_path = [
+  './work/mkc/mkc-01.jpg',
   './work/fourtwenty/fourtwenty.jpg',
   './work/jazzin/jazzin_new.jpg',
   './work/focused/focused_new.jpg',
   './work/apark/small_apark_rendered-01.jpg',
   './work/faces/faces.mp4',
-  './work/yintech/Yintechlabs-01.jpg',
+  // './work/yintech/Yintechlabs-01.jpg',
 ]
 const indexToPath = [
+  "michaelkors/",
   "fourtwenty/",
   "jazzin/",
   "focused/",
   "apark/",
   "faces/",
-  "yintechlabs/",
+  // "yintechlabs/",
 ];
 
 class Work extends Component {
@@ -93,11 +95,19 @@ class Work extends Component {
           this.tl.progress(1).clear();
           this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
 
+          this.tl.to(this.introNameRef, {duration: 0.25, text: "MICHAEL KORS", cursor: "default"});
+          // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
+          this.tl.to(this.descriptionRef, {duration: 0.25, text: "UI/UX DESIGN"}, "-=0.25");
+          break;
+        case 1:
+          this.tl.progress(1).clear();
+          this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
+
           this.tl.to(this.introNameRef, {duration: 0.25, text: "FOUR TWENTY", cursor: "default"});
           this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN & BRANDING"}, "-=0.25");
           break;
-        case 1:
+        case 2:
           this.tl.progress(1).clear();
           this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
 
@@ -105,7 +115,7 @@ class Work extends Component {
           // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "BRANDING & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
-        case 2:
+        case 3:
           this.tl.progress(1).clear();
           this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
 
@@ -113,27 +123,19 @@ class Work extends Component {
           // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
-        case 3:
+        case 4:
           this.tl.progress(1).clear();
           this.tl.to(this.introNameRef, {duration: 0.25, text: "αPARK", cursor: "default"});
           // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
-        case 4:
+        case 5:
           this.tl.progress(1).clear();
           this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
 
           this.tl.to(this.introNameRef, {duration: 0.5, text: "FACES OF THE PORTRAITS", cursor: "default"});
           // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
           this.tl.to(this.descriptionRef, {duration: 0.25, text: "CREATIVE CODING & DATA VISUALIZATION"}, "-=0.5");
-          break;
-        case 5:
-          this.tl.progress(1).clear();
-          this.tl.set(this.skillRef, {opacity: '0', display: 'none'});
-
-          this.tl.to(this.introNameRef, {duration: 0.25, text: "YINTECH LABS", cursor: "default"});
-          // this.tl.to(this.skillRef, {duration: 0.25, opacity: '0', display: 'none', ease: "cubic-bezier(0.215, 0.61, 0.355, 1)"}, "-=0.25");
-          this.tl.to(this.descriptionRef, {duration: 0.25, text: "SOFTWARE DEVELOPMENT & DIGITAL PRODUCT DESIGN"}, "-=0.25");
           break;
         default:
           this.tl.to(this.introNameRef, {duration: 0.25, text: "RYAN FAN"});
@@ -268,9 +270,9 @@ class Work extends Component {
         >
           <div>
             <h2>DESIGNS DIGITAL PRODUCTS</h2>
-            <h2>DEVELOPS SOFTWARE</h2>
+            {/* <h2>DEVELOPS SOFTWARE</h2> */}
+            <h2>CREATES IMMERSIVE UI/UX</h2>
             <h2>CODES CREATIVELY</h2>
-            {/* <h2>WRITES BLOGS</h2> */}
           </div>
         </div>
       </div>

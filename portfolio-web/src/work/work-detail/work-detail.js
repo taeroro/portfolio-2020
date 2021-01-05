@@ -15,6 +15,7 @@ const indexToPath = [
   "apark",
   "yintechlabs",
   "faces",
+  "michaelkors",
 ];
 
 
@@ -317,15 +318,11 @@ class WorkDetail extends Component {
               }
             }
           />
-          <p style={
-            {
-              alignSelf: "center",
-              fontSize: "20px",
-            }
-          }>
-            {/* This case study is currently not available */}
-            This project is protected, content available on request via email.
-          </p>
+          <div className="content-99 no-padding">
+            <p>
+              This project is protected, content available on request via <a href="mailto:hello@ryanfandesign.com">email</a>.
+            </p>
+          </div>
         </div>
       );
     }
@@ -1351,7 +1348,7 @@ class WorkDetail extends Component {
           this.state.dataObj && this.state.dataObj.id === 0 &&
           <div className="content-99">
             <span>
-              Full case study coming soon
+              Full case study available on request via <a href="mailto:hello@ryanfandesign.com">email</a>.
             </span>
           </div>
         }
