@@ -402,6 +402,15 @@ class WorkDetail extends Component {
                   );
                 }
                 else {
+                  if (item.includes("_")) {
+                    return (
+                      <dl key={temp_i++} className="overview-dl">
+                        <dt>{item.replace("_", " ")}</dt>
+                        <dd><a href={data[item]} target="_blank" rel="noopener noreferrer">{data[item]}</a></dd>
+                      </dl>
+                    );
+                  }
+
                   return (
                     <dl key={temp_i++} className="overview-dl">
                       <dt>{item}</dt>
@@ -572,6 +581,44 @@ class WorkDetail extends Component {
                 </div>
               );
             }
+          }
+          else if (content.content_title === "") {
+            let temp_i = 0;
+            let elements = keyArray || [];
+            let components = elements.map(
+              (item) => {
+                if (item.includes("text")) {
+                  return (
+                    <p key={temp_i++}>{data[item] + " "}</p>
+                  );
+                }
+                else if (item.includes("link")) {
+                  return (
+                    <p>
+                      <a className="in-page-link" href={data[item]} target="_blank" rel="noopener noreferrer" key={temp_i++}>{data[item]}</a>
+                    </p>
+                  );
+                }
+              }
+            );
+
+            let toDisplay = [];
+            // toDisplay.push(components[0]);
+            // toDisplay.push(components[1]);
+
+            toDisplay.push(components);
+
+            return (
+              <div className="data-wrapper">
+                <div className="row row-customize">
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
+                  <div className="col-xl-4 col-lg-8 col-customize in-page-a-div">
+                    {toDisplay}
+                  </div>
+                  <div className="col-xl-4 col-lg-2 col-customize"></div>
+                </div>
+              </div>
+            );
           }
 
           return (
@@ -1039,6 +1086,44 @@ class WorkDetail extends Component {
             );
           }
 
+          else if (this.state.projectId === "6") {
+            let temp_q = 0;
+            let elements = keyArray2 || [];
+
+            let components = elements.map(
+              (item, i) => {
+                if (i === 0) {
+                  return (
+                    <div className="video-wrapper" key={temp_q++}>
+                      <iframe src={data2[item]} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+                    </div>
+                  );
+                }
+
+                return (
+                  <div className="video-wrapper mkc" key={temp_q++}>
+                    <iframe src={data2[item]} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+                  </div>
+                );
+              }
+            );
+
+            let toDisplay9 = [];
+
+            toDisplay9.push(
+              <div className="row row-customize">
+                <div className="col-md-9 col-customize ">{components[0]}</div>
+                <div className="col-md-3 col-customize fourtwenty">{components[1]}</div>
+              </div>
+            );
+
+            return (
+              <div className="data-wrapper">
+                {toDisplay9}
+              </div>
+            );
+          }
+
           let temp_i_0 = 0;
           let elements0 = keyArray2 || [];
           let video_count = keyArray2.length/2;
@@ -1345,7 +1430,7 @@ class WorkDetail extends Component {
           })
         }
         {
-          this.state.dataObj && this.state.dataObj.id === 0 &&
+          this.state.dataObj && (this.state.dataObj.id === 0 || this.state.dataObj.id === 6) &&
           <div className="content-99">
             <span>
               Full case study available on request via <a href="mailto:hello@ryanfandesign.com">email</a>.

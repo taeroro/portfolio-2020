@@ -58,18 +58,13 @@ export default class About extends Component {
         </div>
 
         <p className="bio" ref={p => this.bioRef = p}>
-          is a <i><b>hybrid digital product designer & developer</b></i> with a concentration in the practice of user experience design based in NYC. He holds a Master's degree in Communication Design from Parsons School of Design and a Bachelor of Science degree in Computer Science from Purdue University.
+          is a <i><b>UI/UX designer & developer</b></i> currently based in NYC. Ryan’s background and experience allow him to easily translate between design and engineering teams to build cohesive, thoughtful digital products.
           <br /><br />
-          Ryan’s background and experience allow him to easily translate between design and engineering teams to build cohesive, thoughtful digital products.
+          Ryan is passionate about using digital product design to help humans understand machines better. He values collaboration and loves working in a cross-functional & multidisciplinary environment.
           <br /><br />
-          Before attending graduate school, he worked at a machine learning and big data lab under an investment company as a UX Engineer, where he led the design and developed projects from start to end; he also led the design of the new landing website as a freelance UI/UX designer for an organization of aspiring entrepreneurs.
+          He has been working with creative agencies and brands on things like responsive website, native mobile app, motion graphics, and accelerating product launches by providing consultation to the development teams.
           <br /><br />
-          After several years practicing as a software engineer, Ryan made the switch to product design in an effort to help humans understand machines better.
-          <br /><br />
-          More recently, he has been working as a contract front-end UI developer in NYC. He is collaborative by nature, looking to sharpen his skills and gain experience as a creative practitioner, bridging the gap between engineers and designers to make teams more efficient and cohesive.
-          <br /><br />
-          <hr />
-          <span>when he's not working, he is a serial driver, road trip enthusiast and frequent flyer. he enjoys outdoor activities like snowboarding; cooking while watching bon Appétit test kitchen videos, and loves boston terrier!</span>
+          When he's not working, he is a serial driver, road trip enthusiast <s>and frequent flyer</s>. He enjoys outdoor activities like snowboarding, cooking & baking Joshua Weissman and Gordon Ramsay's recipes, and loves Boston Terrier!
         </p>
 
         <div className="contact-wrapper" ref={div => this.contactRef = div}>

@@ -28,8 +28,6 @@
   transform: translateY(10%);
   width: 50%;
   line-height: calc(1.6 * 20px); }
-  .bio span {
-    font-family: 'Major Mono Display', monospace; }
 
 .contact-wrapper {
   margin-top: 10vh;

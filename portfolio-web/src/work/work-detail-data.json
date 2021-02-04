@@ -357,37 +357,31 @@
         "content_data_type": "text-complex",
         "content_data": {
             "role": "Designer",
-            "category": "Digital Product Design\nBranding",
-            "collaborators": "Solo",
-            "timeline": "15 Weeks\n(Jan 2020 - May 2020)",
-            "medium": "Mobile",
-            "deliverables": "Mobile App\nBrand System",
-            "_details": "With the legalization of marijuana across the United States and Canada, more people are getting out of their comfort zones and trying cannabis products to help with anxiety, depression, or even just boost their mood and creativity.\n\n I spent 15 weeks to ideate, research, test, and design an app that moves the entire in-store dispensary experience online. Users can take the quiz and get personal recommendations to find the right cannabis.\n\n Four Twenty is designed for newcomers to learn and discover, and offers experienced users a platform to explore different varieties of cannabis."
+            "category": "Responsive Web Design\nDev Consulting",
+            "collaborators": "Michael Kors Executive, Creative, PM, Editorial and Dev Team",
+            "timeline": "4 Weeks",
+            "medium": "Web",
+            "deliverables": "Responsive Website",
+            "project_link": "https://www.michaelkors-collection.com/",
+            "_details": "I contributed to the debut of the first digital fashion show experience to the audiences around the world and, was the sole designer working in a cross-functional environment with the executive, creative, PM, editorial, and dev teams from Michael Kors. \n\nI was responsible for creating an immersive responsive website using existing assets provided by Michael Kors to present the new Spring/Summer 2021 season, and elevated the brand identity by bringing in new visuals and ideas. I also provided development solutions to the engineers which assisted the launch in meeting its key deadlines.\n\nLaunched along with the new season campaign, we have attracted attracted hundreds of thousands of views around the globe and received positive feedback from critics and the public. The latest launch has also been featured on the “Webflow in 2020” collection."
         }
       },
       {
         "content_id": 1,
         "content_title": "",
-        "content_data_type": "image-multi",
+        "content_data_type": "video",
         "content_data": {
-            "image0": "/work/fourtwenty/FOURTWENTY-2.jpg",
-            "image1": "/work/fourtwenty/FOURTWENTY-3.jpg",
-            "image2": "/work/fourtwenty/FOURTWENTY-4.jpg",
-            "image3": "/work/fourtwenty/FOURTWENTY-5.jpg",
-            "image4": "/work/fourtwenty/FOURTWENTY-6.jpg",
-            "image5": "/work/fourtwenty/FOURTWENTY-7.jpg",
-            "image6": "/work/fourtwenty/FOURTWENTY-8.jpg"
+          "vid0": "https://player.vimeo.com/video/508125757?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0",
+          "vid1": "https://player.vimeo.com/video/508187711?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
         }
       },
       {
         "content_id": 2,
         "content_title": "",
-        "content_data_type": "video",
+        "content_data_type": "text-complex",
         "content_data": {
-          "vid0": "https://player.vimeo.com/video/417911198?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0",
-          "vid1": "https://player.vimeo.com/video/417911212?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0",
-          "vid2": "https://player.vimeo.com/video/417911944?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0",
-          "vid3": "https://player.vimeo.com/video/417911952?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
+          "text": "Project Link:",
+          "link": "https://www.michaelkors-collection.com/"
         }
       }
     ]
